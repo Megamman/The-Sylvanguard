@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Owner\\Documents\\GitHub\\The Sylvanguard\\The Sylvanguard\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AA6BBF2D-94F3-F2F4-1781-554473941FD3}|Assembly-CSharp.csproj|c:\\users\\owner\\documents\\github\\the sylvanguard\\the sylvanguard\\assets\\scripts\\actions\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA6BBF2D-94F3-F2F4-1781-554473941FD3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\actions\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\Owner\\Documents\\GitHub\\The Sylvanguard\\The Sylvanguard\\Assets\\Scripts\\Actions\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Actions\\PlayerController.cs",
+              "ToolTip": "C:\\Users\\Owner\\Documents\\GitHub\\The Sylvanguard\\The Sylvanguard\\Assets\\Scripts\\Actions\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Actions\\PlayerController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowC4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T10:48:27.428Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
