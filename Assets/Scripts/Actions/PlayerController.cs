@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        combat = GetComponent<CombatScript>();
         controls = new PlayerMovement();
         controls.Enable();
     }
@@ -89,7 +90,7 @@ public class PlayerController : MonoBehaviour
     private void CheckHit(RaycastHit2D hit)
     {
         string tag = hit.transform.tag;
-        Debug.Log("Found Tag " + tag);
+        Debug.Log("Found Tag: " + tag);
 
         //Comper Tags if raycast get hit
         switch (tag)
@@ -97,6 +98,7 @@ public class PlayerController : MonoBehaviour
             case "Enemy":
                 Debug.Log("Enemy Found");
                 //Combat
+                combat.Fight(hit.transform.GetComponent<EnemyStats>());
                 break;
 
             case "NPC":

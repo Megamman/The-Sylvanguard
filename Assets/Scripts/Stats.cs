@@ -3,9 +3,9 @@ using System;
 public static class Stats
 {
     //Main Stats
-    public static int HP; //Health Point - Redused when reciing attack - GameOver when 0
-    public static int MovePt; //Steps that can be taken
-    public static int Attack; //how much damage can be dealt
+    public static int HP = 10; //Health Point - Redused when reciing attack - GameOver when 0
+    public static int MovePt = 10; //Steps that can be taken
+    public static int Attack = 1; //how much damage can be dealt
     public static int MP; //Magic Point - Used to use magic active skills
 
     //Collection

@@ -733,6 +733,7 @@ GameObject:
   - component: {fileID: 753329686}
   - component: {fileID: 753329685}
   - component: {fileID: 753329687}
+  - component: {fileID: 753329689}
   - component: {fileID: 753329688}
   m_Layer: 3
   m_Name: Player
@@ -828,7 +829,7 @@ MonoBehaviour:
   MovementCost: 0
   IgnoreLayer:
     serializedVersion: 2
-    m_Bits: 136
+    m_Bits: 0
   test: {fileID: 2009208044}
 --- !u!50 &753329688
 Rigidbody2D:
@@ -857,6 +858,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &753329689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753329684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 916a157a2deb02447a636425522f8070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1782712042
 GameObject:
   m_ObjectHideFlags: 0
@@ -2045,6 +2058,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2126669732}
   - component: {fileID: 2126669731}
+  - component: {fileID: 2126669735}
   - component: {fileID: 2126669734}
   - component: {fileID: 2126669733}
   m_Layer: 6
@@ -2197,6 +2211,37 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2126669735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126669730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2dcd345f56266244a1e514c80db0e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: box
+  Decription: 
+  HP: 2
+  Attack: 0
+  UsingMagicAttack: 0
+  CoinsMin: 0
+  CoinsMax: 0
+  XPMin: 0
+  XPMax: 0
+  DodgeChance: 0
+  CritChance: 0
+  CritMaxDamage: 0
+  SneakAttack: 0
+  isAnimated: 0
+  WeakToPhysical: 0
+  WeakToMagic: 0
+  ResistToPhysical: 0
+  ResistToMagic: 0
+  HPSlider: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

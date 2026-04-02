@@ -7,6 +7,8 @@ public class CombatScript : MonoBehaviour
 
     public void Fight(EnemyStats EnemyScript)
     {
+Debug.Log("Attaking Enemy " + EnemyScript.Name);
+
         if(EnemyScript != null)
         {
             Enemy = EnemyScript;
@@ -47,7 +49,7 @@ public class CombatScript : MonoBehaviour
 
         if (Damage < 0) { Damage = 0; }
 
-        Enemy.HP = Damage;
+        Enemy.HP -= Damage;
 
         if (Enemy.HP <= 0) {
             Stats.XP += Random.Range(Enemy.XPMin, Enemy.XPMax);
@@ -61,7 +63,7 @@ public class CombatScript : MonoBehaviour
     {
         bool CanDodge = true;
         int Damage = 1;
-        float ExtraDamage = 1;
+        // float ExtraDamage = 1;
 
         //Critical Hit
         if (Enemy.CritChance > 0)
