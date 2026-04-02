@@ -1,26 +1,30 @@
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Tilemaps;
 
 public class PlayerController : MonoBehaviour
 {
     // Tutorial: https://www.youtube.com/watch?v=YnwOoxtgZQI
 
-    private PlayerMovement controls;
     private CombatScript combat;
+    private PlayerMovement controls;
+    private Rigidbody2D rb2D;
+    private SpriteRenderer PlayerSprite;
+    private Vector2 direction;
+    [HideInInspector] Vector3 MoveTo;
+
+    [SerializeField] private PlayerAnimationSO[] PASO;
+    [SerializeField] private int PlayerSpriteLevel;
 
     [SerializeField] private Tilemap groundTilemap;
     [SerializeField] private Tilemap collicionTilemap;
     [SerializeField] private bool MovementCost;
     [SerializeField] private LayerMask IgnoreLayer;
 
-    public Transform test;
-
-    Rigidbody2D rb2D;
-    [HideInInspector] Vector3 MoveTo;
-
     private void Awake()
     {
+        PlayerSprite = GetComponent<SpriteRenderer>();
         combat = GetComponent<CombatScript>();
         controls = new PlayerMovement();
         controls.Enable();
@@ -42,9 +46,11 @@ public class PlayerController : MonoBehaviour
         controls.Main.Movement.performed += ctx => Move(ctx.ReadValue<Vector2>());
     }
 
-    private void Move(Vector2 direction)
+    private void Move(Vector2 direct)
     {
-        if (CanMove(direction))
+        direction = direct;
+        LookAt();
+        if (CanMove())
         {
 
             MoveTo = transform.position + (Vector3)direction; // a quick refernce for this equation
@@ -68,7 +74,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private bool CanMove(Vector2 direction)
+    private bool CanMove()
     {
         // This is the same as MoveTo but it send an error when replaced
         Vector3Int gridPostition = groundTilemap.WorldToCell(transform.position + (Vector3)direction); 
@@ -85,6 +91,16 @@ public class PlayerController : MonoBehaviour
 
 
         if (MovementCost) { } //Loose move point
+    }
+
+    void LookAt()
+    {
+        PlayerAnimationSO playerSprite = PASO[PlayerSpriteLevel];
+
+        if (direction.y < 0) { PlayerSprite.sprite = playerSprite.LookDown; } //Look Down
+        if (direction.y > 0) { PlayerSprite.sprite = playerSprite.LookUp; } //Look Up
+        if (direction.x < 0) { PlayerSprite.sprite = playerSprite.LookLeft; } //Look Left
+        if (direction.x > 0) { PlayerSprite.sprite = playerSprite.LookRight; } //Look Right
     }
 
     private void CheckHit(RaycastHit2D hit)

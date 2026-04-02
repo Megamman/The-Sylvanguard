@@ -50,6 +50,11 @@ public class EnemyStats : MonoBehaviour
     private void Start()
     {
         Health = HP;
-        HPSlider.value = HP/ Health;
+        //HPSlider.maxValue = HP;
+    }
+
+    private void Update()
+    {
+        //HPSlider.value = HP;
     }
 }

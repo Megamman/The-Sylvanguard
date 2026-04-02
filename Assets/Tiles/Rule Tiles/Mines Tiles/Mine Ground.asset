@@ -12,24 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
   m_Name: Mine Ground
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 0}
+  m_DefaultSprite: {fileID: 3321776834526787237, guid: 09901e84b9b4b864f855d21347d761f7, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules:
   - m_Id: 0
     m_Sprites:
-    - {fileID: 984262674, guid: b268c6bf2b3bccd439e1aa2b6a9c87ad, type: 3}
-    - {fileID: 142639296, guid: b268c6bf2b3bccd439e1aa2b6a9c87ad, type: 3}
-    - {fileID: 903202725, guid: b268c6bf2b3bccd439e1aa2b6a9c87ad, type: 3}
-    - {fileID: -598695534, guid: b268c6bf2b3bccd439e1aa2b6a9c87ad, type: 3}
-    - {fileID: -599714022, guid: b268c6bf2b3bccd439e1aa2b6a9c87ad, type: 3}
-    - {fileID: 159373266, guid: b268c6bf2b3bccd439e1aa2b6a9c87ad, type: 3}
-    - {fileID: 1047900725, guid: b268c6bf2b3bccd439e1aa2b6a9c87ad, type: 3}
-    - {fileID: 1978880564, guid: b268c6bf2b3bccd439e1aa2b6a9c87ad, type: 3}
-    - {fileID: -1650578393, guid: b268c6bf2b3bccd439e1aa2b6a9c87ad, type: 3}
-    - {fileID: 899123666, guid: b268c6bf2b3bccd439e1aa2b6a9c87ad, type: 3}
-    - {fileID: 1352003285, guid: b268c6bf2b3bccd439e1aa2b6a9c87ad, type: 3}
-    - {fileID: -686583655, guid: b268c6bf2b3bccd439e1aa2b6a9c87ad, type: 3}
+    - {fileID: -6430440041260255613, guid: 09901e84b9b4b864f855d21347d761f7, type: 3}
+    - {fileID: 3321776834526787237, guid: 09901e84b9b4b864f855d21347d761f7, type: 3}
+    - {fileID: -8956331708993001888, guid: 09901e84b9b4b864f855d21347d761f7, type: 3}
+    - {fileID: 6510441962716586231, guid: 09901e84b9b4b864f855d21347d761f7, type: 3}
+    - {fileID: -6169617689148084753, guid: 09901e84b9b4b864f855d21347d761f7, type: 3}
+    - {fileID: -1684170221813643749, guid: 09901e84b9b4b864f855d21347d761f7, type: 3}
+    - {fileID: 7173083013488287840, guid: 09901e84b9b4b864f855d21347d761f7, type: 3}
+    - {fileID: 6241292425692365914, guid: 09901e84b9b4b864f855d21347d761f7, type: 3}
+    - {fileID: 5688298049484874716, guid: 09901e84b9b4b864f855d21347d761f7, type: 3}
+    - {fileID: -8883682751964399843, guid: 09901e84b9b4b864f855d21347d761f7, type: 3}
+    - {fileID: 1781685509322590686, guid: 09901e84b9b4b864f855d21347d761f7, type: 3}
+    - {fileID: -212080922882013470, guid: 09901e84b9b4b864f855d21347d761f7, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
