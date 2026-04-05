@@ -49,12 +49,26 @@ public class EnemyStats : MonoBehaviour
 
     private void Start()
     {
+        if (isAnimated) { m_Animator = GetComponent<Animator>(); }
         Health = HP;
-        //HPSlider.maxValue = HP;
+        HPSlider.maxValue = HP;
+
+        HPSlider.transform.gameObject.SetActive(false);
     }
 
     private void Update()
     {
-        //HPSlider.value = HP;
+        HPSlider.value = HP;
+
+        if (Health > HP)
+        {
+            ActivateAnimation();
+        }
+    }
+
+    public void ActivateAnimation()
+    {
+        HPSlider.transform.gameObject.SetActive(true);
+        if (isAnimated) { m_Animator.SetBool("Active", true); }
     }
 }
