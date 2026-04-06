@@ -1,3 +1,4 @@
+using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
@@ -12,17 +13,25 @@ public class SkillCameraControl : MonoBehaviour
     [SerializeField] private Canvas canvas;
     [SerializeField] private RectTransform canvasRectTransform;
     [SerializeField] private float cursorSpeed = 1000f;
-    [SerializeField] private float padding = 40f;
+    [SerializeField] private float padding = 20f;
     [SerializeField] private Rigidbody2D cameraRB;
 
     private bool previousMouseState;
     private Mouse virtualMouse;
     private Mouse virtualCamera;
     private Camera mainCamera;
+    private SkillTreeMovement controls;
+    private Vector2 _newPosition;
 
     private void OnEnable()
     {
         mainCamera = Camera.main;
+        controls = new SkillTreeMovement();
+
+        controls.Player.Enable();
+        // 2. This ONLY updates the variable when you press/release keys
+        controls.Player.Move.performed += ctx => _newPosition = ctx.ReadValue<Vector2>();
+        controls.Player.Move.canceled += ctx => _newPosition = Vector2.zero;
 
         GetVirtualMouse();
         GetVirtualCamera();
@@ -79,7 +88,7 @@ public class SkillCameraControl : MonoBehaviour
 
     private void UpdateMotion()
     {
-        if (virtualMouse == null || Gamepad.current == null) { return; }
+        if(virtualMouse == null) { return; }
 
         LeftStickMovment();
         RightStickMovment();
@@ -87,14 +96,23 @@ public class SkillCameraControl : MonoBehaviour
 
     private void LeftStickMovment()
     {
+        Vector2 currentPosition = virtualMouse.position.ReadValue();
+        Vector2 newPosition = currentPosition;
+
+        if (Gamepad.current == null) { 
+            newPosition = Mouse.current.position.ReadValue(); 
+            AnchorCurser(newPosition); 
+            return; 
+        }
+
         Vector2 StickValue = Gamepad.current.leftStick.ReadValue();
         StickValue *= cursorSpeed * Time.deltaTime;
 
-        Vector2 currentPosition = virtualMouse.position.ReadValue();
-        Vector2 newPosition = currentPosition + StickValue;
+        newPosition += StickValue;
 
         newPosition.x = Mathf.Clamp(newPosition.x, 0, Screen.width - padding);
         newPosition.y = Mathf.Clamp(newPosition.y, 0, Screen.height - padding);
+
 
         if (StickValue != Vector2.zero)
         {
@@ -125,8 +143,30 @@ public class SkillCameraControl : MonoBehaviour
 
     private void RightStickMovment()
     {
+
+
+        if (Gamepad.current == null) { CameraMovement(); return; }
+
         float StickValueX = Gamepad.current.rightStick.ReadValue().x;
         float StickValueY = Gamepad.current.rightStick.ReadValue().y;
+
+        StickValueX *= cursorSpeed * 2 * Time.deltaTime;
+        StickValueY *= cursorSpeed * 2 * Time.deltaTime;
+
+        cameraRB.linearVelocity = new Vector2(StickValueX, StickValueY);
+    }
+
+    private void Update()
+    {
+        CameraMovement();
+    }
+
+    void CameraMovement()
+    {
+        //Debug.Log(_newPosition);
+
+        float StickValueX = _newPosition.x;
+        float StickValueY = _newPosition.y;
 
         StickValueX *= cursorSpeed * 2 * Time.deltaTime;
         StickValueY *= cursorSpeed * 2 * Time.deltaTime;

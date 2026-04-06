@@ -8,14 +8,11 @@ public class ControllerCursorDetector : MonoBehaviour
     private SkillTreeMovement controls;
 
 
-    public InputActionReference myAction; // Drag your Action here from the Inspector
-
-    private void OnEnable() => myAction.action.Enable();
-    private void OnDisable() => myAction.action.Disable();
-
     private void Start()
     {
         _skillSystem = GetComponent<SkillSystem>();
+        controls = new SkillTreeMovement();
+        controls.Enable();
     }
 
     void Update()
@@ -34,6 +31,7 @@ public class ControllerCursorDetector : MonoBehaviour
             if (hitObject != currentHoverTarget)
             {
                 _skillSystem.OnMouseIsOver();
+                Debug.Log("Mouse over");
                 currentHoverTarget = hitObject;
                 // triggered when the button is fully pressed
                 controls.Player.Interect.performed += ctx => _skillSystem.PurchaseSkill();
@@ -43,6 +41,7 @@ public class ControllerCursorDetector : MonoBehaviour
         {
             // We moved into empty space
             _skillSystem.OnMouseIsExit();
+            Debug.Log("Mouse hidden");
             currentHoverTarget = null;
         }
     }
