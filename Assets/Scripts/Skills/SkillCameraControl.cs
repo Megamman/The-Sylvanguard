@@ -13,8 +13,10 @@ public class SkillCameraControl : MonoBehaviour
     [SerializeField] private Canvas canvas;
     [SerializeField] private RectTransform canvasRectTransform;
     [SerializeField] private float cursorSpeed = 1000f;
+    [SerializeField] private float runSpeed = 20.0f;
     [SerializeField] private float padding = 20f;
     [SerializeField] private Rigidbody2D cameraRB;
+    [SerializeField] private Transform cameraTransform;
 
     private bool previousMouseState;
     private Mouse virtualMouse;
@@ -22,6 +24,7 @@ public class SkillCameraControl : MonoBehaviour
     private Camera mainCamera;
     private SkillTreeMovement controls;
     private Vector2 _newPosition;
+    private Vector3 dragOrigin;
 
     private void OnEnable()
     {
@@ -159,6 +162,7 @@ public class SkillCameraControl : MonoBehaviour
     private void Update()
     {
         CameraMovement();
+        DragCamera();
     }
 
     void CameraMovement()
@@ -172,6 +176,22 @@ public class SkillCameraControl : MonoBehaviour
         StickValueY *= cursorSpeed * 2 * Time.deltaTime;
 
         cameraRB.linearVelocity = new Vector2(StickValueX, StickValueY);
+    }
+
+    void DragCamera()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            dragOrigin = Input.mousePosition;
+            return;
+        }
+
+        if (!Input.GetMouseButton(0)) return;
+
+        Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
+        Vector3 move = new Vector3(pos.x * runSpeed, pos.y * runSpeed, 0);
+
+        cameraTransform.Translate(move, Space.World);
     }
 
     private void AnchorCurser(Vector2 position)

@@ -44,9 +44,9 @@ public class SkillSystem : MonoBehaviour
     public void PurchaseSkill()
     {
 
-        StatsDetails GetStat = Upgrade[currentLevel];
         if (Purchesable && OnHover && !MaxLevelReached) 
         {
+            StatsDetails GetStat = Upgrade[currentLevel];
             switch (GetStat.UpgradeEffect)
             {
                 //Intigers
