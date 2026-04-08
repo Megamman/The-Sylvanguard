@@ -6,21 +6,26 @@ public class SkillSystem : MonoBehaviour
     //[Header("Skill")]
     //public UpgradeLevel upgradeLevel;
     [Header("Skill")]
+    public string SkillName;
+    public String SkillDescription;
     public StatsDetails[] Upgrade;
+    public int maxLevel;
+
     [Header("Cost")]
     public int xpCost;
     public int coinCost;
 
-    public int maxLevel;
     private int currentLevel;
 
     private bool OnHover;
     private bool Purchesable;
 
+    //public SpriteRenderer IconBackground; // not needed as it is this object
+
 
     [HideInInspector] public bool MaxLevelReached = false;
 
-    void Start()
+    void Update()
     {
         UpdateCheck();
     }
@@ -35,10 +40,6 @@ public class SkillSystem : MonoBehaviour
 
         //check if skill is purchasable
         if( Stats.XP <= xpCost || Stats.Coins <= coinCost ) { Purchesable = true; } else { Purchesable = false; }
-    }
-
-    private void Update()
-    {
     }
 
     public void PurchaseSkill()
