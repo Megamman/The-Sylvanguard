@@ -90,14 +90,8 @@ public class SkillSystem : MonoBehaviour
                 case UpgradeStat.MagicAttack:
                     Stats.MagicAttack += GetStat.SkillIncrease;
                     break;
-                case UpgradeStat.MagicAttackCost:
-                    Stats.AttMpCost += GetStat.SkillIncrease;
-                    break;
                 case UpgradeStat.MagicShield:
                     Stats.MagicDef += GetStat.SkillIncrease;
-                    break;
-                case UpgradeStat.MagicShieldCost:
-                    Stats.DefMPCost += GetStat.SkillIncrease;
                     break;
                 case UpgradeStat.Potions:
                     Stats.MaxPotions += GetStat.SkillIncrease;
@@ -115,12 +109,11 @@ public class SkillSystem : MonoBehaviour
                     break;
                 case UpgradeStat.MagicAttackIsActive:
                     Stats.MagicAttackIsActive = true;
-                    break;
-                case UpgradeStat.UsingMagicAttack:
-                    Stats.UsingMagicAttack = true;
+                    Stats.AttMpCost = GetStat.SkillIncrease; // when activated it makes sure to update the cost too.
                     break;
                 case UpgradeStat.MagicShieldIsActive:
                     Stats.MagicShieldIsActive = true;
+                    Stats.DefMPCost = GetStat.SkillIncrease; // when activated it makes sure to update the cost too.
                     break;
                 case UpgradeStat.PoitionUseIsActive:
                     Stats.PoitionUseIsActive = true;
@@ -179,11 +172,9 @@ public class SkillSystem : MonoBehaviour
         HpRegenSteps,
         HpRegenStepsActive,
         MagicAttack,
-        MagicAttackCost,
         MagicAttackIsActive,
         MagicPoints,
         MagicShield,
-        MagicShieldCost,
         MagicShieldIsActive,
         MpRegenSteps,
         MpRegenStepsActive,
