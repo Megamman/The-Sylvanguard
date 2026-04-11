@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Skills\SkillSystem.cs" />
     <Compile Include="Assets\Scripts\Player\CombatScript.cs" />
     <Compile Include="Assets\Scripts\ScriptableObject\PlayerAnimationSO.cs" />
+    <Compile Include="Assets\Scripts\Skills\VSSkillScript.cs" />
     <Compile Include="Assets\Scripts\Skills\ControllerCursorDetector.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Actions\PlayerMovement.cs" />

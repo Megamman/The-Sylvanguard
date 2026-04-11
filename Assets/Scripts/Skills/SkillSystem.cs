@@ -15,7 +15,8 @@ public class SkillSystem : MonoBehaviour
     public int xpCost;
     public int coinCost;
 
-    private int currentLevel;
+    [HideInInspector] public int currentLevel;
+    [HideInInspector] public bool LevelIsBlocked = false;
 
     private bool OnHover;
     private bool Purchesable;
@@ -39,89 +40,97 @@ public class SkillSystem : MonoBehaviour
 
 
         //check if skill is purchasable
-        if( Stats.XP <= xpCost || Stats.Coins <= coinCost ) { Purchesable = true; } else { Purchesable = false; }
+        if( Stats.XP <= xpCost || Stats.Coins <= coinCost ) { Purchesable = true; } 
+        else { Purchesable = false; }
     }
 
     public void PurchaseSkill()
     {
 
-        if (Purchesable && OnHover && !MaxLevelReached) 
+        if (Purchesable && OnHover && !MaxLevelReached && !LevelIsBlocked) 
         {
-            StatsDetails GetStat = Upgrade[currentLevel];
-            switch (GetStat.UpgradeEffect)
+            for (int i = 0; i < Upgrade.Length; i++)
             {
-                //Intigers
-                case UpgradeStat.Health:
-                    Stats.HP += GetStat.SkillIncrease;
-                    break;
-                case UpgradeStat.Movement:
-                    Stats.MovePt += GetStat.SkillIncrease;
-                    break;
-                case UpgradeStat.Attack:
-                    Stats.Attack += GetStat.SkillIncrease;
-                    break;
-                case UpgradeStat.MagicPoints:
-                    Stats.MP += GetStat.SkillIncrease;
-                    break;
-                case UpgradeStat.Dodge:
-                    Stats.DodgeChance += GetStat.SkillIncrease;
-                    break;
-                case UpgradeStat.Defence:
-                    Stats.Def += GetStat.SkillIncrease;
-                    break;
-                case UpgradeStat.Crit:
-                    Stats.CritChance += GetStat.SkillIncrease;
-                    break;
-                case UpgradeStat.CritMax:
-                    Stats.CritMax += GetStat.SkillIncrease;
-                    break;
-                case UpgradeStat.SkipMovement:
-                    Stats.SkipMove += GetStat.SkillIncrease;
-                    break;
-                case UpgradeStat.HpRegen:
-                    Stats.HPRegen += GetStat.SkillIncrease;
-                    break;
-                case UpgradeStat.HpRegenSteps:
-                    Stats.StepsToHPRegen -= GetStat.SkillIncrease;
-                    break;
-                case UpgradeStat.MpRegenSteps:
-                    Stats.StepsToMPRegen -= GetStat.SkillIncrease;
-                    break;
-                case UpgradeStat.MagicAttack:
-                    Stats.MagicAttack += GetStat.SkillIncrease;
-                    break;
-                case UpgradeStat.MagicShield:
-                    Stats.MagicDef += GetStat.SkillIncrease;
-                    break;
-                case UpgradeStat.Potions:
-                    Stats.MaxPotions += GetStat.SkillIncrease;
-                    break;
-                case UpgradeStat.PotionHeal:
-                    Stats.PotionHeal += GetStat.SkillIncrease;
-                    break;
+                
+                StatsDetails GetStat = Upgrade[i];
+                switch (GetStat.UpgradeEffect)
+                {
+                    //Intigers
+                    case UpgradeStat.Health:
+                        Stats.HP += GetStat.SkillIncrease;
+                        break;
+                    case UpgradeStat.Movement:
+                        Stats.MovePt += GetStat.SkillIncrease;
+                        break;
+                    case UpgradeStat.Attack:
+                        Stats.Attack += GetStat.SkillIncrease;
+                        break;
+                    case UpgradeStat.MagicPoints:
+                        Stats.MP += GetStat.SkillIncrease;
+                        break;
+                    case UpgradeStat.Dodge:
+                        Stats.DodgeChance += GetStat.SkillIncrease;
+                        break;
+                    case UpgradeStat.Defence:
+                        Stats.Def += GetStat.SkillIncrease;
+                        break;
+                    case UpgradeStat.Crit:
+                        Stats.CritChance += GetStat.SkillIncrease;
+                        break;
+                    case UpgradeStat.CritMax:
+                        Stats.CritMax += GetStat.SkillIncrease;
+                        break;
+                    case UpgradeStat.SkipMovement:
+                        Stats.SkipMove += GetStat.SkillIncrease;
+                        break;
+                    case UpgradeStat.HpRegen:
+                        Stats.HPRegen += GetStat.SkillIncrease;
+                        break;
+                    case UpgradeStat.HpRegenSteps:
+                        Stats.StepsToHPRegen -= GetStat.SkillIncrease;
+                        break;
+                    case UpgradeStat.MpRegenSteps:
+                        Stats.StepsToMPRegen -= GetStat.SkillIncrease;
+                        break;
+                    case UpgradeStat.MagicAttack:
+                        Stats.MagicAttack += GetStat.SkillIncrease;
+                        break;
+                    case UpgradeStat.MagicShield:
+                        Stats.MagicDef += GetStat.SkillIncrease;
+                        break;
+                    case UpgradeStat.Potions:
+                        Stats.MaxPotions += GetStat.SkillIncrease;
+                        break;
+                    case UpgradeStat.PotionHeal:
+                        Stats.PotionHeal += GetStat.SkillIncrease;
+                        break;
 
-                //Booleans
-                case UpgradeStat.HpRegenStepsActive:
-                    Stats.HPRegenIsOn = true;
-                    break;
-                case UpgradeStat.MpRegenStepsActive:
-                    Stats.MPRegenIsOn = true;
-                    break;
-                case UpgradeStat.MagicAttackIsActive:
-                    Stats.MagicAttackIsActive = true;
-                    Stats.AttMpCost = GetStat.SkillIncrease; // when activated it makes sure to update the cost too.
-                    break;
-                case UpgradeStat.MagicShieldIsActive:
-                    Stats.MagicShieldIsActive = true;
-                    Stats.DefMPCost = GetStat.SkillIncrease; // when activated it makes sure to update the cost too.
-                    break;
-                case UpgradeStat.PoitionUseIsActive:
-                    Stats.PoitionUseIsActive = true;
-                    break;
+                    //Booleans
+                    case UpgradeStat.HpRegenStepsActive:
+                        Stats.HPRegenIsOn = true;
+                        break;
+                    case UpgradeStat.MpRegenStepsActive:
+                        Stats.MPRegenIsOn = true;
+                        break;
+                    case UpgradeStat.MagicAttackIsActive:
+                        Stats.MagicAttackIsActive = true;
+                        Stats.AttMpCost = GetStat.SkillIncrease; // when activated it makes sure to update the cost too.
+                        break;
+                    case UpgradeStat.MagicShieldIsActive:
+                        Stats.MagicShieldIsActive = true;
+                        Stats.DefMPCost = GetStat.SkillIncrease; // when activated it makes sure to update the cost too.
+                        break;
+                    case UpgradeStat.PoitionUseIsActive:
+                        Stats.PoitionUseIsActive = true;
+                        break;
+                    case UpgradeStat.QuickPoitionUse:
+                        //Stats.QuickPotion = true;
+                        break;
 
-                default:
-                    Debug.Log("No Stat Set");
-                    return;
+                    default:
+                        Debug.Log("No Stat Set");
+                        return;
+                }
             }
 
             Stats.XP -= xpCost;
@@ -183,7 +192,8 @@ public class SkillSystem : MonoBehaviour
         PotionHeal,
         PoitionUseIsActive,
         SkipMovement,
-        UsingMagicAttack
+        UsingMagicAttack,
+        QuickPoitionUse,
     }
     #endregion
 }
