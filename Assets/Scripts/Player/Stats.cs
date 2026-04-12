@@ -40,7 +40,8 @@ public static class Stats
     public static bool MagicAttackIsActive; //If the active skill Magic Attack is accuared and usable
     public static bool UsingMagicAttack;
     public static bool MagicShieldIsActive; //If the active skill Magic Shield is accuared and usable
-    public static bool PoitionUseIsActive; //If the potions are accuared and usable
+    public static bool PotionUseIsActive; //If the potions are accuared and usable
+    public static bool QuickPotion;
 
 
     //A qiuck access to randomness

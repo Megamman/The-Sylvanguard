@@ -38,7 +38,6 @@ public class SkillSystem : MonoBehaviour
 
         if(currentLevel == maxLevel) { MaxLevelReached = true; }
 
-
         //check if skill is purchasable
         if( Stats.XP <= xpCost || Stats.Coins <= coinCost ) { Purchesable = true; } 
         else { Purchesable = false; }
@@ -121,10 +120,10 @@ public class SkillSystem : MonoBehaviour
                         Stats.DefMPCost = GetStat.SkillIncrease; // when activated it makes sure to update the cost too.
                         break;
                     case UpgradeStat.PoitionUseIsActive:
-                        Stats.PoitionUseIsActive = true;
+                        Stats.PotionUseIsActive = true;
                         break;
                     case UpgradeStat.QuickPoitionUse:
-                        //Stats.QuickPotion = true;
+                        Stats.QuickPotion = true;
                         break;
 
                     default:
@@ -136,7 +135,7 @@ public class SkillSystem : MonoBehaviour
             Stats.XP -= xpCost;
             Stats.Coins -= coinCost;
             currentLevel++;
-            UpdateCheck();
+            SavenLoadScript.SaveData(); //Save File code
         }
     }
 
@@ -155,13 +154,6 @@ public class SkillSystem : MonoBehaviour
     #endregion
 
     #region Skill Setting
-    //[Serializable]
-    //public class UpgradeLevel
-    //{
-    //    [Header("Effect")]
-    //    public StatsDetails[] Stat;
-    //}
-
     [Serializable]
     public class StatsDetails
     {

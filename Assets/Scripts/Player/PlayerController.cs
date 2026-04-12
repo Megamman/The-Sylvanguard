@@ -20,22 +20,29 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool MovementCost;
     [SerializeField] private LayerMask IgnoreLayer;
 
+    float HpQuorter;
+    int MaxHP;
+    int MagicSteps;
+    int HealthSteps;
+
     private void Awake()
     {
         PlayerSprite = GetComponent<SpriteRenderer>();
         combat = GetComponent<CombatScript>();
         controls = new PlayerMovement();
         controls.Enable();
+
+        MaxHP = Stats.HP;
+        HpQuorter = Stats.HP / 4f;
+        HealthSteps = Stats.StepsToHPRegen;
+        MagicSteps = Stats.StepsToMPRegen;
     }
 
     private void OnEnable()
-    {
-        controls.Enable();
-    }
+    { controls.Enable(); }
+
     private void OnDisable()
-    {
-        controls.Disable();
-    }
+    { controls.Disable(); }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -58,24 +65,32 @@ public class PlayerController : MonoBehaviour
         // RaycastHit check if enemy is there -- need to ignore player
         RaycastHit2D hit = Physics2D.Raycast(transform.position, (Vector3)direction, 1f, ~IgnoreLayer);
 
-        if (hit.collider != null)
-        {
-            CheckHit(hit);
-        }
-        else
-        {
-            ActionMove();
-        }
+        if (hit.collider != null) { CheckHit(hit); } else { ActionMove(); }
 
-        if (MovementCost) { } //Loose move point
+        if (MovementCost) { Stats.MovePt--; } //Loose move point
     }
 
     private void ActionMove()
     {
         transform.position = MoveTo;
 
+        if (Stats.QuickPotion) { if (Stats.HP < HpQuorter) { UsePotion(); } } //use potion
+        if (Stats.HPRegenIsOn) { if (HealthSteps == 0) { Stats.HP += Stats.HPRegen; HealthSteps = Stats.StepsToHPRegen; }
+            else { HealthSteps--; } }
+        if (Stats.MPRegenIsOn) { if (MagicSteps == 0) { Stats.HP += 1; MagicSteps = Stats.StepsToMPRegen; }
+            else { MagicSteps--; } }
         if (MovementCost) { if (Stats.MovePt != 0) { transform.position = MoveTo; } } //Loose move point
-        else { transform.position = MoveTo; } //Free Move
+            else { transform.position = MoveTo; } //Free Move
+    }
+
+    public void UsePotion()
+    {
+        int totalGeneratrd = Stats.HP + Stats.PotionHeal;
+
+        if(totalGeneratrd > MaxHP) { Stats.HP = MaxHP; }
+        else { Stats.HP += Stats.PotionHeal; }
+
+        Stats.MaxPotions--;
     }
 
     void LookAt()
@@ -112,6 +127,7 @@ public class PlayerController : MonoBehaviour
 
             case "Dungean":
                 Debug.Log("Dungean Found");
+
                 break;
 
             default:
