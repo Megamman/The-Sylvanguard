@@ -179,15 +179,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2dcd345f56266244a1e514c80db0e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
-  Decription: 
-  HP: 0
-  Attack: 0
+  Name: Dwarven Cog
+  Decription: A heavy, misplaced relic wedged firmly into the path.
+  HP: 15
+  Attack: 3
   UsingMagicAttack: 0
-  CoinsMin: 0
-  CoinsMax: 0
-  XPMin: 0
-  XPMax: 0
+  CoinsMin: 3
+  CoinsMax: 5
+  XPMin: 10
+  XPMax: 15
   DodgeChance: 0
   CritChance: 0
   CritMaxDamage: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
   WeakToPhysical: 0
   WeakToMagic: 0
   ResistToPhysical: 0
-  ResistToMagic: 0
+  ResistToMagic: 1
   HPSlider: {fileID: 4849873599586789276}
 --- !u!95 &6366577249436430251
 Animator:

@@ -281,23 +281,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2dcd345f56266244a1e514c80db0e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
-  Decription: 
-  HP: 0
-  Attack: 0
-  UsingMagicAttack: 0
-  CoinsMin: 0
-  CoinsMax: 0
-  XPMin: 0
-  XPMax: 0
-  DodgeChance: 0
-  CritChance: 0
-  CritMaxDamage: 0
+  Name: Lurking Shadow
+  Decription: A flicker of darkness that strikes from nowhere.
+  HP: 8
+  Attack: 4
+  UsingMagicAttack: 1
+  CoinsMin: 5
+  CoinsMax: 10
+  XPMin: 20
+  XPMax: 25
+  DodgeChance: 10
+  CritChance: 25
+  CritMaxDamage: 2
   SneakAttack: 1
   isAnimated: 1
-  WeakToPhysical: 0
-  WeakToMagic: 0
-  ResistToPhysical: 0
+  WeakToPhysical: 1
+  WeakToMagic: 1
+  ResistToPhysical: 1
   ResistToMagic: 0
   HPSlider: {fileID: 1393558125027067139}
 --- !u!95 &4447005910293349669

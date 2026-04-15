@@ -445,22 +445,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2dcd345f56266244a1e514c80db0e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
-  Decription: 
-  HP: 0
-  Attack: 0
+  Name: Rust Slime
+  Decription: Smells like old pennies and wet dirt.
+  HP: 6
+  Attack: 2
   UsingMagicAttack: 0
   CoinsMin: 0
-  CoinsMax: 0
-  XPMin: 0
-  XPMax: 0
-  DodgeChance: 0
+  CoinsMax: 1
+  XPMin: 7
+  XPMax: 10
+  DodgeChance: 10
   CritChance: 0
   CritMaxDamage: 0
   SneakAttack: 0
   isAnimated: 0
   WeakToPhysical: 0
-  WeakToMagic: 0
+  WeakToMagic: 1
   ResistToPhysical: 0
   ResistToMagic: 0
   HPSlider: {fileID: 2221927907752238312}

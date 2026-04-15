@@ -445,22 +445,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2dcd345f56266244a1e514c80db0e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
-  Decription: 
-  HP: 0
-  Attack: 0
+  Name: Iron Larva
+  Decription: A heavy, metallic grub with a mean bite.
+  HP: 12
+  Attack: 1
   UsingMagicAttack: 0
-  CoinsMin: 0
-  CoinsMax: 0
-  XPMin: 0
-  XPMax: 0
+  CoinsMin: 1
+  CoinsMax: 3
+  XPMin: 10
+  XPMax: 12
   DodgeChance: 0
-  CritChance: 0
-  CritMaxDamage: 0
+  CritChance: 10
+  CritMaxDamage: 1
   SneakAttack: 0
   isAnimated: 0
   WeakToPhysical: 0
-  WeakToMagic: 0
+  WeakToMagic: 1
   ResistToPhysical: 0
   ResistToMagic: 0
   HPSlider: {fileID: 4563798371934300489}

@@ -331,15 +331,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2dcd345f56266244a1e514c80db0e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
-  Decription: 
-  HP: 0
-  Attack: 0
+  Name: Geode Crab
+  Decription: Potential with claws and a very short temper.
+  HP: 7
+  Attack: 1
   UsingMagicAttack: 0
-  CoinsMin: 0
-  CoinsMax: 0
-  XPMin: 0
-  XPMax: 0
+  CoinsMin: 3
+  CoinsMax: 6
+  XPMin: 4
+  XPMax: 8
   DodgeChance: 0
   CritChance: 0
   CritMaxDamage: 0

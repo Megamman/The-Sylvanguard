@@ -481,15 +481,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2dcd345f56266244a1e514c80db0e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
-  Decription: 
-  HP: 0
-  Attack: 0
+  Name: Silver Vein
+  Decription: A rare streak of precious metal in the wall.
+  HP: 20
+  Attack: 1
   UsingMagicAttack: 0
-  CoinsMin: 0
-  CoinsMax: 0
-  XPMin: 0
-  XPMax: 0
+  CoinsMin: 5
+  CoinsMax: 25
+  XPMin: 1
+  XPMax: 5
   DodgeChance: 0
   CritChance: 0
   CritMaxDamage: 0
