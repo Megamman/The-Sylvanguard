@@ -147,16 +147,16 @@ ScriptedImporter:
   spriteSheetImportData:
   - name: Stats Icons_0
     originalName: 
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 0
-      y: 0
-      width: 16
-      height: 16
+      x: 1
+      y: 2
+      width: 14
+      height: 13
     spriteID: dea1fe3e10f8f874bb4519b9ec6e65fd
     spriteBone: []
     spriteOutline: []
@@ -168,16 +168,16 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: Stats Icons_1
     originalName: 
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 16
-      y: 0
-      width: 16
-      height: 16
+      x: 17
+      y: 2
+      width: 14
+      height: 14
     spriteID: 9be8aeee65c613f40885bd2daf9e30c0
     spriteBone: []
     spriteOutline: []
@@ -189,16 +189,16 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: Stats Icons_2
     originalName: 
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 32
-      y: 0
-      width: 16
-      height: 16
+      x: 34
+      y: 2
+      width: 11
+      height: 14
     spriteID: 0c15f411e654c304b8c9ba914043c6c6
     spriteBone: []
     spriteOutline: []
@@ -210,16 +210,16 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: Stats Icons_3
     originalName: 
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 48
-      y: 0
-      width: 16
-      height: 16
+      x: 51
+      y: 2
+      width: 12
+      height: 12
     spriteID: 4799e787964a5ed4fa6595d0e6ad47a5
     spriteBone: []
     spriteOutline: []
@@ -231,16 +231,16 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: Stats Icons_4
     originalName: 
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 64
-      y: 0
-      width: 16
-      height: 16
+      x: 65
+      y: 2
+      width: 14
+      height: 14
     spriteID: 45311ade346bab142b8eb12ed274131f
     spriteBone: []
     spriteOutline: []
@@ -252,16 +252,16 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: Stats Icons_5
     originalName: 
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 80
-      y: 0
-      width: 16
-      height: 16
+      x: 81
+      y: 2
+      width: 14
+      height: 14
     spriteID: 7af9b7e451234d14a967e36642f77745
     spriteBone: []
     spriteOutline: []
@@ -273,16 +273,16 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: Stats Icons_6
     originalName: 
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 96
-      y: 0
-      width: 16
-      height: 16
+      x: 97
+      y: 2
+      width: 14
+      height: 13
     spriteID: 6a8bc78a78f46c648adab4f8a8b37d22
     spriteBone: []
     spriteOutline: []
@@ -294,16 +294,16 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: Stats Icons_7
     originalName: 
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 112
-      y: 0
-      width: 16
-      height: 16
+      x: 113
+      y: 2
+      width: 14
+      height: 14
     spriteID: 2eb907f66452346489fd1bb4ec4ef539
     spriteBone: []
     spriteOutline: []
@@ -315,16 +315,16 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: Stats Icons_8
     originalName: 
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 128
-      y: 0
-      width: 16
-      height: 16
+      x: 129
+      y: 2
+      width: 14
+      height: 14
     spriteID: e80a64e6aa7ddbe4eb4de640e0c0ecdf
     spriteBone: []
     spriteOutline: []
@@ -336,16 +336,16 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: Stats Icons_9
     originalName: 
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 144
-      y: 0
-      width: 16
-      height: 16
+      x: 145
+      y: 2
+      width: 14
+      height: 14
     spriteID: b161dc1b7a810314facdc72ddec0769f
     spriteBone: []
     spriteOutline: []
@@ -357,16 +357,16 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: Stats Icons_10
     originalName: 
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 160
-      y: 0
-      width: 16
-      height: 16
+      x: 161
+      y: 3
+      width: 14
+      height: 13
     spriteID: b0ee5870ae9c2db4fa7a94122049fc51
     spriteBone: []
     spriteOutline: []
@@ -384,10 +384,10 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 176
-      y: 0
-      width: 16
-      height: 16
+      x: 177
+      y: 1
+      width: 15
+      height: 15
     spriteID: 6f3f8df0d6e1433449e6dc6e4152baae
     spriteBone: []
     spriteOutline: []

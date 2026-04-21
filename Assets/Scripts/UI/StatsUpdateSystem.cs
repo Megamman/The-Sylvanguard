@@ -5,6 +5,7 @@ using static SkillSystem;
 public class StatsUpdateSystem : MonoBehaviour
 {
     [SerializeField] private TMP_Text statText;
+    [SerializeField] private GameObject statParent;
     [SerializeField] private StatType statType;
     float _statFloat;
 
@@ -57,8 +58,8 @@ public class StatsUpdateSystem : MonoBehaviour
                 return;
         }
 
-        //if( _statFloat == 0 ) { statText.transform.gameObject.SetActive(false); }
-        //else { statText.transform.gameObject.SetActive(true); }
+        if( _statFloat == 0 && !(statType == StatType.Attack || statType == StatType.Coin || statType == StatType.XP) ) 
+        { statParent.SetActive(false); } else { statParent.SetActive(true); }
 
     }
 

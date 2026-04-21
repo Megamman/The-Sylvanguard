@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
         if (hit.collider != null) { CheckHit(hit); } else { ActionMove(); }
 
-        if (MovementCost) { Stats.MovePt--; } //Loose move point
+        
     }
 
     private void ActionMove()
@@ -81,6 +81,8 @@ public class PlayerController : MonoBehaviour
             else { MagicSteps--; } }
         if (MovementCost) { if (Stats.MovePt != 0) { transform.position = MoveTo; } } //Loose move point
             else { transform.position = MoveTo; } //Free Move
+
+        if (MovementCost) { Stats.MovePt--; } //Loose move point
     }
 
     public void UsePotion()
