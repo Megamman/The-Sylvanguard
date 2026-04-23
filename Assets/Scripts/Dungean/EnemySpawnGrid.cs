@@ -38,19 +38,19 @@ public class EnemySpawnGrid : MonoBehaviour
 
             Vector3 spawnPos = new Vector3(_PosX, _PosY, 0);
 
-            Debug.Log("Selected Pos: " + spawnPos);
+            //Debug.Log("Selected Pos: " + spawnPos);
             if (Physics2D.OverlapPoint(spawnPos, BlockSpawn) == null && spawnPos != new Vector3(0, 0, 0))
             {
                 int e = Random.Range(0, Entities.Length);
                 GameObject enemy = Instantiate(Entities[e], spawnPos, Quaternion.identity);
                 enemy.transform.SetParent(gameObject.transform);
 
-                Debug.Log("Point is Available. Postion: " + spawnPos);
+                //Debug.Log("Point is Available. Postion: " + spawnPos);
                 spawned++;
             }
             else
             {
-                Debug.Log("Point is NOT Available. Postion: " + spawnPos);
+                //Debug.Log("Point is NOT Available. Postion: " + spawnPos);
                 safety++;
             }
         }

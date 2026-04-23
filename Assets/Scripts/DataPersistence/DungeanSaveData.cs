@@ -9,11 +9,13 @@ public class DungeanSaveData : MonoBehaviour
 
     public static void SaveData()
     {
+        Debug.Log("Saving Data");
         StatsDataPersistenceManager.instance.SaveStatsData();
     }
 
     public static void LoadData()
     {
+        Debug.Log("Loading Data");
         StatsDataPersistenceManager.instance.LoadStatsData();
     }
 

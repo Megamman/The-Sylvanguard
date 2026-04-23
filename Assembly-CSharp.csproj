@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\Actions\SkillTreeMovement.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\DungeanSaveData.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\SavenLoadScript.cs" />
+    <Compile Include="Assets\Scripts\UI\ActiveSkillsControl.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\MainStaticData.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\Stats Data\IStatsDataPersistence.cs" />
   </ItemGroup>

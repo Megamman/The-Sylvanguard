@@ -85,7 +85,10 @@ public class PlayerController : MonoBehaviour
         if (MovementCost) { Stats.MovePt--; } //Loose move point
     }
 
-    public void UsePotion()
+    public static void CallUsePotion()
+    { CallUsePotion(); }
+
+    void UsePotion()
     {
         int totalGeneratrd = Stats.HP + Stats.PotionHeal;
 

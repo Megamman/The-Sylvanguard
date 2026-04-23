@@ -28,6 +28,7 @@ public static class Stats
 
     //Maigc Stats
     public static int MagicAttack; //What additional damage deals with magic
+    public static int CurMagicDef;
     public static int MagicDef; //Defence amount when reciveing magic attack
     public static int DefMPCost; //How much MP is needed and used to activate skill Magic Defence
     public static int AttMpCost; //How much MP is needed and used to activate skill Magic Attack
