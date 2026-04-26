@@ -5,7 +5,7 @@ using System.IO;
 
 public class StatsDataPersistenceManager : MonoBehaviour
 {
-    private string GameFileName = "SavedData";
+    [SerializeField] private string GameFileName = "SavedData";
 
     private StatsData fileData;
 
@@ -29,7 +29,7 @@ public class StatsDataPersistenceManager : MonoBehaviour
     {
         string fileName = GameFileName; //DataHolder.GetFileName();
 
-        DataHandler = new StatsDataHandler(Application.persistentDataPath, fileName);
+        //DataHandler = new StatsDataHandler(Application.persistentDataPath, fileName);
 
         statsDataPersistence = FindAllStatsData();
 
@@ -45,11 +45,17 @@ public class StatsDataPersistenceManager : MonoBehaviour
 
     public void LoadStatsData()
     {
+        DataHandler = new StatsDataHandler(Application.persistentDataPath, GameFileName);
+
+        Debug.Log("Loading Game from: " + Application.persistentDataPath + "/" + GameFileName);
+
         fileData = DataHandler.Load();
 
         if(fileData == null) { NewStatsData(); }
 
-        foreach(IStatsDataPersistence dataObj in statsDataPersistence)
+        statsDataPersistence = FindAllStatsData();
+
+        foreach (IStatsDataPersistence dataObj in statsDataPersistence)
         { dataObj.LoadStatsData(fileData); }
 
         dataLoadedSuccessfully = true;
@@ -59,11 +65,19 @@ public class StatsDataPersistenceManager : MonoBehaviour
     {
         if (!dataLoadedSuccessfully) { return; }
 
+        Debug.Log("Saving Game from: " + Application.persistentDataPath + "/" + GameFileName);
+
         statsDataPersistence = FindAllStatsData();
 
         if (statsDataPersistence == null || fileData == null) { NewStatsData(); }
 
-        foreach(IStatsDataPersistence dataObj in statsDataPersistence)
+        if (fileData == null)
+        {
+            Debug.Log("dungeanData was null. Creating New Dungean Data now.");
+            NewStatsData();
+        }
+
+        foreach (IStatsDataPersistence dataObj in statsDataPersistence)
         { dataObj.SaveStatsData(ref fileData); }
 
         DataHandler.Save(fileData);

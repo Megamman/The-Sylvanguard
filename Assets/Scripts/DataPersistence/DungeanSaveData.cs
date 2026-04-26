@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DungeanSaveData : MonoBehaviour
+public class DungeanSaveData : MonoBehaviour, IStatsDataPersistence
 {
     void Start()
     {
@@ -15,7 +15,7 @@ public class DungeanSaveData : MonoBehaviour
 
     public static void LoadData()
     {
-        Debug.Log("Loading Data");
+        //Debug.Log("Loading Data");
         StatsDataPersistenceManager.instance.LoadStatsData();
     }
 
@@ -28,6 +28,8 @@ public class DungeanSaveData : MonoBehaviour
     {
         if (data != null)
         {
+            Debug.Log("Loading Data");
+
             Stats.HP = data.HP;
             Stats.MovePt = data.MovePt;
             Stats.Attack = data.Attack;
@@ -72,6 +74,4 @@ public class DungeanSaveData : MonoBehaviour
             data.XP = Stats.XP;
         }
     }
-
-
 }

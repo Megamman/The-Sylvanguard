@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Skills\SkillCameraControl.cs" />
     <Compile Include="Assets\Scripts\Player\Stats.cs" />
+    <Compile Include="Assets\Scripts\UI\Go2Town.cs" />
     <Compile Include="Assets\Scripts\Skills\SkillSystem.cs" />
     <Compile Include="Assets\Scripts\Dungean\SpawnPosition.cs" />
     <Compile Include="Assets\Scripts\Dungean\DungeanLoad.cs" />

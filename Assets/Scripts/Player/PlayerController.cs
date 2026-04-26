@@ -85,10 +85,8 @@ public class PlayerController : MonoBehaviour
         if (MovementCost) { Stats.MovePt--; } //Loose move point
     }
 
-    public static void CallUsePotion()
-    { CallUsePotion(); }
 
-    void UsePotion()
+    public void UsePotion()
     {
         int totalGeneratrd = Stats.HP + Stats.PotionHeal;
 
@@ -117,13 +115,13 @@ public class PlayerController : MonoBehaviour
         switch (tag)
         {
             case "Enemy":
-                Debug.Log("Enemy Found");
+                //Debug.Log("Enemy Found");
                 //Combat
                 combat.Fight(hit.transform.GetComponent<EnemyStats>());
                 break;
 
             case "Wall":
-                Debug.Log("Wall Found");
+                //Debug.Log("Wall Found");
                 break;
 
             case "NPC":
