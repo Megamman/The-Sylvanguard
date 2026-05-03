@@ -21,11 +21,26 @@ public class SavenLoadScript : MonoBehaviour, IStatsDataPersistence
     private bool[] AlchemistActives;
     private int[] AlchemistLvls;
 
+    public GameObject InfoBox, Actives;
+
+
+    private void Awake()
+    {
+        MainStaticData.InfoBox = InfoBox;
+
+        Actives.SetActive(true);
+        InfoBox.SetActive(false);
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         LoadData();
+    }
+
+    private void Update()
+    {
+        Actives.SetActive(!MainStaticData.showInfo);
     }
 
     public static void SaveData()
@@ -86,6 +101,9 @@ public class SavenLoadScript : MonoBehaviour, IStatsDataPersistence
             if (FocuseSkillTree) {
                 for (int i = 0; i < SkillTreeIcons.Length; i++)
                 {
+                    SkillTreeActives = new bool[SkillTreeIcons.Length];
+                    SkillTreeLvls = new int[SkillTreeIcons.Length];
+
                     SkillTreeActives[i] = data.ActivesSkillTree[i];
                     SkillTreeLvls[i] = data.LvlsSkillTree[i];
 
@@ -96,6 +114,9 @@ public class SavenLoadScript : MonoBehaviour, IStatsDataPersistence
             if (FocuseBlacksmith) {
                 for (int i = 0; i < BlacksmithIcons.Length; i++)
                 {
+                    BlacksmithActives = new bool[BlacksmithIcons.Length];
+                    BlacksmithLvls = new int[BlacksmithIcons.Length];
+
                     BlacksmithActives[i] = data.ActivesBlacksmith[i];
                     BlacksmithLvls[i] = data.LvlsBlacksmith[i];
 
@@ -106,10 +127,16 @@ public class SavenLoadScript : MonoBehaviour, IStatsDataPersistence
             if (FocuseAlchamist) {
                 for (int i = 0; i < AlchemistIcons.Length; i++)
                 {
+                    //Debug.Log("Length: " + AlchemistIcons.Length + ", at " + i);
+
+                    AlchemistActives = new bool[AlchemistIcons.Length];
+                    AlchemistLvls = new int[AlchemistIcons.Length];
+
                     AlchemistActives[i] = data.ActivesAlchemist[i];
                     AlchemistLvls[i] = data.LvlsAlchemist[i];
 
                     AlchemistIcons[i].GetComponent<SkillSystem>().currentLevel = AlchemistLvls[i];
+
                 }
             }
         }

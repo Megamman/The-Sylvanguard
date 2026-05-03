@@ -16,12 +16,12 @@
                 },
                 {
                     "name": "Interect",
-                    "type": "PassThrough",
+                    "type": "Button",
                     "id": "1471b767-9f1d-438e-9485-64253d8d006a",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "Hold",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -194,7 +194,7 @@
                     "name": "",
                     "id": "c806d65c-2280-48ed-9dff-71b84b669293",
                     "path": "<Mouse>/leftButton",
-                    "interactions": "",
+                    "interactions": "Hold",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Interect",

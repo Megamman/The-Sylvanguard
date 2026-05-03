@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\Stats Data\StatsData.cs" />
     <Compile Include="Assets\Scripts\UI\StatsSlider.cs" />
+    <Compile Include="Assets\Scripts\UI\InfoBoxDetails.cs" />
     <Compile Include="Assets\Scripts\Actions\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStats.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\Stats Data\StatsDataHandler.cs" />

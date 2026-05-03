@@ -5,4 +5,8 @@ public static class MainStaticData
     public static StatsData statsData;
 
     public static int SpawnPosition;
+
+    public static GameObject InfoBox;
+
+    public static bool showInfo;
 }

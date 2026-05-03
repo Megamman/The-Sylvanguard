@@ -30,17 +30,17 @@ public class ControllerCursorDetector : MonoBehaviour
             // Only trigger if we moved to a NEW object
             if (hitObject != currentHoverTarget)
             {
-                _skillSystem.OnMouseIsOver();
+                //_skillSystem.OnMouseIsOver();
                 Debug.Log("Mouse over");
                 currentHoverTarget = hitObject;
                 // triggered when the button is fully pressed
-                controls.Player.Interect.performed += ctx => _skillSystem.PurchaseSkill();
+                //controls.Player.Interect.performed += ctx => _skillSystem.PurchaseSkill();
             }
         }
         else if (currentHoverTarget != null)
         {
             // We moved into empty space
-            _skillSystem.OnMouseIsExit();
+            //_skillSystem.OnMouseIsExit();
             Debug.Log("Mouse hidden");
             currentHoverTarget = null;
         }
