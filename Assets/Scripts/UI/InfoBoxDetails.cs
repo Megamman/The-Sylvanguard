@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 
 public class InfoBoxDetails : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class InfoBoxDetails : MonoBehaviour
     public TMP_Text Level;
 
     public Slider BuySlider;
+
+    private SkillSystem skill;
 
     private void OnEnable()
     {
@@ -33,15 +36,15 @@ public class InfoBoxDetails : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        BuySlider.value = skill.timer;
+        Title.text = skill.SkillName;
+        Description.text = skill.SkillDescription;
+        Level.text = skill.currentLevel.ToString() + "/" + skill.maxLevel.ToString();
     }
 
 
     public void ShowDetails(SkillSystem info)
     {
-        Title.text = info.SkillName;
-        Description.text = info.SkillDescription;
-        Level.text = info.currentLevel.ToString() + "/" + info.maxLevel.ToString();
-        BuySlider.value = info.timer;
+        skill = info;
     }
 }

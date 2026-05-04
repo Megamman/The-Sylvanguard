@@ -178,6 +178,10 @@ public class SkillCameraControl : MonoBehaviour
         cameraRB.linearVelocity = new Vector2(StickValueX, StickValueY);
     }
 
+    public float mouseSpeedX;
+    public float mouseSpeedY;
+    public float sensitivity = 1.0f;
+
     void DragCamera()
     {
         if (Input.GetMouseButtonDown(0))
@@ -188,8 +192,13 @@ public class SkillCameraControl : MonoBehaviour
 
         if (!Input.GetMouseButton(0)) return;
 
-        Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
-        Vector3 move = new Vector3(pos.x * runSpeed, pos.y * runSpeed, 0);
+        mouseSpeedX = Input.GetAxis("Mouse X") * sensitivity;
+        mouseSpeedY = Input.GetAxis("Mouse Y") * sensitivity;
+
+        Vector3 move = new Vector3(-mouseSpeedX, -mouseSpeedY, 0);
+
+        //Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
+        //Vector3 move = new Vector3(-pos.x * runSpeed, -pos.y * runSpeed, 0);
 
         cameraTransform.Translate(move, Space.World);
     }

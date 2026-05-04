@@ -47,7 +47,7 @@ public class StatsDataPersistenceManager : MonoBehaviour
     {
         DataHandler = new StatsDataHandler(Application.persistentDataPath, GameFileName);
 
-        Debug.Log("Loading Game from: " + Application.persistentDataPath + "/" + GameFileName);
+        //Debug.Log("Loading Game from: " + Application.persistentDataPath + "/" + GameFileName);
 
         fileData = DataHandler.Load();
 
@@ -73,7 +73,7 @@ public class StatsDataPersistenceManager : MonoBehaviour
 
         if (fileData == null)
         {
-            Debug.Log("dungeanData was null. Creating New Dungean Data now.");
+            //Debug.Log("dungeanData was null. Creating New Dungean Data now.");
             NewStatsData();
         }
 

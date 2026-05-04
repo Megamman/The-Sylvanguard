@@ -34,7 +34,11 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     private SkillTreeMovement controls;
 
+    SpriteRenderer sr;
+
     [HideInInspector] public bool MaxLevelReached = false;
+    bool isPurchasing;
+    Color _orange = new Color(1.0f, 0.64f, 0.0f);
 
     private void Start()
     {
@@ -46,22 +50,28 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
         controls = new SkillTreeMovement();
         controls.Enable();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        //if (InfoBox == null)
-        //{
-        //    InfoBox = MainStaticData.InfoBox.transform.gameObject;
-        //    infoScript = InfoBox.GetComponent<InfoBoxDetails>();
-        //}
 
         UpdateCheck();
         InfoBoxDetails.timer = timer;
-        InfoBox.SetActive(OnHover);
+
+        //sr.enabled = OnHover;
+        if (Purchesable) { sr.color = Color.yellow; }
+        if (!Purchesable) { sr.color = Color.red; }
+        if (MaxLevelReached) { sr.color = _orange; }
 
         if (OnHover) { 
-            controls.Player.Interect.started += ctx => PurchaseSkill();
+            controls.Player.Interect.started += ctx => isPurchasing = true;
+        }
+
+        controls.Player.Interect.canceled += ctx => isPurchasing = false;            
+
+        if (isPurchasing) {
+            PurchaseSkill();
         }
     }
 
@@ -80,19 +90,22 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void PurchaseSkill()
     {
 
-        Debug.Log("Purches: " + Purchesable + ", Hover: " + OnHover + 
-            ", Max Level: " + MaxLevelReached + ", Blocked: " + LevelIsBlocked);
+        //Debug.Log("Purches: " + Purchesable + ", Hover: " + OnHover + 
+            //", Max Level: " + MaxLevelReached + ", Blocked: " + LevelIsBlocked);
+
         if (Purchesable && OnHover && !MaxLevelReached && !LevelIsBlocked)
         {
             Debug.Log("Purcahsing: " + timer);
 
             if (timer < setTime) { timer += Time.deltaTime; }
-            if (timer == setTime) { GetSkill(); }
+            if (timer >= setTime) { GetSkill(); }
         }           
     }
 
     void GetSkill()
     {
+        
+
         for (int i = 0; i < Upgrade.Length; i++)
         {
                 
@@ -176,6 +189,8 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                     return;
             }
 
+            Debug.Log("Skill Recieved " + GetStat.UpgradeEffect.ToString());
+
             Stats.XP -= xpCost;
             Stats.Coins -= coinCost;
             currentLevel++;
@@ -188,6 +203,7 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void OnPointerEnter(PointerEventData eventData)
     {
         OnHover = true;
+        InfoBox.SetActive(OnHover);
         infoScript.ShowDetails(this);
         //Debug.Log("Mouse is Hovering Over");
 
@@ -197,6 +213,8 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void OnPointerExit(PointerEventData eventData)
     {
         OnHover = false;
+        InfoBox.SetActive(OnHover);
+        infoScript.ShowDetails(null);
         timer = 0;
         //infoScript.ShowDetails(null);
         //Debug.Log("Mouse is Exit");
