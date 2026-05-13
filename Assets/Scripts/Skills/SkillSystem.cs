@@ -13,6 +13,7 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public String SkillDescription;
     public StatsDetails[] Upgrade;
     public int maxLevel;
+    public ActriveSkill[] ActriveSkill;
 
     [Header("Cost")]
     public int xpCost;
@@ -60,7 +61,7 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         InfoBoxDetails.timer = timer;
 
         //sr.enabled = OnHover;
-        if (Purchesable) { sr.color = Color.yellow; }
+        if (Purchesable) { sr.color = Color.green; }
         if (!Purchesable) { sr.color = Color.red; }
         if (MaxLevelReached) { sr.color = _orange; }
 
@@ -95,7 +96,7 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
         if (Purchesable && OnHover && !MaxLevelReached && !LevelIsBlocked)
         {
-            Debug.Log("Purcahsing: " + timer);
+            //Debug.Log("Purcahsing: " + timer);
 
             if (timer < setTime) { timer += Time.deltaTime; }
             if (timer >= setTime) { GetSkill(); }
@@ -104,8 +105,6 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     void GetSkill()
     {
-        
-
         for (int i = 0; i < Upgrade.Length; i++)
         {
                 
@@ -184,6 +183,9 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                     Stats.QuickPotion = true;
                     break;
 
+                case UpgradeStat.NULL:
+                    break;
+
                 default:
                     Debug.Log("No Stat Set");
                     return;
@@ -195,6 +197,7 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             Stats.Coins -= coinCost;
             currentLevel++;
             timer = 0;
+            CheckActriveSkill();
             SavenLoadScript.SaveData(); //Save File code
         }
     }
@@ -216,8 +219,6 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         InfoBox.SetActive(OnHover);
         infoScript.ShowDetails(null);
         timer = 0;
-        //infoScript.ShowDetails(null);
-        //Debug.Log("Mouse is Exit");
     }
 
     #endregion
@@ -255,6 +256,13 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         SkipMovement,
         UsingMagicAttack,
         QuickPoitionUse,
+        NULL,
     }
     #endregion
+
+    private void CheckActriveSkill()
+    {
+        for (int i = 0; i < ActriveSkill.Length; i++)
+        { ActriveSkill[i].CheckCounter(); }
+    }
 }

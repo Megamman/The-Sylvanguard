@@ -13,7 +13,7 @@ public class SkillCameraControl : MonoBehaviour
     [SerializeField] private Canvas canvas;
     [SerializeField] private RectTransform canvasRectTransform;
     [SerializeField] private float cursorSpeed = 1000f;
-    [SerializeField] private float runSpeed = 20.0f;
+    //[SerializeField] private float runSpeed = 20.0f;
     [SerializeField] private float padding = 20f;
     [SerializeField] private Rigidbody2D cameraRB;
     [SerializeField] private Transform cameraTransform;
