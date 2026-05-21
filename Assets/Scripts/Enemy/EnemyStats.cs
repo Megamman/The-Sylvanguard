@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class EnemyStats : MonoBehaviour
 {
@@ -44,11 +45,15 @@ public class EnemyStats : MonoBehaviour
 
     [Header("UI")]
     public Slider HPSlider;
+    public GameObject DmgCounter;
+    private Transform pCanvasTransform;
+    public Transform DamageHolder;
     //Info
 
 
     private void Start()
     {
+        pCanvasTransform = DmgCounter.transform.parent;
         if (isAnimated) { m_Animator = GetComponent<Animator>(); }
         Health = HP;
         HPSlider.maxValue = HP;

@@ -13,7 +13,7 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public String SkillDescription;
     public StatsDetails[] Upgrade;
     public int maxLevel;
-    public ActriveSkill[] ActriveSkill;
+    public ActiveSkill[] ActriveSkill;
 
     [Header("Cost")]
     public int xpCost;

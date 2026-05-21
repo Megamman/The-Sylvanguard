@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3433068948051980163
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1910848661794858009, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6316349086549292003, guid: 752c782856b15004492891a7e839e53b, type: 3}
+    - target: {fileID: 1928800413585923103, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.9375
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465470036345127664, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_Name
+      value: Ice Elemental Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: HP
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: Name
+      value: Ice Elemental
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: XPMax
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: XPMin
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: Attack
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: CoinsMax
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: CoinsMin
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: CritChance
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: Decription
+      value: A living blizzard contained in a frozen core.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: WeakToMagic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: CritMaxDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: ResistToPhysical
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: UsingMagicAttack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -30.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063306945580394259, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063306945580394259, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}

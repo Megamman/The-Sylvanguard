@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ActriveSkill : MonoBehaviour
+public class ActiveSkill : MonoBehaviour
 {
     public GameObject MainTarget;
 

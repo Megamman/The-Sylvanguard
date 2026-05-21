@@ -5,12 +5,11 @@ using UnityEngine;
 public class StatsDataHandler
 {
     private string dataDirPath = "";
-    private string dataFileName = "";
+    private string dataFileName = MainStaticData.SelectedGame;
 
-    public StatsDataHandler(string _dataDirPath, string _dataFileName)
+    public StatsDataHandler(string _dataDirPath)
     {
         this.dataDirPath = _dataDirPath;
-        this.dataFileName = _dataFileName;
     }
 
     public StatsData Load()

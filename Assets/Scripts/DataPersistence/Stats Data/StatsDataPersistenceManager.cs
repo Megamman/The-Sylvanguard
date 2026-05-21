@@ -23,6 +23,7 @@ public class StatsDataPersistenceManager : MonoBehaviour
             Destroy(gameObject); // Important: stop the duplicate from running!
         }
         instance = this;
+        LoadStatsData();
     }
 
     void Start()
@@ -45,7 +46,7 @@ public class StatsDataPersistenceManager : MonoBehaviour
 
     public void LoadStatsData()
     {
-        DataHandler = new StatsDataHandler(Application.persistentDataPath, GameFileName);
+        DataHandler = new StatsDataHandler(Application.persistentDataPath);
 
         //Debug.Log("Loading Game from: " + Application.persistentDataPath + "/" + GameFileName);
 
