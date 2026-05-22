@@ -13,12 +13,15 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer PlayerSprite;
     private Vector2 direction;
     [HideInInspector] Vector3 MoveTo;
+    [SerializeField] private GameObject DungeanPannel;
 
     [SerializeField] private PlayerAnimationSO[] PASO;
     [SerializeField] private int PlayerSpriteLevel;
 
     [SerializeField] private bool MovementCost;
     [SerializeField] private LayerMask IgnoreLayer;
+
+    [SerializeField] private IntoDungean intoDungean;
 
     float HpQuorter;
     int MaxHP;
@@ -49,25 +52,26 @@ public class PlayerController : MonoBehaviour
     {
         //rb2D = GetComponent<Rigidbody2D>();
         controls.Main.Movement.performed += ctx => Move(ctx.ReadValue<Vector2>());
+        DungeanPannel.SetActive(false);
     }
 
     private void Move(Vector2 direct)
     {
+        if (MainStaticData.HoldMovement) // Stops player from moving
+        {
+            direction = new Vector2(Mathf.RoundToInt(direct.x), Mathf.RoundToInt(direct.y));
 
-        direction = new Vector2(Mathf.RoundToInt(direct.x), Mathf.RoundToInt(direct.y));
+            if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y)) { direction.y = 0; } else { direction.x = 0; }
 
-        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y)) { direction.y = 0; } else { direction.x = 0; }
+            LookAt();
 
-        LookAt();
+            MoveTo = transform.position + (Vector3)direction; // a quick refernce for this equation
 
-        MoveTo = transform.position + (Vector3)direction; // a quick refernce for this equation
+            // RaycastHit check if enemy is there -- need to ignore player
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, (Vector3)direction, 1f, ~IgnoreLayer);
 
-        // RaycastHit check if enemy is there -- need to ignore player
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, (Vector3)direction, 1f, ~IgnoreLayer);
-
-        if (hit.collider != null) { CheckHit(hit); } else { ActionMove(); }
-
-        
+            if (hit.collider != null) { CheckHit(hit); } else { ActionMove(); }
+        }        
     }
 
     private void ActionMove()
@@ -129,6 +133,10 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case "Dungean":
+                GoToDungean goToDungean = hit.transform.GetComponent<GoToDungean>();
+                intoDungean.go = goToDungean;
+                MainStaticData.HoldMovement = false;
+                DungeanPannel.SetActive(true);
                 Debug.Log("Dungean Found");
 
                 break;

@@ -25,9 +25,22 @@ public class GameSelectionSystem : MonoBehaviour
         if(MainStaticData.SelectedGame == "") { PlayButton.interactable = false; } else { PlayButton.interactable = true; }
     }
 
+    bool found = false; // set it to false outside the loop
     public void CreateNewGame()
     {
-        GameDataPersistenceManager.instance.NewFileData();
+
+        foreach (string item in SavedGame)
+        {
+            if (string.Equals(item, inputField.text))
+            {
+                Debug.Log("Name Already In Use");
+                break; // since we found a match, exit the for loop.
+            }
+            else
+            {
+                GameDataPersistenceManager.instance.NewFileData();
+            }
+        }
     }
 
     void LoadList()
@@ -35,7 +48,7 @@ public class GameSelectionSystem : MonoBehaviour
 
         if(SavedGame.Count != 0)
         {
-            foreach (var item in SavedGame)
+            foreach (string item in SavedGame)
             {
                 GameObject newItem = Instantiate(GameSelection);
                 newItem.transform.SetParent(Container);

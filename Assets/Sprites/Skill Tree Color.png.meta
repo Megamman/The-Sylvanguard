@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Skill Tree Color_0: 4692592817113794509
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

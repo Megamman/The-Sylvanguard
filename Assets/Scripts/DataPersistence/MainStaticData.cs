@@ -8,6 +8,8 @@ public static class MainStaticData
 
     public static int SpawnPosition;
 
+    public static bool HoldMovement = true;
+
     public static GameObject InfoBox;
 
     public static bool showInfo; // Regulate info Box
