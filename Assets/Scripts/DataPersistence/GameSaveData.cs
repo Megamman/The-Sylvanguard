@@ -15,13 +15,13 @@ public class GameSaveData : MonoBehaviour
     public static void SaveData()
     {
         Debug.Log("Saving Data");
-        StatsDataPersistenceManager.instance.SaveStatsData();
+        GameDataPersistenceManager.instance.SaveFileData();
     }
 
     public static void LoadData()
     {
         //Debug.Log("Loading Data");
-        StatsDataPersistenceManager.instance.LoadStatsData();
+        GameDataPersistenceManager.instance.LoadFileData();
     }
 
     private void OnApplicationQuit()

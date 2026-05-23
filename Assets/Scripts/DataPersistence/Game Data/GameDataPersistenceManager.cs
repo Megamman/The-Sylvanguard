@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using System.IO;
@@ -9,7 +9,7 @@ public class GameDataPersistenceManager : MonoBehaviour
 
     private GameData gameData;
 
-    private List<IGameDataPersistence> gameDataPersistences;
+    private List<IGameDataPersistence> gameDataPersistences = new List<IGameDataPersistence>();
     private GameDataHandler gameDataHandler;
     public static GameDataPersistenceManager instance { get; private set; }
 
@@ -45,6 +45,8 @@ public class GameDataPersistenceManager : MonoBehaviour
 
     public void LoadFileData()
     {
+        gameDataHandler = new GameDataHandler(Application.persistentDataPath, gameFileName);
+
         this.gameData = gameDataHandler.Load();
 
         if (this.gameData == null)

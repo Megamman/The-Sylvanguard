@@ -3,10 +3,13 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class GameSelectionSystem : MonoBehaviour
+
+public class GameSelectionSystem : MonoBehaviour, IGameDataPersistence
 {
 
+    [SerializeField] private GameObject GameClone;
     [SerializeField] private GameObject GameSelection;
     [SerializeField] private GameObject GameCreator;
     [SerializeField] private Transform Container;
@@ -18,6 +21,7 @@ public class GameSelectionSystem : MonoBehaviour
     void Start()
     {
         Return();
+        LoadList();
     }
 
     private void Update()
@@ -39,6 +43,7 @@ public class GameSelectionSystem : MonoBehaviour
             else
             {
                 GameDataPersistenceManager.instance.NewFileData();
+                GameSaveData.SaveData();
             }
         }
     }
@@ -50,13 +55,13 @@ public class GameSelectionSystem : MonoBehaviour
         {
             foreach (string item in SavedGame)
             {
-                GameObject newItem = Instantiate(GameSelection);
+                GameObject newItem = Instantiate(GameClone);
                 newItem.transform.SetParent(Container);
                 newItem.SetActive(true);
 
                 GameNameData data = newItem.GetComponent<GameNameData>();
 
-                data.PlayerName = item;
+                if (item != null) { data.PlayerName = item; }
             }
         }
     }
@@ -87,12 +92,17 @@ public class GameSelectionSystem : MonoBehaviour
 
     public void SubmitNewGameName()
     {
-        GameDataPersistenceManager.instance.SaveFileData();
         SavedGame = new List<string>();
         SavedGame.Add(inputField.text);
+        GameSaveData.SaveData();
         LoadList();
         Return();
 
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Town");
     }
 
 }
