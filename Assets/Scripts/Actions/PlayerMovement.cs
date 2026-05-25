@@ -108,6 +108,69 @@ public partial class @PlayerMovement: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Back"",
+                    ""type"": ""Button"",
+                    ""id"": ""17f76889-05d3-4b3f-9df5-e91a8a74e4f4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Card1"",
+                    ""type"": ""Button"",
+                    ""id"": ""f35870f8-a852-471e-9ca7-a3811da599bc"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Card2"",
+                    ""type"": ""Button"",
+                    ""id"": ""77b649b2-d6c8-4df6-a82f-06a171ab6348"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Card3"",
+                    ""type"": ""Button"",
+                    ""id"": ""1bd3b2f8-3314-455e-ad5e-7a3eb366686b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Card4"",
+                    ""type"": ""Button"",
+                    ""id"": ""f0336e50-b55a-4b12-9b28-ef42b8814496"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UsingKeyboard"",
+                    ""type"": ""Button"",
+                    ""id"": ""24fa76e8-2365-46be-8966-ebc961f5455a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OpenMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""3897cd2a-bdd4-4446-ad26-a7994cad5c16"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -363,6 +426,149 @@ public partial class @PlayerMovement: IInputActionCollection2, IDisposable
                     ""action"": ""Interect"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""be7bb7f8-557d-460c-bf53-d4cd00cf2e50"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Back"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f87f7e58-69d3-4b41-8785-ab336823cf3e"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Back"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bf52f988-f443-40ec-a4d3-fa567694af4b"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Card1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1f4561cb-a784-49ef-9385-3d162eab05a6"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Card1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6a950b8f-9dd3-4da0-bb5f-d928aec3a5eb"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Card2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""aa491034-9b38-445b-8613-29fa9b5fafaf"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Card2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f8108d49-39bd-4823-8ce5-767a75229e49"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Card3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""27e8d736-138d-42f8-bd8e-df4c189e4cff"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Card3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""68cc7856-11a0-47bf-b01b-70e459adf505"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Card4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dedb45be-2f72-4c5d-9786-32dc8ed2b4fb"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Card4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0c7cb89f-d001-4f85-8e31-d6a02f359df5"",
+                    ""path"": ""<Keyboard>/anyKey"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UsingKeyboard"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1c0924bd-9d82-4806-a65d-c7b23fb3d183"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OpenMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cbbc5b29-446c-4431-8737-ef72be256c27"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OpenMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -373,6 +579,13 @@ public partial class @PlayerMovement: IInputActionCollection2, IDisposable
         m_Main = asset.FindActionMap("Main", throwIfNotFound: true);
         m_Main_Movement = m_Main.FindAction("Movement", throwIfNotFound: true);
         m_Main_Interect = m_Main.FindAction("Interect", throwIfNotFound: true);
+        m_Main_Back = m_Main.FindAction("Back", throwIfNotFound: true);
+        m_Main_Card1 = m_Main.FindAction("Card1", throwIfNotFound: true);
+        m_Main_Card2 = m_Main.FindAction("Card2", throwIfNotFound: true);
+        m_Main_Card3 = m_Main.FindAction("Card3", throwIfNotFound: true);
+        m_Main_Card4 = m_Main.FindAction("Card4", throwIfNotFound: true);
+        m_Main_UsingKeyboard = m_Main.FindAction("UsingKeyboard", throwIfNotFound: true);
+        m_Main_OpenMenu = m_Main.FindAction("OpenMenu", throwIfNotFound: true);
     }
 
     ~@PlayerMovement()
@@ -455,6 +668,13 @@ public partial class @PlayerMovement: IInputActionCollection2, IDisposable
     private List<IMainActions> m_MainActionsCallbackInterfaces = new List<IMainActions>();
     private readonly InputAction m_Main_Movement;
     private readonly InputAction m_Main_Interect;
+    private readonly InputAction m_Main_Back;
+    private readonly InputAction m_Main_Card1;
+    private readonly InputAction m_Main_Card2;
+    private readonly InputAction m_Main_Card3;
+    private readonly InputAction m_Main_Card4;
+    private readonly InputAction m_Main_UsingKeyboard;
+    private readonly InputAction m_Main_OpenMenu;
     /// <summary>
     /// Provides access to input actions defined in input action map "Main".
     /// </summary>
@@ -474,6 +694,34 @@ public partial class @PlayerMovement: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Main/Interect".
         /// </summary>
         public InputAction @Interect => m_Wrapper.m_Main_Interect;
+        /// <summary>
+        /// Provides access to the underlying input action "Main/Back".
+        /// </summary>
+        public InputAction @Back => m_Wrapper.m_Main_Back;
+        /// <summary>
+        /// Provides access to the underlying input action "Main/Card1".
+        /// </summary>
+        public InputAction @Card1 => m_Wrapper.m_Main_Card1;
+        /// <summary>
+        /// Provides access to the underlying input action "Main/Card2".
+        /// </summary>
+        public InputAction @Card2 => m_Wrapper.m_Main_Card2;
+        /// <summary>
+        /// Provides access to the underlying input action "Main/Card3".
+        /// </summary>
+        public InputAction @Card3 => m_Wrapper.m_Main_Card3;
+        /// <summary>
+        /// Provides access to the underlying input action "Main/Card4".
+        /// </summary>
+        public InputAction @Card4 => m_Wrapper.m_Main_Card4;
+        /// <summary>
+        /// Provides access to the underlying input action "Main/UsingKeyboard".
+        /// </summary>
+        public InputAction @UsingKeyboard => m_Wrapper.m_Main_UsingKeyboard;
+        /// <summary>
+        /// Provides access to the underlying input action "Main/OpenMenu".
+        /// </summary>
+        public InputAction @OpenMenu => m_Wrapper.m_Main_OpenMenu;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -506,6 +754,27 @@ public partial class @PlayerMovement: IInputActionCollection2, IDisposable
             @Interect.started += instance.OnInterect;
             @Interect.performed += instance.OnInterect;
             @Interect.canceled += instance.OnInterect;
+            @Back.started += instance.OnBack;
+            @Back.performed += instance.OnBack;
+            @Back.canceled += instance.OnBack;
+            @Card1.started += instance.OnCard1;
+            @Card1.performed += instance.OnCard1;
+            @Card1.canceled += instance.OnCard1;
+            @Card2.started += instance.OnCard2;
+            @Card2.performed += instance.OnCard2;
+            @Card2.canceled += instance.OnCard2;
+            @Card3.started += instance.OnCard3;
+            @Card3.performed += instance.OnCard3;
+            @Card3.canceled += instance.OnCard3;
+            @Card4.started += instance.OnCard4;
+            @Card4.performed += instance.OnCard4;
+            @Card4.canceled += instance.OnCard4;
+            @UsingKeyboard.started += instance.OnUsingKeyboard;
+            @UsingKeyboard.performed += instance.OnUsingKeyboard;
+            @UsingKeyboard.canceled += instance.OnUsingKeyboard;
+            @OpenMenu.started += instance.OnOpenMenu;
+            @OpenMenu.performed += instance.OnOpenMenu;
+            @OpenMenu.canceled += instance.OnOpenMenu;
         }
 
         /// <summary>
@@ -523,6 +792,27 @@ public partial class @PlayerMovement: IInputActionCollection2, IDisposable
             @Interect.started -= instance.OnInterect;
             @Interect.performed -= instance.OnInterect;
             @Interect.canceled -= instance.OnInterect;
+            @Back.started -= instance.OnBack;
+            @Back.performed -= instance.OnBack;
+            @Back.canceled -= instance.OnBack;
+            @Card1.started -= instance.OnCard1;
+            @Card1.performed -= instance.OnCard1;
+            @Card1.canceled -= instance.OnCard1;
+            @Card2.started -= instance.OnCard2;
+            @Card2.performed -= instance.OnCard2;
+            @Card2.canceled -= instance.OnCard2;
+            @Card3.started -= instance.OnCard3;
+            @Card3.performed -= instance.OnCard3;
+            @Card3.canceled -= instance.OnCard3;
+            @Card4.started -= instance.OnCard4;
+            @Card4.performed -= instance.OnCard4;
+            @Card4.canceled -= instance.OnCard4;
+            @UsingKeyboard.started -= instance.OnUsingKeyboard;
+            @UsingKeyboard.performed -= instance.OnUsingKeyboard;
+            @UsingKeyboard.canceled -= instance.OnUsingKeyboard;
+            @OpenMenu.started -= instance.OnOpenMenu;
+            @OpenMenu.performed -= instance.OnOpenMenu;
+            @OpenMenu.canceled -= instance.OnOpenMenu;
         }
 
         /// <summary>
@@ -577,5 +867,54 @@ public partial class @PlayerMovement: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnInterect(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Back" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnBack(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Card1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCard1(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Card2" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCard2(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Card3" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCard3(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Card4" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCard4(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "UsingKeyboard" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnUsingKeyboard(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "OpenMenu" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnOpenMenu(InputAction.CallbackContext context);
     }
 }

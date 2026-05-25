@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -32,7 +34,7 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     private GameObject InfoBox;
     private InfoBoxDetails infoScript;
-
+    private List<SkillSwitch> SkillSwitches;
     private SkillTreeMovement controls;
 
     SpriteRenderer sr;
@@ -52,10 +54,12 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         controls = new SkillTreeMovement();
         controls.Enable();
         sr = GetComponent<SpriteRenderer>();
+
     }
 
     void Update()
     {
+        if(currentLevel != 0) { transform.GetComponent<SkillSwitch>().SkillPurchase = true; }
 
         UpdateCheck();
         InfoBoxDetails.timer = timer;
@@ -198,6 +202,14 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             currentLevel++;
             timer = 0;
             CheckActriveSkill();
+
+            SkillSwitches = GetSkillList();
+
+            foreach (SkillSwitch _switch in SkillSwitches)
+            {
+                _switch.CheckSkill();
+            }
+
             SavenLoadScript.SaveData(); //Save File code
         }
     }
@@ -265,4 +277,14 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         for (int i = 0; i < ActriveSkill.Length; i++)
         { ActriveSkill[i].CheckCounter(); }
     }
+
+    private List<SkillSwitch> GetSkillList()
+    {
+        IEnumerable<SkillSwitch> _SkillSwitch =
+            FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None)
+            .OfType<SkillSwitch>();
+
+        return new List<SkillSwitch>(_SkillSwitch);
+    }
+    
 }

@@ -8,11 +8,12 @@ public class GameData
 
     public GameData()
     {
-        List<string> SavedGame = new List<string>();
+        SavedGame = new List<string>();
     }
 
     public void RemoveGameData()
     {
         SavedGame.Remove(MainStaticData.SelectedGame);
+
     }
 }

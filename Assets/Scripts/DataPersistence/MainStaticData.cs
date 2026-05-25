@@ -5,6 +5,7 @@ public static class MainStaticData
     public static string SelectedGame;
     public static StatsData statsData;
     public static GameData gameData;
+    public static GameDataHandler gameDataHandler;
 
     public static int SpawnPosition;
 

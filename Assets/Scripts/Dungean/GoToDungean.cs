@@ -2,11 +2,12 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GoToDungean : MonoBehaviour
+public class GoToDungean : MonoBehaviour, IStatsDataPersistence
 {
 
     public int point = 1;
-    public string Dungean;
+    public int Dungean;
+    public Transform player;
 
     //MainStaticData.SpawnPosition
 
@@ -16,7 +17,16 @@ public class GoToDungean : MonoBehaviour
     {
         MainStaticData.SpawnPosition = point;
 
-        SceneManager.LoadScene(Dungean);
+        SceneManager.LoadScene(Dungean, LoadSceneMode.Single);
     }
 
+    public void LoadStatsData(StatsData data)
+    {
+        return;
+    }
+
+    public void SaveStatsData(ref StatsData data)
+    {
+        data.TownPos = player.position;
+    }
 }

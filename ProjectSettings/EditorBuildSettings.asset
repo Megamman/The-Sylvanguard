@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/4 - Dungean - Forest.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 1c1260fac489c89429a0dd1ab6e20dc4
   - enabled: 1
@@ -21,11 +18,29 @@ EditorBuildSettings:
     path: Assets/Scenes/3 - Dungean - Sewers.unity
     guid: 359acba244d1f7f40bc8aaa60af5a328
   - enabled: 1
+    path: Assets/Scenes/4 - Dungean - Forest.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
     path: Assets/Scenes/5 - Dungean - Mountians.unity
     guid: 1e50736db6e682a4588de52158bc0407
   - enabled: 1
     path: Assets/Scenes/6 - Dungean - GraveYard.unity
     guid: 4609fa17eebbe3542893961c5c0d1730
+  - enabled: 1
+    path: Assets/Scenes/7 - Dungean - Tower.unity
+    guid: 68be34c719c3a8c4f81efb391d7e28f3
+  - enabled: 1
+    path: Assets/Scenes/Alchemist SkillTree.unity
+    guid: 848a96aa2b2bf2f4e89529b6aa627fa1
+  - enabled: 1
+    path: Assets/Scenes/Blacksmith SkillTree.unity
+    guid: 9aaf65c0b45449247b16821acb0b5ff8
+  - enabled: 1
+    path: Assets/Scenes/SkillTree.unity
+    guid: a79cd77e32be5b04ab8f196483d44a31
+  - enabled: 1
+    path: Assets/Scenes/Town.unity
+    guid: c3a2f2962e954cf41b6e452ee039f744
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 0e94bc7d00574f7449630b7fb263f82b, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: ea033cc4e022efa4ca368cf5a9bdd652, type: 3}

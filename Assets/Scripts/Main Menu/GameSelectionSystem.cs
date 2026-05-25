@@ -4,6 +4,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Linq;
+using static UnityEditor.Progress;
 
 
 public class GameSelectionSystem : MonoBehaviour, IGameDataPersistence
@@ -16,55 +18,95 @@ public class GameSelectionSystem : MonoBehaviour, IGameDataPersistence
     [SerializeField] private Button PlayButton;
     [SerializeField] private TMP_InputField inputField;
     [HideInInspector] public static List<string> SavedGame;
+    private PlayerMovement controls;
+    private GameObject[] Games;
+    VirtualKeyboard vk = new VirtualKeyboard();
+    bool isKeyOn;
+
+
+    public GameObject warningTextOBJ;
+    public TMP_Text warningText;
+    private void Awake()
+    {
+        controls = new PlayerMovement();
+        controls.Enable();
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Return();
-        LoadList();
+        warningTextOBJ.SetActive(false);
+        //LoadList();
     }
 
     private void Update()
     {
-        if(MainStaticData.SelectedGame == "") { PlayButton.interactable = false; } else { PlayButton.interactable = true; }
+        ////Virtual Keyboard system (Not working)
+
+        //controls.Main.UsingKeyboard.performed += ctx => isKeyOn = true;
+        //controls.Main.UsingKeyboard.performed += ctx => vk.HideTouchKeyboard();
+
+        //if (MainStaticData.SelectedGame == "") { PlayButton.interactable = false; } else { PlayButton.interactable = true; }
+        //if(inputField.isFocused) { if (!string.IsNullOrWhiteSpace(inputField.text)) { vk.ShowTouchKeyboard(); isKeyOn = true; } }
+        //else
+        //{
+        //    {  isKeyOn = false; }
+        //}
+        //if (isKeyOn)
+        //{
+        //    vk.HideTouchKeyboard();
+        //}
     }
 
-    bool found = false; // set it to false outside the loop
     public void CreateNewGame()
     {
+        //vk.HideTouchKeyboard();
 
-        foreach (string item in SavedGame)
+        if (!string.IsNullOrWhiteSpace(inputField.text))
         {
-            if (string.Equals(item, inputField.text))
+            for (int i = 0; i < SavedGame.Count; i++)
             {
-                Debug.Log("Name Already In Use");
-                break; // since we found a match, exit the for loop.
+                if (string.Equals(SavedGame[i], inputField.text))
+                {
+                    warningTextOBJ.SetActive(true);
+                    warningText.text = "Name Already In Use";
+                    GameDataPersistenceManager.instance.NewFileData();
+                    GameSaveData.SaveData();
+                }
             }
-            else
-            {
-                GameDataPersistenceManager.instance.NewFileData();
-                GameSaveData.SaveData();
-            }
+        }else
+        {
+            warningTextOBJ.SetActive(true);
+            warningText.text = "Name Is Empty";
         }
     }
 
     void LoadList()
     {
 
-        if(SavedGame.Count != 0)
+        if (SavedGame.Count != 0)
         {
-            foreach (string item in SavedGame)
+            // Clear old UI objects first if needed safely
+            foreach (Transform child in Container)
             {
-                GameObject newItem = Instantiate(GameClone);
-                newItem.transform.SetParent(Container);
-                newItem.SetActive(true);
-
-                GameNameData data = newItem.GetComponent<GameNameData>();
-
-                if (item != null) { data.PlayerName = item; }
+                Destroy(child.gameObject);
             }
+
+        }
+        foreach (string item in SavedGame)
+        {
+            if (item == null) continue;
+
+            GameObject newItem = Instantiate(GameClone, Container);
+            newItem.SetActive(true);
+
+            GameNameData data = newItem.GetComponent<GameNameData>();
+
+            if (data != null) { data.PlayerName = item; }
         }
     }
+
 
     public void SaveGameData(ref GameData data)
     {
@@ -82,27 +124,68 @@ public class GameSelectionSystem : MonoBehaviour, IGameDataPersistence
     public void ToCreate() {
         GameCreator.SetActive(true);
         GameSelection.SetActive(false);
+        warningTextOBJ.SetActive(false);
     }
 
     public void Return()
     {
         GameCreator.SetActive(false);
         GameSelection.SetActive(true);
+        warningTextOBJ.SetActive(false);
     }
 
     public void SubmitNewGameName()
     {
-        SavedGame = new List<string>();
-        SavedGame.Add(inputField.text);
-        GameSaveData.SaveData();
-        LoadList();
-        Return();
 
+        if (!string.IsNullOrWhiteSpace(inputField.text))
+        {
+            //foreach (string item in SavedGame)
+            for (int i = 0; i < SavedGame.Count; i++)
+            {
+                if (string.Equals(SavedGame[i], inputField.text))
+                {
+
+                    warningTextOBJ.SetActive(true);
+                    warningText.text = "Name Already In Use";
+                    Debug.Log("Name Already In Use");
+                    break; // since we found a match, exit the for loop.
+                }
+                warningTextOBJ.SetActive(false);
+            }
+            Debug.Log("Creating Game");
+            SavedGame.Add(inputField.text);
+            GameSaveData.SaveData();
+            LoadList();
+            Return();
+        }
+
+        else
+        {
+            warningTextOBJ.SetActive(true);
+            warningText.text = "Name Is Empty";
+        }
     }
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Town");
+
+        if (MainStaticData.SelectedGame != null)
+        {
+            warningTextOBJ.SetActive(false);
+            SceneManager.LoadScene("Town");
+        }
+        else
+        {
+
+            warningTextOBJ.SetActive(true);
+            warningText.text = "Game Not Selected";
+        }
+    }
+
+    public void DeleteGame()
+    {
+        MainStaticData.gameData.RemoveGameData();
+        MainStaticData.gameDataHandler.DeleteSaveFile();
     }
 
 }

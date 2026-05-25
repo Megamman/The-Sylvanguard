@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
     {
         //rb2D = GetComponent<Rigidbody2D>();
         controls.Main.Movement.performed += ctx => Move(ctx.ReadValue<Vector2>());
-        DungeanPannel.SetActive(false);
+        if (DungeanPannel != null ) DungeanPannel.SetActive(false);
     }
 
     private void Move(Vector2 direct)
@@ -76,6 +76,8 @@ public class PlayerController : MonoBehaviour
 
     private void ActionMove()
     {
+
+        DungeanPannel.SetActive(false);
         transform.position = MoveTo;
 
         if (Stats.QuickPotion) { if (Stats.HP < HpQuorter) { UsePotion(); } } //use potion

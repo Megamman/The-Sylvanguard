@@ -26,6 +26,7 @@ public class SkillCameraControl : MonoBehaviour
     private Vector2 _newPosition;
     private Vector3 dragOrigin;
 
+
     private void OnEnable()
     {
         mainCamera = Camera.main;

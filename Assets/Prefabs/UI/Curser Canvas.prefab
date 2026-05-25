@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 871804551279759771}
   - component: {fileID: 5477887231896518645}
   m_Layer: 5
-  m_Name: SkillTree Canvas
+  m_Name: Curser Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

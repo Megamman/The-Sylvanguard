@@ -7,6 +7,7 @@ public class StatsDataHandler
     private string dataDirPath = "";
     private string dataFileName = MainStaticData.SelectedGame;
 
+
     public StatsDataHandler(string _dataDirPath)
     {
         this.dataDirPath = _dataDirPath;
@@ -14,6 +15,8 @@ public class StatsDataHandler
 
     public StatsData Load()
     {
+        if (string.IsNullOrEmpty(dataFileName)) { dataFileName = "Defult"; }
+
         string fullPath = Path.Combine(dataDirPath, dataFileName);
         StatsData loadedData = null;
 

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor.ShaderGraph;
 
 public class ActiveSkillsControl : MonoBehaviour
 {
@@ -35,18 +36,27 @@ public class ActiveSkillsControl : MonoBehaviour
     [SerializeField] private Sprite HomeNotAvailable;
     [SerializeField] private GameObject HomeBox;
 
+    private PlayerMovement controls;
     int fullHP;
     Color ShadedText;
 
     private void Awake()
     {
         fullHP = Stats.HP;
+        controls = new PlayerMovement();
+        controls.Enable();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Stats.PotionUseIsActive = true;
+
+
+        controls.Main.Card1.performed += ctx => UsePotion();
+        controls.Main.Card2.performed += ctx => UseMagicAttack();
+        controls.Main.Card3.performed += ctx => UseMagicShield();
+        controls.Main.Card4.performed += ctx => UseHome();
 
         Potion.interactable = Stats.PotionUseIsActive;
         PotionText.SetActive(Stats.PotionUseIsActive);

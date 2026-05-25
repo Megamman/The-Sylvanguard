@@ -36,6 +36,7 @@ public class GameDataPersistenceManager : MonoBehaviour
 
         LoadFileData();
         MainStaticData.gameData = gameData;
+        MainStaticData.gameDataHandler = gameDataHandler;
     }
 
     public void NewFileData()

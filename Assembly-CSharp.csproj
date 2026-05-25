@@ -66,8 +66,10 @@
     <Compile Include="Assets\Scripts\UI\Go2Town.cs" />
     <Compile Include="Assets\Scripts\Skills\SkillSystem.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\Game Data\IGameDataPersistence.cs" />
+    <Compile Include="Assets\Scripts\Skills\LineRend.cs" />
     <Compile Include="Assets\Scripts\Dungean\SpawnPosition.cs" />
     <Compile Include="Assets\Scripts\Dungean\DungeanLoad.cs" />
+    <Compile Include="Assets\Scripts\UI\VirtualKeyboard.cs" />
     <Compile Include="Assets\Scripts\Player\CombatScript.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\Game Data\GameDataHandler.cs" />
     <Compile Include="Assets\Scripts\ScriptableObject\PlayerAnimationSO.cs" />
@@ -77,6 +79,7 @@
     <Compile Include="Assets\Scripts\DataPersistence\Stats Data\StatsDataPersistenceManager.cs" />
     <Compile Include="Assets\Scripts\Main Menu\MainMenuSystem.cs" />
     <Compile Include="Assets\Scripts\UI\StatsUpdateSystem.cs" />
+    <Compile Include="Assets\Scripts\Skills\SkillSwitch.cs" />
     <Compile Include="Assets\Scripts\Dungean\EnemySpawnGrid.cs" />
     <Compile Include="Assets\Scripts\Skills\VSSkillScript.cs" />
     <Compile Include="Assets\Scripts\Skills\ControllerCursorDetector.cs" />
@@ -97,6 +100,7 @@
     <Compile Include="Assets\Scripts\UI\ActiveSkillsControl.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\MainStaticData.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\GameSaveData.cs" />
+    <Compile Include="Assets\Scripts\UI\ActiveMenu.cs" />
     <Compile Include="Assets\Scripts\Misc\DestoryGameObject.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\Game Data\GameDataPersistenceManager.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\Stats Data\IStatsDataPersistence.cs" />
