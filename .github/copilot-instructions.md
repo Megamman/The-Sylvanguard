@@ -1,8 +1,14 @@
 <!-- UNITY CODE ASSIST INSTRUCTIONS START -->
 - Project name: The-Sylvanguard
 - Unity version: Unity 6000.0.43f1
+- Active scene:
+  - Name: 1 - Dungeon - Mines
+  - Tags:
+    - Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController
+  - Layers:
+    - Default, TransparentFX, Ignore Raycast, Water, UI
 - Active game object:
-  - Name: Tiers
-  - Tag: Untagged
-  - Layer: Default
+  - Name: Player
+  - Tag: Player
+  - Layer: 3
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

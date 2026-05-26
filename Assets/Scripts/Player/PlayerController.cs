@@ -32,8 +32,9 @@ public class PlayerController : MonoBehaviour
     {
         PlayerSprite = GetComponent<SpriteRenderer>();
         combat = GetComponent<CombatScript>();
+
         controls = new PlayerMovement();
-        controls.Enable();
+        
 
         MaxHP = Stats.HP;
         HpQuorter = Stats.HP / 4f;
@@ -42,14 +43,16 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnEnable()
-    { controls.Enable(); }
+    { if (controls != null) controls.Enable(); }
 
     private void OnDisable()
-    { controls.Disable(); }
+    { if (controls != null) controls.Disable(); }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        MainStaticData.HoldMovement = true;
+        controls.Enable();
         //rb2D = GetComponent<Rigidbody2D>();
         controls.Main.Movement.performed += ctx => Move(ctx.ReadValue<Vector2>());
         if (DungeanPannel != null ) DungeanPannel.SetActive(false);
