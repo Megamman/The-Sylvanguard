@@ -957,6 +957,9 @@ GameObject:
   - component: {fileID: 70800768}
   - component: {fileID: 70800767}
   - component: {fileID: 70800766}
+  - component: {fileID: 70800772}
+  - component: {fileID: 70800771}
+  - component: {fileID: 70800770}
   m_Layer: 0
   m_Name: Rhythmic Breath - Skill - Icon - T4
   m_TagString: Untagged
@@ -1109,6 +1112,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &70800770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70800764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60af506d5e5184d44b2b558ef3768d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillPurchase: 0
+  Skill: {fileID: 257538727}
+  Serios:
+  - {fileID: 1188304329}
+  - {fileID: 70800764}
+--- !u!114 &70800771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70800764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60af506d5e5184d44b2b558ef3768d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillPurchase: 0
+  Skill: {fileID: 352738052}
+  Serios:
+  - {fileID: 1188304329}
+  - {fileID: 70800764}
+--- !u!114 &70800772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70800764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60af506d5e5184d44b2b558ef3768d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillPurchase: 0
+  Skill: {fileID: 550594041}
+  Serios:
+  - {fileID: 1188304329}
+  - {fileID: 70800764}
 --- !u!1 &82578685
 GameObject:
   m_ObjectHideFlags: 0
@@ -4120,6 +4174,8 @@ GameObject:
   - component: {fileID: 324814212}
   - component: {fileID: 324814211}
   - component: {fileID: 324814210}
+  - component: {fileID: 324814215}
+  - component: {fileID: 324814214}
   m_Layer: 0
   m_Name: Firm Footing - Skill - Icon - T2
   m_TagString: Untagged
@@ -4272,6 +4328,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &324814214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324814208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60af506d5e5184d44b2b558ef3768d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillPurchase: 0
+  Skill: {fileID: 1121369956}
+  Serios:
+  - {fileID: 324814208}
+--- !u!114 &324814215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324814208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60af506d5e5184d44b2b558ef3768d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillPurchase: 0
+  Skill: {fileID: 1987013610}
+  Serios:
+  - {fileID: 1429301488}
+  - {fileID: 324814208}
 --- !u!1 &344207651
 GameObject:
   m_ObjectHideFlags: 0
@@ -4450,6 +4539,8 @@ GameObject:
   - component: {fileID: 352738056}
   - component: {fileID: 352738055}
   - component: {fileID: 352738054}
+  - component: {fileID: 352738059}
+  - component: {fileID: 352738058}
   m_Layer: 0
   m_Name: Tireless Path - Skill - Icon - T5
   m_TagString: Untagged
@@ -4602,6 +4693,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &352738058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352738052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60af506d5e5184d44b2b558ef3768d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillPurchase: 0
+  Skill: {fileID: 2080539579}
+  Serios:
+  - {fileID: 352738052}
+  - {fileID: 1338273332}
+--- !u!114 &352738059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352738052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60af506d5e5184d44b2b558ef3768d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillPurchase: 0
+  Skill: {fileID: 1753438814}
+  Serios:
+  - {fileID: 352738052}
+  - {fileID: 1029271864}
 --- !u!1 &367131651
 GameObject:
   m_ObjectHideFlags: 0
@@ -5523,7 +5648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &444240951
 Transform:
   m_ObjectHideFlags: 0
@@ -6543,6 +6668,7 @@ GameObject:
   - component: {fileID: 451782845}
   - component: {fileID: 451782844}
   - component: {fileID: 451782843}
+  - component: {fileID: 451782847}
   m_Layer: 0
   m_Name: Focused Intent - Skill - Icon - T2
   m_TagString: Untagged
@@ -6695,6 +6821,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &451782847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451782841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60af506d5e5184d44b2b558ef3768d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillPurchase: 0
+  Skill: {fileID: 805880111}
+  Serios:
+  - {fileID: 1188304329}
+  - {fileID: 451782841}
 --- !u!1 &462236329
 GameObject:
   m_ObjectHideFlags: 0
@@ -12538,6 +12681,7 @@ GameObject:
   - component: {fileID: 805880115}
   - component: {fileID: 805880114}
   - component: {fileID: 805880113}
+  - component: {fileID: 805880117}
   m_Layer: 0
   m_Name: Pattern Recognition - Icon - T4
   m_TagString: Untagged
@@ -12690,6 +12834,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &805880117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805880111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60af506d5e5184d44b2b558ef3768d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillPurchase: 0
+  Skill: {fileID: 881947270}
+  Serios:
+  - {fileID: 444240950}
+  - {fileID: 805880111}
 --- !u!1 &806038436
 GameObject:
   m_ObjectHideFlags: 0
@@ -13261,6 +13422,7 @@ GameObject:
   - component: {fileID: 881947274}
   - component: {fileID: 881947273}
   - component: {fileID: 881947272}
+  - component: {fileID: 881947276}
   m_Layer: 0
   m_Name: Fatal Flaw - Icon - T5
   m_TagString: Untagged
@@ -13413,6 +13575,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &881947276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881947270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60af506d5e5184d44b2b558ef3768d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillPurchase: 0
+  Skill: {fileID: 1060689719}
+  Serios:
+  - {fileID: 881947270}
+  - {fileID: 1338273332}
 --- !u!1 &908644735
 GameObject:
   m_ObjectHideFlags: 0
@@ -14398,7 +14577,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1029271865
 Transform:
   m_ObjectHideFlags: 0
@@ -16180,7 +16359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1188304330
 Transform:
   m_ObjectHideFlags: 0
@@ -16865,7 +17044,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7366001822722063475, guid: 4350a021594a0f24e92a29b90881c57e, type: 3}
+  m_Sprite: {fileID: 5431178180462042245, guid: eefb0a63502867e429469682e099bec1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -18534,7 +18713,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1338273333
 Transform:
   m_ObjectHideFlags: 0
@@ -19024,7 +19203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1429301489
 Transform:
   m_ObjectHideFlags: 0
@@ -24270,6 +24449,8 @@ GameObject:
   - component: {fileID: 1987013615}
   - component: {fileID: 1987013614}
   - component: {fileID: 1987013613}
+  - component: {fileID: 1987013617}
+  - component: {fileID: 1987013616}
   - component: {fileID: 1987013612}
   m_Layer: 0
   m_Name: Longer Strides - Skill - Icon - T3
@@ -24423,6 +24604,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1987013616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987013610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60af506d5e5184d44b2b558ef3768d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillPurchase: 0
+  Skill: {fileID: 70800764}
+  Serios:
+  - {fileID: 1987013610}
+  - {fileID: 1188304329}
+--- !u!114 &1987013617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987013610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60af506d5e5184d44b2b558ef3768d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillPurchase: 0
+  Skill: {fileID: 344207651}
+  Serios:
+  - {fileID: 1987013610}
 --- !u!1 &1992050381
 GameObject:
   m_ObjectHideFlags: 0
@@ -24525,7 +24739,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1997086903
 Transform:
   m_ObjectHideFlags: 0
@@ -27078,6 +27292,7 @@ GameObject:
   - component: {fileID: 8841759715394940631}
   - component: {fileID: 8841759715394940633}
   - component: {fileID: 8841759715394940632}
+  - component: {fileID: 8841759715394940634}
   m_Layer: 0
   m_Name: Solid Fist - Skill - Icon - T1
   m_TagString: Untagged
@@ -27187,6 +27402,24 @@ MonoBehaviour:
   Serios:
   - {fileID: 6676254628406475187}
   - {fileID: 1429301488}
+--- !u!114 &8841759715394940634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6676254628406475187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60af506d5e5184d44b2b558ef3768d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillPurchase: 0
+  Skill: {fileID: 1849188067}
+  Serios:
+  - {fileID: 6676254628406475187}
+  - {fileID: 1429301488}
+  - {fileID: 0}
 --- !u!212 &9011128151812163451
 SpriteRenderer:
   m_ObjectHideFlags: 0
