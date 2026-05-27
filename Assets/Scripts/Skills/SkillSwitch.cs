@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class SkillSwitch : MonoBehaviour
 {
-    public bool SkillPurchase = false;
+    private bool SkillPurchase = false;
+    public SkillSystem LeadSkill;
     public GameObject Skill;
     public GameObject[] Serios;
 
@@ -14,12 +15,13 @@ public class SkillSwitch : MonoBehaviour
 
     private void Update()
     {
+        if(LeadSkill.currentLevel >= 1 ) {SkillPurchase = true; } else {SkillPurchase = false; }
         if (SkillPurchase && !Skill.activeSelf) { CheckSkill(); }
     }
 
     public void CheckSkill()
     {
-
+        
         int i = 0;
 
         foreach (GameObject s in Serios)

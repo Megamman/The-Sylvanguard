@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 25, y: 25}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1919920451171327216
 CanvasRenderer:
@@ -230,6 +230,10 @@ MonoBehaviour:
   cursorSpeed: 1000
   padding: 35
   cameraRB: {fileID: 0}
+  cameraTransform: {fileID: 0}
+  mouseSpeedX: 0
+  mouseSpeedY: 0
+  sensitivity: 1
 --- !u!114 &5901082613895296959
 MonoBehaviour:
   m_ObjectHideFlags: 0

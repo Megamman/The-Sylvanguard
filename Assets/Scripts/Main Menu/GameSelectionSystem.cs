@@ -185,7 +185,9 @@ public class GameSelectionSystem : MonoBehaviour, IGameDataPersistence
     public void DeleteGame()
     {
         MainStaticData.gameData.RemoveGameData();
-        MainStaticData.gameDataHandler.DeleteSaveFile();
+        MainStaticData.gameDataHandler.DeleteSaveFile();        
+        GameSaveData.SaveData();
+        LoadList();
     }
 
 }

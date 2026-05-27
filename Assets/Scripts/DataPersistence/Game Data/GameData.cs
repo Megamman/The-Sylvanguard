@@ -13,6 +13,7 @@ public class GameData
 
     public void RemoveGameData()
     {
+        Debug.Log("Removing Game");
         SavedGame.Remove(MainStaticData.SelectedGame);
 
     }

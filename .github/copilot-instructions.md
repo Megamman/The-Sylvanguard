@@ -2,13 +2,13 @@
 - Project name: The-Sylvanguard
 - Unity version: Unity 6000.0.43f1
 - Active scene:
-  - Name: 1 - Dungeon - Mines
+  - Name: MainMenu
   - Tags:
-    - Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController
+    - Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController, Ground, Enemy, Wall, Cursor, Dungean
   - Layers:
-    - Default, TransparentFX, Ignore Raycast, Water, UI
+    - Default, TransparentFX, Ignore Raycast, Player, Water, UI, Enemy, Walls, SpawnBlocker
 - Active game object:
-  - Name: Player
-  - Tag: Player
-  - Layer: 3
+  - Name: Delete Game
+  - Tag: Untagged
+  - Layer: UI
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

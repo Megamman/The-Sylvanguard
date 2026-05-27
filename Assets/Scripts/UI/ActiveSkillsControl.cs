@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEditor.ShaderGraph;
+using UnityEngine.SceneManagement;
 
 public class ActiveSkillsControl : MonoBehaviour
 {
@@ -56,7 +56,7 @@ public class ActiveSkillsControl : MonoBehaviour
         controls.Main.Card1.performed += ctx => UsePotion();
         controls.Main.Card2.performed += ctx => UseMagicAttack();
         controls.Main.Card3.performed += ctx => UseMagicShield();
-        controls.Main.Card4.performed += ctx => UseHome();
+        controls.Main.Card4.performed += ctx => CheckSceen();
 
         Potion.interactable = Stats.PotionUseIsActive;
         PotionText.SetActive(Stats.PotionUseIsActive);
@@ -76,6 +76,14 @@ public class ActiveSkillsControl : MonoBehaviour
         ShadedText = new Color(151f / 255f, 151f / 255f, 151f / 255f);
 
         HomeBox.SetActive(false);
+    }
+
+    void CheckSceen()
+    {
+        if(SceneManager.GetActiveScene().name == "SkillTree")
+        {
+            ToSkillTree();
+        } else { UseHome();}
     }
 
     public void UsePotion()
@@ -112,6 +120,12 @@ public class ActiveSkillsControl : MonoBehaviour
     public void UseHome() 
     {
         HomeBox.SetActive (true);
+    }
+
+    public void  ToSkillTree()
+    {
+        //to skill tree
+        SceneManager.LoadScene("SkillTree");
     }
 
 
