@@ -15,6 +15,7 @@ public class MainMenuSystem : MonoBehaviour
 
     public void ToMainMenu()
     {
+        MainStaticData.SelectedGame = null;
         MainMenu.SetActive(true);
         GameSelection.SetActive(false);
         SettingsMenu.SetActive(false);

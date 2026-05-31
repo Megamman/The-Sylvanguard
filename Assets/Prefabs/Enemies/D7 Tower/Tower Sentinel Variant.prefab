@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &682584521979096185
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1910848661794858009, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4049416169284696210, guid: f239d3e40bc7cf64f8b572486cb3aaeb, type: 3}
+    - target: {fileID: 1928800413585923103, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.1296143
+      objectReference: {fileID: 0}
+    - target: {fileID: 1928800413585923103, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1928800413585923103, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.4375
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465470036345127664, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_Name
+      value: Tower Sentinel Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006507763855172627, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: bee302eb8a5ef5040bbb2307ad77d3df, type: 2}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: HP
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: Name
+      value: Tower Sentinel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: XPMax
+      value: 6000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: XPMin
+      value: 5750
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: Attack
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: CoinsMax
+      value: 7000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: CoinsMin
+      value: 6750
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: CritChance
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: Decription
+      value: A reinforced guardian built to withstand a siege.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: WeakToMagic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: CritMaxDamage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: WeakToPhysical
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: ResistToPhysical
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063306945580394259, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063306945580394259, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}

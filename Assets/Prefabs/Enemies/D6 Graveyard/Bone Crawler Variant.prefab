@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6127008134139696147
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1910848661794858009, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -9122514876835033304, guid: d997df97584dfbb4dbface0ea6c1752f, type: 3}
+    - target: {fileID: 1928800413585923103, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.54545456
+      objectReference: {fileID: 0}
+    - target: {fileID: 1928800413585923103, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.72727275
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465470036345127664, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_Name
+      value: Bone Crawler Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: HP
+      value: 280
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: Name
+      value: Bone Crawler
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: XPMax
+      value: 1600
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: XPMin
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: Attack
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: CoinsMax
+      value: 850
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: CoinsMin
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: CritChance
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: Decription
+      value: A rattling chain of vertebrae hungry for marrow.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: DodgeChance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966215022319289554, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: CritMaxDamage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.692
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352283440314267069, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063306945580394259, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063306945580394259, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2d7d3071f54ce61419762ace37c407f2, type: 3}

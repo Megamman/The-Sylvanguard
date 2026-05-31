@@ -75,14 +75,15 @@ public class GameDataHandler
 
     public void DeleteSaveFile()
     {
+        if(MainStaticData.SelectedGame == null) return;
         string fullPath = Path.Combine(dataDirPath, MainStaticData.SelectedGame);
 
         if (File.Exists(fullPath))
         {
             Debug.Log("Deleting file");
             GameData _data = MainStaticData.gameData;
-            File.Delete(fullPath);
             _data.RemoveGameData();
+            File.Delete(fullPath);
 
         }
     }

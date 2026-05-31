@@ -1,11 +1,8 @@
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Linq;
-using static UnityEditor.Progress;
 
 
 public class GameSelectionSystem : MonoBehaviour, IGameDataPersistence
@@ -30,6 +27,11 @@ public class GameSelectionSystem : MonoBehaviour, IGameDataPersistence
     {
         controls = new PlayerMovement();
         controls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        controls.Disable();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -84,6 +86,8 @@ public class GameSelectionSystem : MonoBehaviour, IGameDataPersistence
 
     void LoadList()
     {
+
+        //GameDataPersistenceManager.instance.LoadFileData();
 
         if (SavedGame.Count != 0)
         {
@@ -185,8 +189,7 @@ public class GameSelectionSystem : MonoBehaviour, IGameDataPersistence
     public void DeleteGame()
     {
         MainStaticData.gameData.RemoveGameData();
-        MainStaticData.gameDataHandler.DeleteSaveFile();        
-        GameSaveData.SaveData();
+        MainStaticData.gameDataHandler.DeleteSaveFile();       
         LoadList();
     }
 

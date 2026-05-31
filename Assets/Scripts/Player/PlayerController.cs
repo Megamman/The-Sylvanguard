@@ -1,7 +1,6 @@
-using UnityEditor.Tilemaps;
+
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Tilemaps;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 direction;
     [HideInInspector] Vector3 MoveTo;
     [SerializeField] private GameObject DungeanPannel;
+    public GameObject Curser;
 
     [SerializeField] private PlayerAnimationSO[] PASO;
     [SerializeField] private int PlayerSpriteLevel;
@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask IgnoreLayer;
 
     [SerializeField] private IntoDungean intoDungean;
+    EndGame endGame;
 
     float HpQuorter;
     int MaxHP;
@@ -32,6 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         PlayerSprite = GetComponent<SpriteRenderer>();
         combat = GetComponent<CombatScript>();
+        endGame = GetComponent<EndGame>();
 
         controls = new PlayerMovement();
         
@@ -46,7 +48,10 @@ public class PlayerController : MonoBehaviour
     { if (controls != null) controls.Enable(); }
 
     private void OnDisable()
-    { if (controls != null) controls.Disable(); }
+    { 
+        if (controls != null) controls.Disable(); 
+        //Curser.SetActive(false);
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -56,7 +61,11 @@ public class PlayerController : MonoBehaviour
         //rb2D = GetComponent<Rigidbody2D>();
         controls.Main.Movement.performed += ctx => Move(ctx.ReadValue<Vector2>());
         if (DungeanPannel != null ) DungeanPannel.SetActive(false);
+
+        Curser.SetActive(false);
+
     }
+
 
     private void Move(Vector2 direct)
     {
@@ -138,6 +147,7 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case "Dungean":
+                Curser.SetActive(true);
                 GoToDungean goToDungean = hit.transform.GetComponent<GoToDungean>();
                 intoDungean.go = goToDungean;
                 MainStaticData.HoldMovement = false;
@@ -150,5 +160,10 @@ public class PlayerController : MonoBehaviour
                 ActionMove();
                 break;
         }
+
+        if (Stats.MovePt == 0) { endGame.GetEndGame("Out of Steps"); Curser.SetActive(true); }
+        if (Stats.HP == 0) { endGame.GetEndGame("Health to Low"); Curser.SetActive(true); }
     }
+
+
 }

@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEditor.Experimental.GraphView;
-
 public class InfoBoxDetails : MonoBehaviour
 {
     [HideInInspector] public static float timer = 0;

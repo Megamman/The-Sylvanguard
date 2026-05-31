@@ -32,7 +32,7 @@ public class CombatScript : MonoBehaviour
     private void EnemyDamage() //How much damge the enemy recives
     {
         bool CanDodge = true;
-        int Damage = 1;
+        int Damage = Enemy.Attack;
         float ExtraDamage = 1;
         bool weekPoint = false;
         bool Dodged = false;

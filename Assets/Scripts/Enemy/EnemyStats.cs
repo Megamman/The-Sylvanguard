@@ -46,14 +46,11 @@ public class EnemyStats : MonoBehaviour
     [Header("UI")]
     public Slider HPSlider;
     public GameObject DmgCounter;
-    private Transform pCanvasTransform;
-    public Transform DamageHolder;
     //Info
 
 
     private void Start()
     {
-        pCanvasTransform = DmgCounter.transform.parent;
         if (isAnimated) { m_Animator = GetComponent<Animator>(); }
         Health = HP;
         HPSlider.maxValue = HP;
@@ -75,5 +72,15 @@ public class EnemyStats : MonoBehaviour
     {
         HPSlider.transform.gameObject.SetActive(true);
         if (isAnimated) { m_Animator.SetBool("Active", true); }
+    }
+
+    private void OnDestroy()
+    {
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+
+        Sprite img = sr.sprite;
+        
+        EndGame.DeafetedEnemy(img);
+        
     }
 }

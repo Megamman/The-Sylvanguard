@@ -1,4 +1,3 @@
-using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,18 +18,19 @@ public class IntoDungean : MonoBehaviour
     private void Start()
     {
         controls.Main.Interect.performed += ctx => GoInDungean();
-        controls.Main.Back.performed += ctx => LeaveDungean();
+        controls.Main.Back.performed += ctx => GoBack();
     }
     public void GoInDungean()
     {
+
         MainStaticData.SpawnPosition = go.point;
 
         SceneManager.LoadScene(go.Dungean);
     }
 
-    public void LeaveDungean()
+    public void GoBack()
     {
-        MainStaticData.HoldMovement = false;
+        MainStaticData.HoldMovement = true;
         gameObject.SetActive(false);
     }
 }

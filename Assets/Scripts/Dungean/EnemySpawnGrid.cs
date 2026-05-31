@@ -69,10 +69,10 @@ public class EnemySpawnGrid : MonoBehaviour
         Vector3 pos3 = new Vector3(RightX - 0.5f, BotY + 0.5f);
         Vector3 pos4 = new Vector3(LeftX + 0.5f, LeftX + 0.5f);
 
-        Handles.Label(pos1, $"{(RightX, TopY)}");
-        Handles.Label(pos2, $"{(LeftX, TopY)}");
-        Handles.Label(pos3, $"{(RightX, BotY)}");
-        Handles.Label(pos4, $"{(LeftX, BotY)}");
+        //Handles.Label(pos1, $"{(RightX, TopY)}");
+        //Handles.Label(pos2, $"{(LeftX, TopY)}");
+        //Handles.Label(pos3, $"{(RightX, BotY)}");
+        //Handles.Label(pos4, $"{(LeftX, BotY)}");
     }
 
     private void OnValidate()

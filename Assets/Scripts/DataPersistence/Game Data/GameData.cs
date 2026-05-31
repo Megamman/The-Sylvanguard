@@ -13,8 +13,9 @@ public class GameData
 
     public void RemoveGameData()
     {
-        Debug.Log("Removing Game");
         SavedGame.Remove(MainStaticData.SelectedGame);
+        GameDataPersistenceManager.instance.SaveFileData();
+        MainStaticData.SelectedGame = null;
 
     }
 }
