@@ -81,9 +81,9 @@ public class GameDataHandler
         if (File.Exists(fullPath))
         {
             Debug.Log("Deleting file");
-            GameData _data = MainStaticData.gameData;
-            _data.RemoveGameData();
             File.Delete(fullPath);
+            GameData _data = MainStaticData.gameData;
+            //_data.RemoveGameData();
 
         }
     }

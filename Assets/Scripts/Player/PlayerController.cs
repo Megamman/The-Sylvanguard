@@ -170,6 +170,16 @@ public class PlayerController : MonoBehaviour
 
                 break;
 
+            case "Blacksmith":
+                Curser.SetActive(true);
+                hit.transform.GetComponent<BlacksmithDialoge>().StartDialogue();
+                break;
+
+            case "Alchamist":
+                Curser.SetActive(true);
+                hit.transform.GetComponent<AlchamisthDialogue>().StartDialogue();
+                break;
+
             default:
                 ActionMove();
                 break;

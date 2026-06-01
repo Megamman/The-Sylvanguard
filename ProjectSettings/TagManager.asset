@@ -9,6 +9,9 @@ TagManager:
   - Wall
   - Cursor
   - Dungean
+  - NPC
+  - Blacksmith
+  - Alchamist
   layers:
   - Default
   - TransparentFX
