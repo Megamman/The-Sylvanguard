@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour
     int MagicSteps;
     int HealthSteps;
 
+    bool Deadlock;
+    bool Turnout;
+
     private void Awake()
     {
         PlayerSprite = GetComponent<SpriteRenderer>();
@@ -65,7 +68,18 @@ public class PlayerController : MonoBehaviour
         Curser.SetActive(false);
 
     }
+    void Update()
+    {
+        if(Stats.MovePt <= 0 || Stats.HP <= 0) Deadlock = true;
 
+        if (Deadlock && !Turnout)
+        {
+            
+            if (Stats.MovePt <= 0) { endGame.GetEndGame("Out of Steps"); Curser.SetActive(true); }
+            if (Stats.HP <= 0) { endGame.GetEndGame("Health to Low"); Curser.SetActive(true); }
+            Turnout = true; //calls this function once
+        }
+    }
 
     private void Move(Vector2 direct)
     {
@@ -161,8 +175,6 @@ public class PlayerController : MonoBehaviour
                 break;
         }
 
-        if (Stats.MovePt == 0) { endGame.GetEndGame("Out of Steps"); Curser.SetActive(true); }
-        if (Stats.HP == 0) { endGame.GetEndGame("Health to Low"); Curser.SetActive(true); }
     }
 
 

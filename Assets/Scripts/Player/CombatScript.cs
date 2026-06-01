@@ -29,10 +29,12 @@ public class CombatScript : MonoBehaviour
         }
     }
 
+
+// Damage to Enemy
     private void EnemyDamage() //How much damge the enemy recives
     {
         bool CanDodge = true;
-        int Damage = Enemy.Attack;
+        int Damage = Stats.Attack;
         float ExtraDamage = 1;
         bool weekPoint = false;
         bool Dodged = false;
@@ -55,7 +57,7 @@ public class CombatScript : MonoBehaviour
         if (Stats.CritChance > 0) { Damage += Random.Range(1, Stats.CritMax + 1); }
 
 
-        if (Enemy.DodgeChance > 0 && CanDodge) { if (Stats.GetRandom(0, 101, Enemy.DodgeChance)) { Damage = 0; Dodged = true; } }
+        if (Enemy.DodgeChance > 0 && CanDodge) { if (Stats.GetRandom(1, 101, Enemy.DodgeChance)) { Damage = 0; Dodged = true; } }
 
         if (Damage < 0) { Damage = 0; }
 
@@ -83,17 +85,18 @@ public class CombatScript : MonoBehaviour
         }
     }
 
+// Damage to Player
     private void PlayerDamage() //How much Damage the player recieves
     {
         bool CanDodge = true;
         bool Dodged = false;
-        int Damage = Stats.Attack;
+        int Damage = Enemy.Attack;
         // float ExtraDamage = 1;
 
         //Critical Hit
         if (Enemy.CritChance > 0)
         {
-            if (Stats.GetRandom(0, 101, Enemy.CritChance))
+            if (Stats.GetRandom(1, 101, Enemy.CritChance))
             {
                 Damage += Random.Range(1, Enemy.CritMaxDamage);
                 CanDodge = false;
@@ -127,7 +130,6 @@ public class CombatScript : MonoBehaviour
             else if (Damage < Stats.Attack) { DamageCounter(Damage.ToString(), Color.cyan, transform); }
         }
 
-        if (Stats.HP <= 0) { } //GameOver
     }
 
     public void DamageCounter(string dmg, Color color, Transform Position)

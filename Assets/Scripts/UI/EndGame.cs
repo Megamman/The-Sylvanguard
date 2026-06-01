@@ -16,8 +16,8 @@ public class EndGame : MonoBehaviour
     public TMP_Text Coins;
     public TMP_Text XP;
 
-    private int CoinStart, CoinEnd;
-    private int XpStart, XpEnd;
+    private int CoinStart;
+    private int XpStart;
 
 
     public static List<Sprite> _Sprites;
@@ -38,10 +38,10 @@ public class EndGame : MonoBehaviour
 
     public void GetEndGame(string title)
     {
-        MainStaticData.HoldMovement = false;
+        EndScene.SetActive(true);
+        MainStaticData.HoldMovement = true;
         _Title.text = title;
 
-        EndScene.SetActive(true);
 
         for (int i = 0; i < _Sprites.Count; i++)
         {
@@ -50,17 +50,17 @@ public class EndGame : MonoBehaviour
             img.sprite = _Sprites[i];
 
             Coins.text = (Stats.Coins - CoinStart).ToString();
-            XP.text = (Stats.XP - CoinEnd).ToString();
+            XP.text = (Stats.XP - XpStart).ToString();
         }
     }
 
-    public void ReturnHome()
+    public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         DungeanSaveData.SaveData();
     }
 
-    public void Retry()
+    public void ReturnHome()
     {
         SceneManager.LoadScene("Town");
         DungeanSaveData.SaveData();
