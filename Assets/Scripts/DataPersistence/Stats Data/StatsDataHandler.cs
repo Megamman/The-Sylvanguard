@@ -15,6 +15,8 @@ public class StatsDataHandler
 
     public StatsData Load()
     {
+       
+
         if (string.IsNullOrEmpty(dataFileName)) { dataFileName = "Defult"; }
 
         string fullPath = Path.Combine(dataDirPath, dataFileName);
@@ -74,17 +76,18 @@ public class StatsDataHandler
         }
     }
 
-    //public void DeleteSaveFile() // Delete Save File set in the name save file
-    //{
-    //    string fullPath = Path.Combine(dataDirPath, dataFileName);
+    public void DeleteSaveFile() // Delete Save File set in the name save file
+    {
+        if(MainStaticData.SelectedGame == null) return;
+       string fullPath = Path.Combine(dataDirPath, dataFileName);
 
-    //    if (File.Exists(fullPath))
-    //    {
-    //        Debug.Log("Deleting file");
-    //        StatsData _file = MainStaticData.statsData;
-    //        File.Delete(fullPath);
-    //        _file.RemoveData();
+       if (File.Exists(fullPath))
+       {
+           Debug.Log("Deleting file");
+           StatsData _file = MainStaticData.statsData;
+           File.Delete(fullPath);
+        //    _file.RemoveData();
 
-    //    }
-    //}
+       }
+    }
 }

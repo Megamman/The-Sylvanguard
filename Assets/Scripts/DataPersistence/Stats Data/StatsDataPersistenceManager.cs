@@ -47,6 +47,7 @@ public class StatsDataPersistenceManager : MonoBehaviour
     public void LoadStatsData()
     {
         DataHandler = new StatsDataHandler(Application.persistentDataPath);
+        MainStaticData.statsDataHandler = DataHandler;
 
         //Debug.Log("Loading Game from: " + Application.persistentDataPath + "/" + GameFileName);
 

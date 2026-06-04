@@ -6,6 +6,7 @@ public static class MainStaticData
     public static StatsData statsData;
     public static GameData gameData;
     public static GameDataHandler gameDataHandler;
+    public static StatsDataHandler statsDataHandler;
 
     public static int SpawnPosition;
 
