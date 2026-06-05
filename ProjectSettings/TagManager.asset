@@ -12,6 +12,7 @@ TagManager:
   - NPC
   - Blacksmith
   - Alchamist
+  - Sign
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Enemy
   - Walls
   - SpawnBlocker
-  - 
+  - Sign
   - 
   - 
   - 

@@ -179,6 +179,8 @@ public class PlayerController : MonoBehaviour
                 Curser.SetActive(true);
                 hit.transform.GetComponent<AlchamisthDialogue>().StartDialogue();
                 break;
+            case "Sign":
+                break;
 
             default:
                 ActionMove();
