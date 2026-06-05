@@ -16,6 +16,8 @@ public class GameDataHandler
 
     public GameData Load()
     {
+        MainStaticData.gameDataHandler = this;
+
         string fullPath = Path.Combine(dataDirPath, dataFileName);
         GameData loadedData = null;
 
@@ -80,10 +82,9 @@ public class GameDataHandler
 
         if (File.Exists(fullPath))
         {
-            Debug.Log("Deleting file");
-            File.Delete(fullPath);
+            
             GameData _data = MainStaticData.gameData;
-            //_data.RemoveGameData();
+            _data.RemoveGameData();
 
         }
     }
