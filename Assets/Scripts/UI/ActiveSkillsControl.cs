@@ -125,7 +125,7 @@ public class ActiveSkillsControl : MonoBehaviour
     public void  ToSkillTree()
     {
         //to skill tree
-        SceneManager.LoadScene("SkillTree");
+        MainStaticData.loadScreen.LoadScene(10);
     }
 
 

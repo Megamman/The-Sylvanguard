@@ -74,7 +74,8 @@ public class ActiveMenu : MonoBehaviour, IStatsDataPersistence
         //Save Position
         DungeanSaveData.SaveData();
         //Load Skill tree
-        SceneManager.LoadScene("SkillTree");
+        //SceneManager.LoadScene("SkillTree");
+        MainStaticData.loadScreen.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void CloseGame()

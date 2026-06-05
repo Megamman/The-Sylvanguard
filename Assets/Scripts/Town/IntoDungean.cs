@@ -26,6 +26,7 @@ public class IntoDungean : MonoBehaviour
         MainStaticData.SpawnPosition = go.point;
 
         SceneManager.LoadScene(go.Dungean);
+        MainStaticData.loadScreen.LoadScene(go.Dungean);
     }
 
     public void GoBack()

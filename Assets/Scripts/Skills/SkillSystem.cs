@@ -59,6 +59,8 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         // if(currentLevel != 0) { transform.GetComponent<SkillSwitch>().SkillPurchase = true; }
 
+        MainStaticData.isOnSkill = OnHover;
+
         UpdateCheck();
         InfoBoxDetails.timer = timer;
 

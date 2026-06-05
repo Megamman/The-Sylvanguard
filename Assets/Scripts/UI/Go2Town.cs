@@ -23,7 +23,8 @@ public class Go2Town : MonoBehaviour
     {
         DungeanSaveData.LoadData(); //loading back data to not save collected resourses
 
-        SceneManager.LoadScene("Town");
+        MainStaticData.loadScreen.LoadScene(11);
+        //SceneManager.LoadScene("Town");
         //change scene
     }
 

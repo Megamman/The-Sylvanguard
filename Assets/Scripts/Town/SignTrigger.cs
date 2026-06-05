@@ -10,9 +10,11 @@ public class SignTrigger : MonoBehaviour
         Text.SetActive(false);
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+            Debug.Log("Trigger");
+
+        if (collision.gameObject.CompareTag("Player"))
         {
             Text.SetActive(true);
         }

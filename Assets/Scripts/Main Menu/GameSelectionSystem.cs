@@ -177,7 +177,8 @@ public class GameSelectionSystem : MonoBehaviour, IGameDataPersistence
         if (MainStaticData.SelectedGame != null)
         {
             warningTextOBJ.SetActive(false);
-            SceneManager.LoadScene("Town");
+            //SceneManager.LoadScene("Town");
+            MainStaticData.loadScreen.LoadScene(11);
         }
         else
         {

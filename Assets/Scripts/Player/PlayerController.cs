@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
         controls.Main.Movement.performed += ctx => Move(ctx.ReadValue<Vector2>());
         if (DungeanPannel != null ) DungeanPannel.SetActive(false);
 
-        Curser.SetActive(false);
+        //Curser.SetActive(false);
 
     }
     void Update()
@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
         {
             
             if (Stats.MovePt <= 0) { endGame.GetEndGame("Out of Steps"); Curser.SetActive(true); }
-            if (Stats.HP <= 0) { endGame.GetEndGame("Health to Low"); Curser.SetActive(true); }
+            if (Stats.HP <= 0) { endGame.GetEndGame("Health too Low"); Curser.SetActive(true); }
             Turnout = true; //calls this function once
         }
     }
@@ -161,7 +161,7 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case "Dungean":
-                Curser.SetActive(true);
+                //Curser.SetActive(true);
                 GoToDungean goToDungean = hit.transform.GetComponent<GoToDungean>();
                 intoDungean.go = goToDungean;
                 MainStaticData.HoldMovement = false;
@@ -171,12 +171,12 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case "Blacksmith":
-                Curser.SetActive(true);
+                //Curser.SetActive(true);
                 hit.transform.GetComponent<BlacksmithDialoge>().StartDialogue();
                 break;
 
             case "Alchamist":
-                Curser.SetActive(true);
+                //Curser.SetActive(true);
                 hit.transform.GetComponent<AlchamisthDialogue>().StartDialogue();
                 break;
             case "Sign":

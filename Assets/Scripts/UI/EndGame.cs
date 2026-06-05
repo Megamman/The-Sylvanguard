@@ -38,8 +38,9 @@ public class EndGame : MonoBehaviour
 
     public void GetEndGame(string title)
     {
+        MainStaticData.HoldMovement = false;
         EndScene.SetActive(true);
-        MainStaticData.HoldMovement = true;
+        //MainStaticData.HoldMovement = true;
         _Title.text = title;
 
 
@@ -56,13 +57,22 @@ public class EndGame : MonoBehaviour
 
     public void Retry()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        MainStaticData.loadScreen.LoadScene(SceneManager.GetActiveScene().buildIndex);
         DungeanSaveData.SaveData();
+        MainStaticData.HoldMovement = false;
     }
 
     public void ReturnHome()
     {
-        SceneManager.LoadScene("Town");
+        MainStaticData.loadScreen.LoadScene(11);
         DungeanSaveData.SaveData();
+        MainStaticData.HoldMovement = false;
+    }
+
+    public void ToSkillTree()
+    {
+        MainStaticData.loadScreen.LoadScene(10);
+        DungeanSaveData.SaveData();
+        MainStaticData.HoldMovement = false;
     }
 }

@@ -7,6 +7,9 @@ public static class MainStaticData
     public static GameData gameData;
     public static GameDataHandler gameDataHandler;
     public static StatsDataHandler statsDataHandler;
+    public static LoadScreen loadScreen;
+    public static int OldSceen;
+    public static bool isOnSkill;
 
     public static int SpawnPosition;
 

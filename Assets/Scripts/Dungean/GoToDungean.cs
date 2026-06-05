@@ -17,7 +17,8 @@ public class GoToDungean : MonoBehaviour, IStatsDataPersistence
     {
         MainStaticData.SpawnPosition = point;
 
-        SceneManager.LoadScene(Dungean, LoadSceneMode.Single);
+
+        MainStaticData.loadScreen.LoadScene(Dungean);
     }
 
     public void LoadStatsData(StatsData data)

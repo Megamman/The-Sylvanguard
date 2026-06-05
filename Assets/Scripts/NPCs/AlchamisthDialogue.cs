@@ -25,6 +25,7 @@ public class AlchamisthDialogue : MonoBehaviour
     public void GoAlchamist()
     {
         MainStaticData.HoldMovement = true;
-        SceneManager.LoadScene("Alchemist SkillTree");
+        //SceneManager.LoadScene("Alchemist SkillTree");
+        MainStaticData.loadScreen.LoadScene(8);
     }
 }

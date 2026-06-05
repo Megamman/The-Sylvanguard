@@ -196,6 +196,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7646ef646b79ace4cbc96c3f8c627834, type: 3}
+--- !u!20 &250213723 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1989256821899987342, guid: da2ef7a37c0216b4b94f300c5b5fa8cd, type: 3}
+  m_PrefabInstance: {fileID: 280317036}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &280317036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -187061,6 +187066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Curser Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5901082613895296959, guid: 92ef423b5ed21ca4499771e161e816e7, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 250213723}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -187445,6 +187454,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2329940890540794682, guid: 7d27003c6e9150a42a5200580dffb730, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378378392981679393, guid: 7d27003c6e9150a42a5200580dffb730, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378378392981679393, guid: 7d27003c6e9150a42a5200580dffb730, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2406660692318308283, guid: 7d27003c6e9150a42a5200580dffb730, type: 3}

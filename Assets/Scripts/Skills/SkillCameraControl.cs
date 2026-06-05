@@ -36,8 +36,10 @@ public class SkillCameraControl : MonoBehaviour
         controls.Player.Move.performed += ctx => _newPosition = ctx.ReadValue<Vector2>();
         controls.Player.Move.canceled += ctx => _newPosition = Vector2.zero;
 
+
         GetVirtualMouse();
-        GetVirtualCamera();
+
+        if(!MainStaticData.isOnSkill) GetVirtualCamera();
 
         InputSystem.onAfterUpdate += UpdateMotion;
 

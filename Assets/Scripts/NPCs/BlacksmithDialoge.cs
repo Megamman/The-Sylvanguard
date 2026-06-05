@@ -26,6 +26,7 @@ public class BlacksmithDialoge : MonoBehaviour
     public void GoBlacksmith()
     {
         MainStaticData.HoldMovement = true;
-        SceneManager.LoadScene("Blacksmith SkillTree");
+        //SceneManager.LoadScene("Blacksmith SkillTree");
+        MainStaticData.loadScreen.LoadScene(9);
     }
 }
