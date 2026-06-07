@@ -32,15 +32,12 @@ public class SkillCameraControl : MonoBehaviour
         controls = new SkillTreeMovement();
 
         controls.Player.Enable();
-        // 2. This ONLY updates the variable when you press/release keys
+        // 2. This ONLY updates the variable when you press/release key
         controls.Player.Move.performed += ctx => _newPosition = ctx.ReadValue<Vector2>();
         controls.Player.Move.canceled += ctx => _newPosition = Vector2.zero;
 
-
+        GetVirtualCamera(); 
         GetVirtualMouse();
-
-        if(!MainStaticData.isOnSkill) GetVirtualCamera();
-
         InputSystem.onAfterUpdate += UpdateMotion;
 
         //Disable mouse viuals
@@ -96,11 +93,14 @@ public class SkillCameraControl : MonoBehaviour
         if(virtualMouse == null) { return; }
 
         LeftStickMovment();
+
+        //if(MainStaticData.isOnSkill) 
         RightStickMovment();
     }
 
     private void LeftStickMovment()
     {
+        //if (!MainStaticData.isOnSkill) return;
         Vector2 currentPosition = virtualMouse.position.ReadValue();
         Vector2 newPosition = currentPosition;
 
@@ -164,7 +164,8 @@ public class SkillCameraControl : MonoBehaviour
     private void Update()
     {
         CameraMovement();
-        DragCamera();
+
+        if(!MainStaticData.isOnSkill) DragCamera();
     }
 
     void CameraMovement()

@@ -31,5 +31,6 @@ public class Go2Town : MonoBehaviour
     public void CloseThisWindow()
     {
         this.gameObject.SetActive(false);
+        MainStaticData.CurserContol = false;
     }
 }

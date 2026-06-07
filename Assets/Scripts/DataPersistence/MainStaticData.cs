@@ -10,6 +10,7 @@ public static class MainStaticData
     public static LoadScreen loadScreen;
     public static int OldSceen;
     public static bool isOnSkill;
+    public static bool CurserContol;
 
     public static int SpawnPosition;
 

@@ -38,6 +38,7 @@ public class EndGame : MonoBehaviour
 
     public void GetEndGame(string title)
     {
+        MainStaticData.CurserContol = true;
         MainStaticData.HoldMovement = false;
         EndScene.SetActive(true);
         //MainStaticData.HoldMovement = true;

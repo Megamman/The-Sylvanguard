@@ -28,7 +28,7 @@ public class ControllerCursorDetector : MonoBehaviour
             GameObject hitObject = hit.collider.gameObject;
 
             // Only trigger if we moved to a NEW object
-            if (hitObject != currentHoverTarget)
+            if (hitObject != currentHoverTarget && MainStaticData.isOnSkill)
             {
                 //_skillSystem.OnMouseIsOver();
                 //Debug.Log("Mouse over");

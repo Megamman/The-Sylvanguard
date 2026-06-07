@@ -53,7 +53,6 @@ public class PlayerController : MonoBehaviour
     private void OnDisable()
     { 
         if (controls != null) controls.Disable(); 
-        //Curser.SetActive(false);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -65,12 +64,14 @@ public class PlayerController : MonoBehaviour
         controls.Main.Movement.performed += ctx => Move(ctx.ReadValue<Vector2>());
         if (DungeanPannel != null ) DungeanPannel.SetActive(false);
 
-        //Curser.SetActive(false);
 
     }
     void Update()
     {
-        if(Stats.MovePt <= 0 || Stats.HP <= 0) Deadlock = true;
+        Curser.SetActive(MainStaticData.CurserContol);
+
+
+        if (Stats.MovePt <= 0 || Stats.HP <= 0) Deadlock = true;
 
         if (Deadlock && !Turnout)
         {
@@ -162,6 +163,7 @@ public class PlayerController : MonoBehaviour
 
             case "Dungean":
                 //Curser.SetActive(true);
+                MainStaticData.CurserContol = true;
                 GoToDungean goToDungean = hit.transform.GetComponent<GoToDungean>();
                 intoDungean.go = goToDungean;
                 MainStaticData.HoldMovement = false;
@@ -172,11 +174,13 @@ public class PlayerController : MonoBehaviour
 
             case "Blacksmith":
                 //Curser.SetActive(true);
+                MainStaticData.CurserContol = true;
                 hit.transform.GetComponent<BlacksmithDialoge>().StartDialogue();
                 break;
 
             case "Alchamist":
                 //Curser.SetActive(true);
+                MainStaticData.CurserContol = true;
                 hit.transform.GetComponent<AlchamisthDialogue>().StartDialogue();
                 break;
             case "Sign":

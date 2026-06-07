@@ -59,10 +59,12 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         // if(currentLevel != 0) { transform.GetComponent<SkillSwitch>().SkillPurchase = true; }
 
-        MainStaticData.isOnSkill = OnHover;
 
         UpdateCheck();
-        InfoBoxDetails.timer = timer;
+        if (infoScript != null)
+            infoScript.timer = timer;
+        {
+        }
 
         //sr.enabled = OnHover;
         if (Purchesable) { sr.color = Color.green; }
@@ -71,9 +73,14 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
         if (OnHover) { 
             controls.Player.Interect.started += ctx => isPurchasing = true;
+
+            MainStaticData.isOnSkill = false;
+        }else
+        {
+            MainStaticData.isOnSkill = true;
         }
 
-        controls.Player.Interect.canceled += ctx => isPurchasing = false;            
+            controls.Player.Interect.canceled += ctx => isPurchasing = false;            
 
         if (isPurchasing) {
             PurchaseSkill();
@@ -87,8 +94,9 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
         if(currentLevel == maxLevel) { MaxLevelReached = true; }
 
+
         //check if skill is purchasable
-        if( Stats.XP >= xpCost && Stats.Coins >= coinCost ) { Purchesable = true; } 
+        if ( Stats.XP >= xpCost && Stats.Coins >= coinCost ) { Purchesable = true; } 
         else { Purchesable = false; }
     }
 
@@ -116,22 +124,22 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             switch (GetStat.UpgradeEffect)
             {
                 //Intigers
-                case UpgradeStat.Health:
+                case UpgradeStat.Health: //
                     Stats.HP += GetStat.SkillIncrease;
                     break;
-                case UpgradeStat.Movement:
+                case UpgradeStat.Movement: //
                     Stats.MovePt += GetStat.SkillIncrease;
                     break;
-                case UpgradeStat.Attack:
+                case UpgradeStat.Attack: //
                     Stats.Attack += GetStat.SkillIncrease;
                     break;
-                case UpgradeStat.MagicPoints:
+                case UpgradeStat.MagicPoints: //
                     Stats.MP += GetStat.SkillIncrease;
                     break;
-                case UpgradeStat.Dodge:
+                case UpgradeStat.Dodge: //
                     Stats.DodgeChance += GetStat.SkillIncrease;
                     break;
-                case UpgradeStat.Defence:
+                case UpgradeStat.Defence: //
                     Stats.Def += GetStat.SkillIncrease;
                     break;
                 case UpgradeStat.Crit:
@@ -143,19 +151,19 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                 case UpgradeStat.SkipMovement:
                     Stats.SkipMove += GetStat.SkillIncrease;
                     break;
-                case UpgradeStat.HpRegen:
+                case UpgradeStat.HpRegen://
                     Stats.HPRegen += GetStat.SkillIncrease;
                     break;
                 case UpgradeStat.HpRegenSteps:
                     Stats.StepsToHPRegen -= GetStat.SkillIncrease;
                     break;
-                case UpgradeStat.MpRegenSteps:
+                case UpgradeStat.MpRegenSteps://
                     Stats.StepsToMPRegen -= GetStat.SkillIncrease;
                     break;
-                case UpgradeStat.MagicAttack:
+                case UpgradeStat.MagicAttack://
                     Stats.MagicAttack += GetStat.SkillIncrease;
                     break;
-                case UpgradeStat.MagicShield:
+                case UpgradeStat.MagicShield://
                     Stats.MagicDef += GetStat.SkillIncrease;
                     break;
                 case UpgradeStat.Potions:

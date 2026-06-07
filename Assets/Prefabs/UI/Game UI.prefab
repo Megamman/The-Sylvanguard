@@ -3211,6 +3211,18 @@ MonoBehaviour:
   XpCost: {fileID: 858492848567068970}
   CoinCost: {fileID: 826093290856090928}
   BuySlider: {fileID: 5899015215944919294}
+  SkillHolder: {fileID: 0}
+  SkillParent: {fileID: 0}
+  HP: {fileID: 799518468378597231, guid: 0bfd2d4520ff552419587dfb3bfdf69e, type: 3}
+  MP: {fileID: 3614986518450183708, guid: 0bfd2d4520ff552419587dfb3bfdf69e, type: 3}
+  Steps: {fileID: -7994913117971141790, guid: 0bfd2d4520ff552419587dfb3bfdf69e, type: 3}
+  Att: {fileID: -503798793681675572, guid: 0bfd2d4520ff552419587dfb3bfdf69e, type: 3}
+  HPReg: {fileID: 723932658625247526, guid: 0bfd2d4520ff552419587dfb3bfdf69e, type: 3}
+  MPReg: {fileID: 1013929259981814892, guid: 0bfd2d4520ff552419587dfb3bfdf69e, type: 3}
+  Def: {fileID: 6605618204015838191, guid: 0bfd2d4520ff552419587dfb3bfdf69e, type: 3}
+  Dog: {fileID: 6950371369711177783, guid: 0bfd2d4520ff552419587dfb3bfdf69e, type: 3}
+  Mdef: {fileID: -7056084208908246041, guid: 0bfd2d4520ff552419587dfb3bfdf69e, type: 3}
+  Matt: {fileID: 2175175845963378595, guid: 0bfd2d4520ff552419587dfb3bfdf69e, type: 3}
 --- !u!1 &2056843119809785379
 GameObject:
   m_ObjectHideFlags: 0
@@ -10114,6 +10126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59e8c1494c07084b870202225e2c4f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curser: 0
 --- !u!114 &3562402803654974663
 MonoBehaviour:
   m_ObjectHideFlags: 0
