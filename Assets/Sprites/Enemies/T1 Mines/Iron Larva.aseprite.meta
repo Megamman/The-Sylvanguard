@@ -125,15 +125,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Iron Larva
     originalName: 
-    pivot: {x: 0.6666667, y: 0.5}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
+      x: 3
       y: 4
-      width: 12
+      width: 16
       height: 16
     spriteID: 487df9946b31fa244b8ac52161ba1406
     spriteBone: []
