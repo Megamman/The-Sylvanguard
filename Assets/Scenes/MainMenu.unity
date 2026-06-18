@@ -5102,6 +5102,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Loading Sceen
       objectReference: {fileID: 0}
+    - target: {fileID: 3877226931916960716, guid: 60a21f938307866488818714a893aeec, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6959929312988419221, guid: 60a21f938307866488818714a893aeec, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
