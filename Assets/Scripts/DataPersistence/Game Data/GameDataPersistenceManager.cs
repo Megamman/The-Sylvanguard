@@ -9,7 +9,7 @@ public class GameDataPersistenceManager : MonoBehaviour
 
     private GameData gameData;
 
-    private List<IGameDataPersistence> gameDataPersistences = new List<IGameDataPersistence>();
+    private List<IGameDataPersistence> gameDataPersistences;
     private GameDataHandler gameDataHandler;
     public static GameDataPersistenceManager instance { get; private set; }
 

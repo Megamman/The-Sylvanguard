@@ -84,6 +84,7 @@ public class GameDataHandler
         {
             
             GameData _data = MainStaticData.gameData;
+            File.Delete(fullPath);
             _data.RemoveGameData();
 
         }
