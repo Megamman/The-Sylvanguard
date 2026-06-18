@@ -125,16 +125,16 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Aether Shard
     originalName: 
-    pivot: {x: 0.54545456, y: 0}
+    pivot: {x: 0.5, y: 0.3}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
-      width: 11
-      height: 15
+      x: 0
+      y: 0
+      width: 19
+      height: 19
     spriteID: 045feea37ff0d7f459542ee4a3f4a596
     spriteBone: []
     spriteOutline: []

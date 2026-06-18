@@ -132,9 +132,9 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
+      y: 0
       width: 23
-      height: 15
+      height: 23
     spriteID: fa556a40fde85124693c56732cbc5b3f
     spriteBone: []
     spriteOutline: []
@@ -146,16 +146,16 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Frame_1
     originalName: 
-    pivot: {x: 0.5, y: 0.53333336}
+    pivot: {x: 0.5, y: 0.58412856}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
       x: 4
-      y: 27
+      y: 23
       width: 21
-      height: 15
+      height: 21
     spriteID: 88bf99bf2faa96c419f2bd0b8f0fd2b8
     spriteBone: []
     spriteOutline: []

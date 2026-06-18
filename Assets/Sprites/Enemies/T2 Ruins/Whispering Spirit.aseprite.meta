@@ -125,16 +125,16 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Whispering Spirit
     originalName: 
-    pivot: {x: 0.45454547, y: 0.21428573}
+    pivot: {x: 0.5, y: 0.21428573}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
+      x: 2
       y: 4
-      width: 11
-      height: 14
+      width: 15
+      height: 15
     spriteID: 1d9801ae07c21624bab33c85cd99489f
     spriteBone: []
     spriteOutline: []
@@ -146,16 +146,16 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Frame_1
     originalName: 
-    pivot: {x: 0.45454547, y: 0.21428573}
+    pivot: {x: 0.5, y: 0.21428573}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
+      x: 2
       y: 26
-      width: 11
-      height: 14
+      width: 15
+      height: 15
     spriteID: 6b951c0c302a31b4fb6a4f93e47c3030
     spriteBone: []
     spriteOutline: []

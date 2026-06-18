@@ -146,15 +146,15 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Frame_1
     originalName: 
-    pivot: {x: 0.53333336, y: 0.5}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 27
+      x: 21
       y: 4
-      width: 15
+      width: 27
       height: 27
     spriteID: da854dc4bcfdd8e47a479dbdecb02b21
     spriteBone: []

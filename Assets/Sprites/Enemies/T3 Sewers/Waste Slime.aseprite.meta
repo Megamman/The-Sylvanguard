@@ -131,10 +131,10 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
+      x: 3
       y: 27
-      width: 14
-      height: 15
+      width: 16
+      height: 16
     spriteID: 6573be858e6c1794c80e3b76f00f9fba
     spriteBone: []
     spriteOutline: []
@@ -155,7 +155,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 16
-      height: 15
+      height: 16
     spriteID: 41cf48e29052e01479265e8ed9e26102
     spriteBone: []
     spriteOutline: []
@@ -167,7 +167,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Frame_2
     originalName: 
-    pivot: {x: 0.53333336, y: 0.265}
+    pivot: {x: 0.5, y: 0.265}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -175,8 +175,8 @@ ScriptedImporter:
       serializedVersion: 2
       x: 28
       y: 4
-      width: 15
-      height: 15
+      width: 16
+      height: 16
     spriteID: 23a82c05869a9f04fadd27c5c3d5a21e
     spriteBone: []
     spriteOutline: []

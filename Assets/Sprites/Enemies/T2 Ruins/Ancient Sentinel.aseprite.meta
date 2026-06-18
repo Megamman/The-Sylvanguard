@@ -78,7 +78,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 9
     customPivotPosition: {x: 0.5, y: 0.35}
-    mosaicPadding: 4
+    mosaicPadding: 5
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -91,14 +91,14 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 9
     customPivotPosition: {x: 0.5, y: 0.35}
-    mosaicPadding: 4
+    mosaicPadding: 5
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639060727895911964
+  platformSettingsDirtyTick: 639170633953244073
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -131,9 +131,9 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
-      width: 10
+      x: 0
+      y: 5
+      width: 21
       height: 21
     spriteID: 849936ab90dba0b4ab9ecba82702c3ec
     spriteBone: []
@@ -152,9 +152,9 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 22
-      y: 4
-      width: 10
+      x: 20
+      y: 5
+      width: 21
       height: 21
     spriteID: 50c20ec553289694aab5e8ba6d0365e3
     spriteBone: []
@@ -174,8 +174,8 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 40
-      y: 4
-      width: 10
+      y: 5
+      width: 21
       height: 21
     spriteID: 19fbd15466a2d394d87c0d895101509e
     spriteBone: []
@@ -194,9 +194,9 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
-      y: 33
-      width: 10
+      x: 0
+      y: 36
+      width: 21
       height: 21
     spriteID: cf7c0eb4377ee72469217cdd32f72163
     spriteBone: []
