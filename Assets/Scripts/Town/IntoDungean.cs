@@ -24,6 +24,7 @@ public class IntoDungean : MonoBehaviour
     {
 
         MainStaticData.SpawnPosition = go.point;
+        SavenLoadScript.SaveData();
 
         SceneManager.LoadScene(go.Dungean);
         MainStaticData.loadScreen.LoadScene(go.Dungean);

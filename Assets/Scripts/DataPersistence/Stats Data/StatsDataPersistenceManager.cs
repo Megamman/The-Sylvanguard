@@ -65,9 +65,9 @@ public class StatsDataPersistenceManager : MonoBehaviour
 
     public void SaveStatsData()
     {
+        Debug.Log("Saving Game from: " + Application.persistentDataPath + "/" + GameFileName);
         if (!dataLoadedSuccessfully) { return; }
 
-        Debug.Log("Saving Game from: " + Application.persistentDataPath + "/" + GameFileName);
 
         statsDataPersistence = FindAllStatsData();
 

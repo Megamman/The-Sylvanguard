@@ -3,7 +3,7 @@ using UnityEngine;
 [System.Serializable]
 public class StatsData
 {
-    public Vector2 TownPos = Vector2.zero;
+    public Vector2 TownPos = new Vector2(0,0);
 
     //Main Stats
     public int HP = 10; //Health Point - Redused when reciing attack - GameOver when 0

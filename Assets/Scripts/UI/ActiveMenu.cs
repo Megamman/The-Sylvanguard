@@ -89,12 +89,19 @@ public class ActiveMenu : MonoBehaviour, IStatsDataPersistence
     public void LoadStatsData(StatsData data)
     {
         if (scene.name == ("Town"))
+        {
             player.position = data.TownPos;
+            //Debug.Log("Loading Town Location " + data.TownPos);
+        }
     }
 
     public void SaveStatsData(ref StatsData data)
     {
         if (scene.name == ("Town"))
+        {
             data.TownPos = player.position;
+
+            Debug.Log("Saving Town Location " + data.TownPos);
+        }
     }
 }

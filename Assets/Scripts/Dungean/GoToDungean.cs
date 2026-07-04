@@ -17,17 +17,22 @@ public class GoToDungean : MonoBehaviour, IStatsDataPersistence
     {
         MainStaticData.SpawnPosition = point;
 
+        StatsDataPersistenceManager.instance.SaveStatsData();
 
         MainStaticData.loadScreen.LoadScene(Dungean);
+        
     }
 
     public void LoadStatsData(StatsData data)
     {
+
+        //Debug.Log(data.TownPos + "Load ========================");
         return;
     }
 
     public void SaveStatsData(ref StatsData data)
     {
         data.TownPos = player.position;
+        Debug.Log(data.TownPos + "Save ========================");
     }
 }

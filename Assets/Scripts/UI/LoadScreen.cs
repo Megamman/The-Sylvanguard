@@ -9,7 +9,7 @@ public class LoadScreen : MonoBehaviour
     public GameObject _Screen;
     public Image LoadingBarFill;
 
-    private void Start()
+    private void Awake()
     {
         _Screen.SetActive(false);
         MainStaticData.loadScreen = this;

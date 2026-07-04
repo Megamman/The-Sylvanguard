@@ -55,7 +55,11 @@ public class StatsSlider : MonoBehaviour //, IPointerEnterHandler, IPointerExitH
 
 
         if(StatType.Mana <= 0 && statType == StatType.Mana) { 
-            HideObject.SetActive(true); Debug.Log("Hidden"); } else { HideObject.SetActive(false); Debug.Log("Visible"); }
+            HideObject.SetActive(true); 
+            //Debug.Log("Hidden"); 
+        } else { HideObject.SetActive(false); 
+            //Debug.Log("Visible"); 
+        }
 
         Slider.maxValue = maxtStat;
 

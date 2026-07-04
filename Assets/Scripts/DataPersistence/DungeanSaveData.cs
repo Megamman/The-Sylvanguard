@@ -9,7 +9,7 @@ public class DungeanSaveData : MonoBehaviour, IStatsDataPersistence
 
     public static void SaveData()
     {
-        Debug.Log("Saving Data");
+        //Debug.Log("Saving Data");s
         StatsDataPersistenceManager.instance.SaveStatsData();
     }
 
@@ -28,7 +28,7 @@ public class DungeanSaveData : MonoBehaviour, IStatsDataPersistence
     {
         if (data != null)
         {
-            Debug.Log("Loading Data");
+            //Debug.Log("Loading Data");
 
             Stats.HP = data.HP;
             Stats.MovePt = data.MovePt;

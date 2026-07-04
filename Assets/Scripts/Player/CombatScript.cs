@@ -18,7 +18,7 @@ public class CombatScript : MonoBehaviour
 
         if(EnemyScript != null)
         {
-            Debug.Log("Attaking Enemy " + EnemyScript.Name);
+            //Debug.Log("Attaking Enemy " + EnemyScript.Name);
             Enemy = EnemyScript;
 
             if (Enemy.SneakAttack)

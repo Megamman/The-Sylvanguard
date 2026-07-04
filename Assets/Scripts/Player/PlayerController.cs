@@ -142,7 +142,7 @@ public class PlayerController : MonoBehaviour
     private void CheckHit(RaycastHit2D hit)
     {
         string tag = hit.transform.tag;
-        Debug.Log("Found Tag: " + tag);
+        //Debug.Log("Found Tag: " + tag);
 
         //Comper Tags if raycast get hit
         switch (tag)
@@ -158,7 +158,7 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case "NPC":
-                Debug.Log("NPC Found");
+                //Debug.Log("NPC Found");
                 break;
 
             case "Dungean":
@@ -168,7 +168,7 @@ public class PlayerController : MonoBehaviour
                 intoDungean.go = goToDungean;
                 MainStaticData.HoldMovement = false;
                 DungeanPannel.SetActive(true);
-                Debug.Log("Dungean Found");
+                //Debug.Log("Dungean Found");
 
                 break;
 

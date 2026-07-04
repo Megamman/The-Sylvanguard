@@ -90,18 +90,18 @@ public class GameSelectionSystem : MonoBehaviour, IGameDataPersistence
 
         //GameDataPersistenceManager.instance.LoadFileData();
 
-        if (SavedGame.Count != 0)
+        foreach (Transform child in Container)
         {
             // Clear old UI objects first if needed safely
-            foreach (Transform child in Container)
-            {
-                Destroy(child.gameObject);
-            }
-
+            Destroy(child.gameObject);
         }
+        //if (SavedGame.Count != 0)
+        //{
+
+        //}
         foreach (string item in SavedGame)
         {
-            if (item == null) continue;
+            //if (item == null) continue;
 
             GameObject newItem = Instantiate(GameClone, Container);
             newItem.SetActive(true);
@@ -190,6 +190,9 @@ public class GameSelectionSystem : MonoBehaviour, IGameDataPersistence
 
     public void DeleteGame()
     {
+
+        SavedGame.Remove(MainStaticData.SelectedGame);
+
         MainStaticData.gameData.RemoveGameData();
         MainStaticData.gameDataHandler.DeleteSaveFile();   
         MainStaticData.statsDataHandler.DeleteSaveFile();
