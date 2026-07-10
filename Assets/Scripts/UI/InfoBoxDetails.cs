@@ -16,10 +16,10 @@ public class InfoBoxDetails : MonoBehaviour
     public GameObject SkillHolder;
     public Transform SkillParent;
 
-    [HideInInspector] public float timer = 0;
+    public float timer = 0;
 
     // Parent panel containers for visibility control
-    private GameObject PartGBSlider, PartGBXP, PartGBCost;
+    [SerializeField]private GameObject PartGBSlider, PartGBXP, PartGBCost;
 
     // Sprites
     public Sprite HP, MP, Steps, Att, HPReg, MPReg, Def, Dog, Mdef, Matt, Crit, CritMax, SkipMove, HPSteps, Potions, PotionHeal;
@@ -37,7 +37,7 @@ public class InfoBoxDetails : MonoBehaviour
         MainStaticData.showInfo = false;
     }
 
-    void Start()
+    void Awake()
     {
         PartGBSlider = BuySlider.transform.parent.gameObject;
         PartGBXP = XpCost.transform.parent.gameObject;
@@ -50,9 +50,19 @@ public class InfoBoxDetails : MonoBehaviour
     if (currentSkill == null) return;
 
     // Use the timer value that SkillSystem is pushing into this script
+    timer = currentSkill.timer;
     BuySlider.value = timer;
+    UpdateData();
 }
 
+
+    public void UpdateData()
+    {
+        Title.text = currentSkill.SkillName;
+        Description.text = currentSkill.SkillDescription;
+        XpCost.text = currentSkill.xpCost.ToString();
+        CoinCost.text = currentSkill.coinCost.ToString();
+    }
     // Called instantly by SkillSystem when mouse enters or exits a node
     public void ShowDetails(SkillSystem info)
     {
@@ -68,11 +78,7 @@ public class InfoBoxDetails : MonoBehaviour
         currentSkill = info;
 
         // Populate text details immediately (Runs once per hover action instead of every frame)
-        Title.text = currentSkill.SkillName;
-        Description.text = currentSkill.SkillDescription;
-        XpCost.text = currentSkill.xpCost.ToString();
-        CoinCost.text = currentSkill.coinCost.ToString();
-        BuySlider.maxValue = 3f; // Hardcoded fallback matching your setTime state variable
+        BuySlider.maxValue = 2f; // Hardcoded fallback matching your setTime state variable
 
         // Handle Max Level Visibility Layout changes
         if (currentSkill.currentLevel == currentSkill.maxLevel)
@@ -84,9 +90,9 @@ public class InfoBoxDetails : MonoBehaviour
         }
         else
         {
-            PartGBSlider.SetActive(true);
-            PartGBXP.SetActive(true);
-            PartGBCost.SetActive(true);
+            if(PartGBSlider != null) PartGBSlider.SetActive(true);
+            if(PartGBXP != null) PartGBXP.SetActive(true);
+            if(PartGBCost != null) PartGBCost.SetActive(true);
             Level.text = $"{currentSkill.currentLevel}/{currentSkill.maxLevel}";
         }
 

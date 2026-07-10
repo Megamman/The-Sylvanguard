@@ -3214,6 +3214,9 @@ MonoBehaviour:
   SkillHolder: {fileID: 4118139006579999201, guid: b2c9377aa90c9dc46ad9890dc6ec27e9, type: 3}
   SkillParent: {fileID: 2719971784938534253}
   timer: 0
+  PartGBSlider: {fileID: 0}
+  PartGBXP: {fileID: 0}
+  PartGBCost: {fileID: 0}
   HP: {fileID: 799518468378597231, guid: 0bfd2d4520ff552419587dfb3bfdf69e, type: 3}
   MP: {fileID: 3614986518450183708, guid: 0bfd2d4520ff552419587dfb3bfdf69e, type: 3}
   Steps: {fileID: -7994913117971141790, guid: 0bfd2d4520ff552419587dfb3bfdf69e, type: 3}
@@ -4142,7 +4145,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7374760563071426989, guid: 78749b996153af147b13f7ec5d554d46, type: 3}
+  m_Sprite: {fileID: 6935945250143372314, guid: 78749b996153af147b13f7ec5d554d46, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10960,10 +10963,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5836846131595028238, guid: efe1df00fb8b0c948836a908561878cc, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -7374760563071426989, guid: 78749b996153af147b13f7ec5d554d46, type: 3}
     - target: {fileID: 5912259040731484916, guid: efe1df00fb8b0c948836a908561878cc, type: 3}
       propertyPath: m_fontColor.b
       value: 0

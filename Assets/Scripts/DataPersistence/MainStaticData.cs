@@ -4,6 +4,7 @@ public static class MainStaticData
 {
     public static string SelectedGame;
     public static StatsData statsData;
+    public static GameObject DigitalMouse;
     public static GameData gameData;
     public static GameDataHandler gameDataHandler;
     public static StatsDataHandler statsDataHandler;

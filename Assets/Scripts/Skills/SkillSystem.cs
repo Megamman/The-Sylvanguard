@@ -61,10 +61,10 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
 
         UpdateCheck();
-        if (infoScript != null)
-            infoScript.timer = timer;
-        {
-        }
+        // if (infoScript != null)
+        // {
+        //     infoScript.timer = timer;
+        // }
 
         //sr.enabled = OnHover;
         if (Purchesable) { sr.color = Color.green; }
@@ -85,6 +85,7 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if (isPurchasing) {
             PurchaseSkill();
         }
+        else {timer = 0;}
     }
 
     private void UpdateCheck()
@@ -217,7 +218,7 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             {
                 _switch.CheckSkill();
             }
-
+    
             SavenLoadScript.SaveData(); //Save File code
         }
     }

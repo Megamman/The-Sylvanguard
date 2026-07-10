@@ -13,7 +13,7 @@ public class StatsSlider : MonoBehaviour //, IPointerEnterHandler, IPointerExitH
 
     private int maxtStat;
     private int curStat;
-    private string extraText;
+    // private string extraText;
 
     //public void OnPointerEnter(PointerEventData eventData)
     //{
@@ -36,15 +36,15 @@ public class StatsSlider : MonoBehaviour //, IPointerEnterHandler, IPointerExitH
         {
             case StatType.Health:
                 maxtStat = Stats.HP;
-                extraText = "Health: "; 
+                // extraText = "Health: "; 
                 break;
             case StatType.Movement:
                 maxtStat = Stats.MovePt;
-                extraText = "Steps: ";
+                // extraText = "Steps: ";
                 break;
             case StatType.Mana:
                 maxtStat = Stats.MP;
-                extraText = "Mana: ";
+                // extraText = "Mana: ";
                     break;
 
             default:
