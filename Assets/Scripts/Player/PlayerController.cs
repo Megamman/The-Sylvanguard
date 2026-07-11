@@ -1,4 +1,4 @@
-
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +9,12 @@ public class PlayerController : MonoBehaviour
     private CombatScript combat;
     private PlayerMovement controls;
     //private Rigidbody2D rb2D;
+
+    public GameObject PunchEffect;
+    public GameObject SlashEffect;
+
+    bool usingSword;
+
     private SpriteRenderer PlayerSprite;
     private Vector2 direction;
     [HideInInspector] Vector3 MoveTo;
@@ -105,15 +111,17 @@ public class PlayerController : MonoBehaviour
     {
 
         DungeanPannel.SetActive(false);
-        transform.position = MoveTo;
+        //transform.position = MoveTo;
+
+        StartCoroutine(AnimMove(MoveTo));
 
         if (Stats.QuickPotion) { if (Stats.HP < HpQuorter) { UsePotion(); } } //use potion
         if (Stats.HPRegenIsOn) { if (HealthSteps == 0) { Stats.HP += Stats.HPRegen; HealthSteps = Stats.StepsToHPRegen; }
             else { HealthSteps--; } }
         if (Stats.MPRegenIsOn) { if (MagicSteps == 0) { Stats.HP += 1; MagicSteps = Stats.StepsToMPRegen; }
             else { MagicSteps--; } }
-        if (MovementCost) { if (Stats.MovePt != 0) { transform.position = MoveTo; } } //Loose move point
-            else { transform.position = MoveTo; } //Free Move
+        if (MovementCost) { if (Stats.MovePt != 0) { StartCoroutine(AnimMove(MoveTo)); } } //Loose move point
+            else { StartCoroutine(AnimMove(MoveTo)); } //Free Move
 
         if (MovementCost) { Stats.MovePt--; } //Loose move point
     }
@@ -150,7 +158,7 @@ public class PlayerController : MonoBehaviour
             case "Enemy":
                 //Debug.Log("Enemy Found");
                 //Combat
-                combat.Fight(hit.transform.GetComponent<EnemyStats>());
+                StartCoroutine(AttackAnime(MoveTo, hit));
                 break;
 
             case "Wall":
@@ -192,6 +200,66 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
+    bool inPos = true;
+    float duration = 0.2f;
+    bool isMoving;
+
+    IEnumerator AttackAnime(Vector3 destination, RaycastHit2D hit)
+    {
+        isMoving = true;
+        Vector3 startPosition = transform.position;
+
+        // 1. Move to target position
+        yield return StartCoroutine(MoveCharacter(destination));
+
+        combat.Fight(hit.transform.GetComponent<EnemyStats>());
+
+
+        if (usingSword) { Instantiate(SlashEffect, hit.transform.position, Quaternion.identity); }
+        else { Instantiate(PunchEffect, hit.transform.position, Quaternion.identity); }
+
+// 2. Wait at target position
+yield return new WaitForSeconds(duration);
+
+        // 3. Move back to start position
+        yield return StartCoroutine(MoveCharacter(startPosition));
+
+        isMoving = false;
+    }
+
+    IEnumerator AnimMove(Vector3 pos)
+    {
+        // Double-check: If we aren't standing still, ignore this spam input completely
+        if (!inPos) yield break;
+
+        Debug.Log("Move");
+
+        inPos = false; // Instantly lock movement
+        yield return StartCoroutine(MoveCharacter(pos));
+    }
+
+    IEnumerator MoveCharacter(Vector3 destination)
+    {
+        Vector3 origin = transform.position;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float percentageComplete = elapsed / duration;
+            float smoothPercentage = Mathf.SmoothStep(0f, 1f, percentageComplete);
+
+            transform.position = Vector3.Lerp(origin, destination, smoothPercentage);
+            yield return null;
+        }
+
+        transform.position = destination;
+
+        // ONLY unlock movement here, when the character has fully arrived
+        inPos = true;
+    }
+
 
 
 }

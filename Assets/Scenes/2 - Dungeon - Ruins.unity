@@ -14282,6 +14282,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1662187298}
     - target: {fileID: 3590138596363431517, guid: da2ef7a37c0216b4b94f300c5b5fa8cd, type: 3}
+      propertyPath: PunchEffect
+      value: 
+      objectReference: {fileID: 8021247847017917479, guid: 64f65086273e254479e6ca0d03ccbae2, type: 3}
+    - target: {fileID: 3590138596363431517, guid: da2ef7a37c0216b4b94f300c5b5fa8cd, type: 3}
+      propertyPath: SlashEffect
+      value: 
+      objectReference: {fileID: 8252108341644809927, guid: d4344d59ccaaa3b40ad41909b9d9721e, type: 3}
+    - target: {fileID: 3590138596363431517, guid: da2ef7a37c0216b4b94f300c5b5fa8cd, type: 3}
       propertyPath: MovementCost
       value: 1
       objectReference: {fileID: 0}

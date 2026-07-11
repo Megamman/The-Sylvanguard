@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using System.Collections;
 
 public class CombatScript : MonoBehaviour
 {
@@ -144,4 +145,5 @@ public class CombatScript : MonoBehaviour
         tmp.color = color;
         tmp.text = dmg;
     }
+
 }

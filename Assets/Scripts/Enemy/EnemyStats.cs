@@ -46,6 +46,7 @@ public class EnemyStats : MonoBehaviour
     [Header("UI")]
     public Slider HPSlider;
     public GameObject DmgCounter;
+    public GameObject SmokeEffect;
     //Info
 
 
@@ -66,8 +67,20 @@ public class EnemyStats : MonoBehaviour
         {
             ActivateAnimation();
         }
+        if (HP <= 0)
+        {
+            Instantiate(SmokeEffect, transform.position, Quaternion.identity);
+        }
     }
 
+
+    private void LateUpdate()
+    {
+        if (HP <= 0)
+        {
+            Instantiate(SmokeEffect, transform.position, Quaternion.identity);
+        }
+    }
     public void ActivateAnimation()
     {
         HPSlider.transform.gameObject.SetActive(true);
@@ -76,10 +89,12 @@ public class EnemyStats : MonoBehaviour
 
     private void OnDestroy()
     {
-        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+
+
+       SpriteRenderer sr = GetComponent<SpriteRenderer>();
 
         Sprite img = sr.sprite;
-        
+
         EndGame.DeafetedEnemy(img);
         
     }

@@ -576,6 +576,7 @@ MonoBehaviour:
   ResistToMagic: 0
   HPSlider: {fileID: 1393558125027067139}
   DmgCounter: {fileID: 2044024962470897778}
+  SmokeEffect: {fileID: 6869975349908540226, guid: b3f71a1e99ccf5248a6005124621eb10, type: 3}
 --- !u!95 &4447005910293349669
 Animator:
   serializedVersion: 7
@@ -636,7 +637,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8125, y: 1.1875}
+    oldSize: {x: 1.1875, y: 1.1875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

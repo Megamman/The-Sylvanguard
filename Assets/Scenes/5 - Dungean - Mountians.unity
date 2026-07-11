@@ -46850,6 +46850,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 456175647}
     - target: {fileID: 3590138596363431517, guid: da2ef7a37c0216b4b94f300c5b5fa8cd, type: 3}
+      propertyPath: PunchEffect
+      value: 
+      objectReference: {fileID: -2253911629886400664, guid: a78df23469d25634cb468cb11a4e464a, type: 3}
+    - target: {fileID: 3590138596363431517, guid: da2ef7a37c0216b4b94f300c5b5fa8cd, type: 3}
+      propertyPath: SlashEffect
+      value: 
+      objectReference: {fileID: -2253911629886400664, guid: 3bda8ab902855b4458934d426f486bf7, type: 3}
+    - target: {fileID: 3590138596363431517, guid: da2ef7a37c0216b4b94f300c5b5fa8cd, type: 3}
       propertyPath: MovementCost
       value: 1
       objectReference: {fileID: 0}

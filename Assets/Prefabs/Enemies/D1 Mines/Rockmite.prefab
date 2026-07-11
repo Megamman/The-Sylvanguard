@@ -214,6 +214,7 @@ MonoBehaviour:
   ResistToMagic: 0
   HPSlider: {fileID: 7162841447355626091}
   DmgCounter: {fileID: 8756009944572652926}
+  SmokeEffect: {fileID: 6869975349908540226, guid: b3f71a1e99ccf5248a6005124621eb10, type: 3}
 --- !u!95 &626919359098571379
 Animator:
   serializedVersion: 7
