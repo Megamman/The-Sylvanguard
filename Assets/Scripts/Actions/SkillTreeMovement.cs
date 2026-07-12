@@ -931,6 +931,7 @@ public partial class @SkillTreeMovement: IInputActionCollection2, IDisposable
     public void Dispose()
     {
         UnityEngine.Object.Destroy(asset);
+
     }
 
     /// <inheritdoc cref="UnityEngine.InputSystem.InputActionAsset.bindingMask" />

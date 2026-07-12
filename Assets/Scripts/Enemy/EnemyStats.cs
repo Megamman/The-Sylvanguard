@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
+using UnityEditor.Tilemaps;
 
 public class EnemyStats : MonoBehaviour
 {
@@ -69,18 +71,12 @@ public class EnemyStats : MonoBehaviour
         }
         if (HP <= 0)
         {
-            Instantiate(SmokeEffect, transform.position, Quaternion.identity);
+            StartCoroutine(Deafeat());
+            
         }
     }
 
 
-    private void LateUpdate()
-    {
-        if (HP <= 0)
-        {
-            Instantiate(SmokeEffect, transform.position, Quaternion.identity);
-        }
-    }
     public void ActivateAnimation()
     {
         HPSlider.transform.gameObject.SetActive(true);
@@ -97,5 +93,12 @@ public class EnemyStats : MonoBehaviour
 
         EndGame.DeafetedEnemy(img);
         
+    }
+
+    IEnumerator Deafeat()
+    {
+        Instantiate(SmokeEffect, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.3f);
+        Destroy(this.gameObject);
     }
 }

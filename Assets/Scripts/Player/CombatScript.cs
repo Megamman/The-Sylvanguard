@@ -82,7 +82,7 @@ public class CombatScript : MonoBehaviour
             Stats.XP += Random.Range(Enemy.XPMin, Enemy.XPMax);
             Stats.Coins += Random.Range(Enemy.CoinsMin, Enemy.CoinsMax);
 
-            Destroy(Enemy.transform.gameObject);
+            //Destroy(Enemy.transform.gameObject);
         }
     }
 

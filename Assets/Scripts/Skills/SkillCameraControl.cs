@@ -31,6 +31,7 @@ public class SkillCameraControl : MonoBehaviour
         mainCamera = Camera.main;
         controls = new SkillTreeMovement();
 
+
         controls.Player.Enable();
         // 2. This ONLY updates the variable when you press/release key
         controls.Player.Move.performed += ctx => _newPosition = ctx.ReadValue<Vector2>();
@@ -86,6 +87,8 @@ public class SkillCameraControl : MonoBehaviour
     private void OnDisable()
     {
         InputSystem.onAfterUpdate -= UpdateMotion;
+
+        controls.Player.Disable();
     }
 
     private void UpdateMotion()
