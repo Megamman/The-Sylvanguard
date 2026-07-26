@@ -5,6 +5,8 @@ public class StatsData
 {
     public Vector2 TownPos = new Vector2(0,0);
 
+    public bool T2, T3, T4, T5, T6, T7;
+
     //Main Stats
     public int HP = 10; //Health Point - Redused when reciing attack - GameOver when 0
     public int MovePt = 10; //Steps that can be taken
@@ -60,8 +62,10 @@ public class StatsData
     {
         TownPos = Vector2.zero;
 
-        //Main Stats
-        HP = 10; //Health Point - Redused when reciing attack - GameOver when 0
+        T2 = true; T3 = true; T4 = true; T5 = true; T6 = true; T7 = true;
+
+    //Main Stats
+    HP = 10; //Health Point - Redused when reciing attack - GameOver when 0
         MovePt = 10; //Steps that can be taken
         Attack = 1; //how much damage can be dealt
         MP = 0; //Magic Point - Used to use magic active skills

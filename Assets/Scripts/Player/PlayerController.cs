@@ -194,6 +194,9 @@ public class PlayerController : MonoBehaviour
             case "Sign":
                 break;
 
+            case "Story":
+                break;
+
             default:
                 ActionMove();
                 break;
