@@ -29,11 +29,11 @@ public class StorySaveSystem : MonoBehaviour, IStatsDataPersistence
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (ObjT2 != null) { ObjT2.SetActive(StoryStatic.T2); }
-        if (ObjT3 != null) { ObjT3.SetActive(StoryStatic.T3); }
-        if (ObjT4 != null) { ObjT4.SetActive(StoryStatic.T4); }
-        if (ObjT5 != null) { ObjT5.SetActive(StoryStatic.T5); }
-        if (ObjT6 != null) { ObjT6.SetActive(StoryStatic.T6); } 
-        if (ObjT7 != null) { ObjT7.SetActive(StoryStatic.T7); }
+        if (ObjT2 != null) { ObjT2.SetActive(!StoryStatic.T2); }
+        if (ObjT3 != null) { ObjT3.SetActive(!StoryStatic.T3); }
+        if (ObjT4 != null) { ObjT4.SetActive(!StoryStatic.T4); }
+        if (ObjT5 != null) { ObjT5.SetActive(!StoryStatic.T5); }
+        if (ObjT6 != null) { ObjT6.SetActive(!StoryStatic.T6); } 
+        if (ObjT7 != null) { ObjT7.SetActive(!StoryStatic.T7); }
     }
 }

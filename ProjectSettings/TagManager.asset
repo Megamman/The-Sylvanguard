@@ -13,6 +13,7 @@ TagManager:
   - Blacksmith
   - Alchamist
   - Sign
+  - Story
   layers:
   - Default
   - TransparentFX

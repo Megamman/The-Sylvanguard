@@ -88,7 +88,7 @@ public class ActiveSkillsControl : MonoBehaviour
 
     public void UsePotion()
     {
-        if (Stats.PotionUseIsActive && Stats.MaxPotions > 0)
+        if (Stats.PotionUseIsActive && Stats.MaxPotions > 0 && MainStaticData.HoldMovement)
         {
             int totalGeneratrd = Stats.HP + Stats.PotionHeal;
 
@@ -101,7 +101,7 @@ public class ActiveSkillsControl : MonoBehaviour
 
     public void UseMagicAttack()
     {
-        if (Stats.MP >= Stats.AttMpCost)
+        if (Stats.MP >= Stats.AttMpCost && MainStaticData.HoldMovement)
         {
             Stats.UsingMagicAttack = true;
             Stats.MP -= Stats.AttMpCost;
@@ -110,7 +110,7 @@ public class ActiveSkillsControl : MonoBehaviour
 
     public void UseMagicShield() 
     {
-        if (Stats.MP >= Stats.DefMPCost)
+        if (Stats.MP >= Stats.DefMPCost && MainStaticData.HoldMovement)
         {
             Stats.CurMagicDef += Stats.MagicDef;
             Stats.MP -= Stats.DefMPCost;
@@ -119,13 +119,15 @@ public class ActiveSkillsControl : MonoBehaviour
 
     public void UseHome() 
     {
-        HomeBox.SetActive (true);
+        if(MainStaticData.HoldMovement)
+            HomeBox.SetActive (true);
     }
 
     public void  ToSkillTree()
     {
+        if(MainStaticData.HoldMovement)
         //to skill tree
-        MainStaticData.loadScreen.LoadScene(10);
+            MainStaticData.loadScreen.LoadScene(10);
     }
 
 
@@ -136,7 +138,7 @@ public class ActiveSkillsControl : MonoBehaviour
         MSStat.text = "+" + Stats.MagicDef.ToString() + " Defence, " +  Stats.DefMPCost.ToString() + " MP Cost";
 
 
-        if (Stats.PotionUseIsActive && Stats.MaxPotions == 0)
+        if (Stats.PotionUseIsActive && Stats.MaxPotions >= 1)
         {
             PotionRenderer.sprite = PotionNotAvailable;
             PotionText.GetComponent<TextMeshProUGUI>().color = ShadedText;

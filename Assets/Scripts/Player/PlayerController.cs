@@ -195,6 +195,8 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case "Story":
+                Debug.Log("Trigger Story");
+                hit.transform.GetComponent<StoryTrigger>().TriggerStory();
                 break;
 
             default:
