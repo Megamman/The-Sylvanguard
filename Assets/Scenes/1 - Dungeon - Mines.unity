@@ -1423,12 +1423,15 @@ PlayableDirector:
     value: {fileID: 972527175}
   - key: {fileID: -3259975964209316117, guid: 9d4836e791a69cc4e91f612e4a54a1df, type: 2}
     value: {fileID: 1733870798}
-  - key: {fileID: -8688799150593481406, guid: 9d4836e791a69cc4e91f612e4a54a1df, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 2022157678}
-  - key: {fileID: 2433596022233045808, guid: 9d4836e791a69cc4e91f612e4a54a1df, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 1392259091}
+  - key: {fileID: -6828651119826866690, guid: 9d4836e791a69cc4e91f612e4a54a1df, type: 2}
+    value: {fileID: 338725464}
   m_ExposedReferences:
-    m_References: []
+    m_References:
+    - 4fd4e4572170b724bb8779cbf3cf05be: {fileID: 255925259}
 --- !u!95 &260512751
 Animator:
   serializedVersion: 7
@@ -1925,7 +1928,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: how are you feeling
+  m_text: oo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15224,7 +15227,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1733870797}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: TimelineSettings, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
@@ -17535,7 +17538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1733870796}
   - component: {fileID: 1733870798}
-  - component: {fileID: 1733870797}
+  - component: {fileID: 1733870799}
   m_Layer: 0
   m_Name: Signal
   m_TagString: Untagged
@@ -17558,19 +17561,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 255925260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1733870797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733870795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 127a216e5736859408c2a9c6e45c2b70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Director: {fileID: 255925261}
 --- !u!114 &1733870798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17589,8 +17579,8 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1733870797}
-          m_TargetAssemblyTypeName: TimelineSettings, Assembly-CSharp
+        - m_Target: {fileID: 1733870799}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
           m_MethodName: PauseTimeline
           m_Mode: 1
           m_Arguments:
@@ -17600,7 +17590,37 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 1
+--- !u!114 &1733870799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733870795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf0a75315734f6b48b14ac22d2aabac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Director: {fileID: 255925261}
+  textMesh: {fileID: 424454433}
+  Text: {fileID: 424454433}
+  Name1: {fileID: 0}
+  Name2: {fileID: 0}
+  Persion1: {fileID: 2022157680}
+  Persion2: {fileID: 1392259093}
+  s_Persion1: {fileID: 0}
+  s_Persion2: {fileID: 0}
+  dialogueBox:
+  - dailogue: Biulder!
+    isPersion2: 0
+  - dailogue: Wake UP!
+    isPersion2: 0
+  - dailogue: Uhhhhh!
+    isPersion2: 1
+  - dailogue: '{name}'
+    isPersion2: 1
 --- !u!1 &1759019273
 GameObject:
   m_ObjectHideFlags: 0
