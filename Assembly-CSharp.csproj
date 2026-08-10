@@ -117,6 +117,7 @@
     <Compile Include="Assets\Scripts\UI\ActiveMenu.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\StorySaveSystem.cs" />
     <Compile Include="Assets\Scripts\Misc\DestoryGameObject.cs" />
+    <Compile Include="Assets\Scripts\Misc\TimelineSettings.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\Game Data\GameDataPersistenceManager.cs" />
     <Compile Include="Assets\Scripts\DataPersistence\Stats Data\IStatsDataPersistence.cs" />
   </ItemGroup>
