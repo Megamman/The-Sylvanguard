@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 19ec26fa952b61a4882c2ad6a28f41e3
+guid: 71ce3845c4cd8964ba0bc256f9eaad20
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -36,7 +36,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 18
+    spritePixelsToUnits: 16
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -73,7 +73,7 @@ ScriptedImporter:
     applyGammaDecoding: 0
   previousAsepriteImporterSettings:
     fileImportMode: 0
-    importHiddenLayers: 1
+    importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
@@ -86,7 +86,7 @@ ScriptedImporter:
     addShadowCasters: 0
   asepriteImporterSettings:
     fileImportMode: 0
-    importHiddenLayers: 1
+    importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
@@ -98,7 +98,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639217123534779219
+  platformSettingsDirtyTick: 639241290747774166
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,9 +123,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Biulder
+  - name: Elias
     originalName: 
-    pivot: {x: 0.5080645, y: -0.016393444}
+    pivot: {x: 0.5064935, y: -0.016393444}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -133,9 +133,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 62
+      width: 77
       height: 61
-    spriteID: c9e77d40540da804ca03ee1f07e4db39
+    spriteID: 47e02a1f6d98eb241b23994454071e11
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -145,7 +145,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData:
-  - name: Biulder_0
+  - name: Elias_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -155,9 +155,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 46
-      width: 15
+      width: 13
       height: 19
-    spriteID: d86d3226b333b864e8f3f9c3d7982c84
+    spriteID: 04f22b12d9bbfd94cb3032772f2154fa
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -166,7 +166,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Biulder_1
+  - name: Elias_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -176,9 +176,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 21
       y: 46
-      width: 15
+      width: 12
       height: 19
-    spriteID: 5f2c22e1f05775541b12dc919153a855
+    spriteID: c955c6a7c451f3343ae721819b2f4bca
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -187,7 +187,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Biulder_2
+  - name: Elias_2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -195,11 +195,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 53
+      x: 37
       y: 46
-      width: 13
+      width: 12
       height: 19
-    spriteID: 516d719bd1eeca34aa3d0cadb0639487
+    spriteID: 575c64921578a9a4a95ad0729e60a90f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -208,7 +208,28 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Biulder_3
+  - name: Elias_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 46
+      width: 13
+      height: 19
+    spriteID: ab8f84554163ecb48b50b96a15361114
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Elias_5
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -218,9 +239,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 25
-      width: 15
-      height: 20
-    spriteID: 511d9a52afc1747459acb24375808ea4
+      width: 13
+      height: 19
+    spriteID: 4f07a4ce5d5009143a3a2c595bb04971
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -229,7 +250,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Biulder_4
+  - name: Elias_6
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -239,9 +260,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 21
       y: 25
-      width: 15
-      height: 20
-    spriteID: 5318a4ce83587644db1e7a5ac8d68d8b
+      width: 12
+      height: 19
+    spriteID: 84d85680b08628b46a03bf148cf367cf
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -250,7 +271,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Biulder_5
+  - name: Elias_7
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -258,11 +279,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 53
+      x: 37
       y: 25
-      width: 13
+      width: 12
       height: 19
-    spriteID: 27ba4eca74cbf494bb8576234e7cb9a1
+    spriteID: 29922b524c50d924ba8c108a06c656cc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -271,7 +292,28 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Biulder_6
+  - name: Elias_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 25
+      width: 13
+      height: 19
+    spriteID: 492d4988ce71e704582e2616ea23ba34
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Elias_9
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -281,9 +323,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 15
-      height: 20
-    spriteID: 2f5e2482614d3ae4fb3eaf969d7fe8f1
+      width: 13
+      height: 19
+    spriteID: f2289a25389d2884c981b87354073437
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -292,7 +334,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Biulder_7
+  - name: Elias_10
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -302,9 +344,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 21
       y: 4
-      width: 15
-      height: 20
-    spriteID: a1b2e9f3c2cdcf64e9840d0ebdb0c0af
+      width: 12
+      height: 19
+    spriteID: 01e953a8f7c50d842b1ee7f8e3186f8c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -313,7 +355,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Biulder_8
+  - name: Elias_11
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -321,74 +363,32 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 53
+      x: 37
+      y: 4
+      width: 12
+      height: 19
+    spriteID: 192c800dc2f3ec94d99ad89a83613da4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Elias_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 52
       y: 4
       width: 13
       height: 19
-    spriteID: f413195db8575a9498783d8636bbee11
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: Biulder_9
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 36
-      y: 46
-      width: 15
-      height: 19
-    spriteID: 9e17c076348517540806d39e148ae828
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: Biulder_10
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 36
-      y: 25
-      width: 15
-      height: 20
-    spriteID: b9f17f36ce4607e48bcbd147d9484673
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: Biulder_11
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 36
-      y: 4
-      width: 15
-      height: 20
-    spriteID: e079745c10ef26c4ca5ba63e1125f95a
+    spriteID: a3506e2bc8aeda243a82c9a3aa2e49f5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -399,21 +399,21 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
-    guid: 869477469
-    name: Biulder
+    guid: 613684866
+    name: Elias
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Blacksmith
+    - name: Elias
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 1
         y: 1
-        width: 78
-        height: 60
-      spriteId: c9e77d40540da804ca03ee1f07e4db39
+        width: 77
+        height: 61
+      spriteId: 47e02a1f6d98eb241b23994454071e11
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -442,6 +442,18 @@ ScriptedImporter:
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
   - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: iPhone
     overridden: 0
     ignorePlatformSupport: 0
     maxTextureSize: 16384

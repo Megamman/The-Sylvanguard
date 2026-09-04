@@ -33,6 +33,6 @@ public class GoToDungean : MonoBehaviour, IStatsDataPersistence
     public void SaveStatsData(ref StatsData data)
     {
         data.TownPos = player.position;
-        Debug.Log(data.TownPos + "Save ========================");
+        // Debug.Log(data.TownPos + "Save ========================");
     }
 }

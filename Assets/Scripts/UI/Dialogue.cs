@@ -12,13 +12,10 @@ public class Dialogue : MonoBehaviour
     bool isPause;
 
     public TMP_Text Text;
-    public TMP_Text Name1;
-    public TMP_Text Name2;
+    public TMP_Text Name;
 
-    public Image Persion1;
-    public Image Persion2;
-    public Sprite s_Persion1;
-    public Sprite s_Persion2;
+    // public Image Persion;
+    // public Sprite s_Persion;
 
     int i = 0;
 
@@ -45,8 +42,7 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Persion1.sprite = s_Persion1;
-        Persion2.sprite = s_Persion2;
+        // Persion.sprite = s_Persion;
 
         if(isPause)
         {
@@ -61,10 +57,13 @@ public class Dialogue : MonoBehaviour
         if (i >= dialogueBox.Length || i < 0)
         { return; }
             string currentText = dialogueBox[i].dailogue.ToString();
+            string currentname = dialogueBox[i].character.ToString();
 
-        string newText = currentText.Replace("{name}", MainStaticData.SelectedGame);
+        string Text = currentText.Replace("{Player}", MainStaticData.SelectedGame);
+        string name = currentname.Replace("{Player}", MainStaticData.SelectedGame);
 
-        textMesh.text = newText.ToString();
+        textMesh.text = Text.ToString();
+        Name.text = name.ToString();
         
     }
 
@@ -98,8 +97,8 @@ public class Dialogue : MonoBehaviour
     [Serializable]
     public class DialogueContent 
     {
+        public string character;
         public string dailogue;
-        public bool isPersion2;
     }
 
 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 19ec26fa952b61a4882c2ad6a28f41e3
+guid: 03b3b5b442f7d624e94711590e7dc65a
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -36,7 +36,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 18
+    spritePixelsToUnits: 16
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -73,7 +73,7 @@ ScriptedImporter:
     applyGammaDecoding: 0
   previousAsepriteImporterSettings:
     fileImportMode: 0
-    importHiddenLayers: 1
+    importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
@@ -86,7 +86,7 @@ ScriptedImporter:
     addShadowCasters: 0
   asepriteImporterSettings:
     fileImportMode: 0
-    importHiddenLayers: 1
+    importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
@@ -98,7 +98,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639217123534779219
+  platformSettingsDirtyTick: 639241291055188274
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,9 +123,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Biulder
+  - name: Kaelen
     originalName: 
-    pivot: {x: 0.5080645, y: -0.016393444}
+    pivot: {x: 0.5064935, y: -0.016393444}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -133,9 +133,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 62
+      width: 77
       height: 61
-    spriteID: c9e77d40540da804ca03ee1f07e4db39
+    spriteID: d4a2b0d0e779aa1459978e3dec4a6b97
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -145,7 +145,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData:
-  - name: Biulder_0
+  - name: Kaelen_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -155,9 +155,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 46
-      width: 15
+      width: 13
       height: 19
-    spriteID: d86d3226b333b864e8f3f9c3d7982c84
+    spriteID: 57044fcb17973334f93a53caab39de41
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -166,7 +166,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Biulder_1
+  - name: Kaelen_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -176,9 +176,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 21
       y: 46
-      width: 15
+      width: 12
       height: 19
-    spriteID: 5f2c22e1f05775541b12dc919153a855
+    spriteID: 572e5932e70384541b44aae0b8c62316
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -187,7 +187,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Biulder_2
+  - name: Kaelen_2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -195,11 +195,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 53
+      x: 37
       y: 46
-      width: 13
+      width: 12
       height: 19
-    spriteID: 516d719bd1eeca34aa3d0cadb0639487
+    spriteID: d2aaa3a5d92be6a45a0361a81e701d8b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -208,7 +208,49 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Biulder_3
+  - name: Kaelen_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 46
+      width: 13
+      height: 19
+    spriteID: 36a651f4293654a4eaeddbc30a49f2ef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Kaelen_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 69
+      y: 51
+      width: 12
+      height: 14
+    spriteID: c93b9b3cdf25a6a468f0662354aa3abc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Kaelen_5
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -218,9 +260,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 25
-      width: 15
-      height: 20
-    spriteID: 511d9a52afc1747459acb24375808ea4
+      width: 13
+      height: 19
+    spriteID: aefed085efd7cf743aeb5caf4deacb47
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -229,7 +271,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Biulder_4
+  - name: Kaelen_6
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -239,9 +281,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 21
       y: 25
-      width: 15
-      height: 20
-    spriteID: 5318a4ce83587644db1e7a5ac8d68d8b
+      width: 12
+      height: 19
+    spriteID: 405d4da4fbc54df4fa6e36031839f359
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -250,7 +292,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Biulder_5
+  - name: Kaelen_7
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -258,11 +300,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 53
+      x: 37
       y: 25
-      width: 13
+      width: 12
       height: 19
-    spriteID: 27ba4eca74cbf494bb8576234e7cb9a1
+    spriteID: d9b1a1a2062d90840a85176876d8b3f8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -271,7 +313,28 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Biulder_6
+  - name: Kaelen_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 25
+      width: 13
+      height: 19
+    spriteID: 928e69e869233624ab5468724d2fc586
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Kaelen_9
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -281,9 +344,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 15
-      height: 20
-    spriteID: 2f5e2482614d3ae4fb3eaf969d7fe8f1
+      width: 13
+      height: 19
+    spriteID: 6316a5ad88b95494fb6bd9e223f9e9d4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -292,7 +355,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Biulder_7
+  - name: Kaelen_10
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -302,9 +365,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 21
       y: 4
-      width: 15
-      height: 20
-    spriteID: a1b2e9f3c2cdcf64e9840d0ebdb0c0af
+      width: 12
+      height: 19
+    spriteID: fbd3165ee5f5d3b4fac569133ede673f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -313,7 +376,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Biulder_8
+  - name: Kaelen_11
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -321,74 +384,32 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 53
+      x: 37
+      y: 4
+      width: 12
+      height: 19
+    spriteID: d4c7d93414745a440ade73948b30add1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Kaelen_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 52
       y: 4
       width: 13
       height: 19
-    spriteID: f413195db8575a9498783d8636bbee11
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: Biulder_9
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 36
-      y: 46
-      width: 15
-      height: 19
-    spriteID: 9e17c076348517540806d39e148ae828
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: Biulder_10
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 36
-      y: 25
-      width: 15
-      height: 20
-    spriteID: b9f17f36ce4607e48bcbd147d9484673
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: Biulder_11
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 36
-      y: 4
-      width: 15
-      height: 20
-    spriteID: e079745c10ef26c4ca5ba63e1125f95a
+    spriteID: 372a19ced277499459309ba32188d6d6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -399,21 +420,21 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
-    guid: 869477469
-    name: Biulder
+    guid: 247867884
+    name: Kaelen
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Blacksmith
+    - name: Kaelen
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 1
         y: 1
-        width: 78
-        height: 60
-      spriteId: c9e77d40540da804ca03ee1f07e4db39
+        width: 77
+        height: 61
+      spriteId: d4a2b0d0e779aa1459978e3dec4a6b97
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -442,6 +463,18 @@ ScriptedImporter:
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
   - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: iPhone
     overridden: 0
     ignorePlatformSupport: 0
     maxTextureSize: 16384
