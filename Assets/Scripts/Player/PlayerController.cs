@@ -227,10 +227,13 @@ public class PlayerController : MonoBehaviour
 // 2. Wait at target position
 yield return new WaitForSeconds(duration);
 
-        // 3. Move back to start position
-        yield return StartCoroutine(MoveCharacter(startPosition));
+        if(isMoving)
+        {
+            // 3. Move back to start position
+            yield return StartCoroutine(MoveCharacter(startPosition));
 
-        isMoving = false;
+            isMoving = false;
+        }
     }
 
     IEnumerator AnimMove(Vector3 pos)

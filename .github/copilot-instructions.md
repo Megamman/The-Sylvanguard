@@ -8,7 +8,7 @@
   - Layers:
     - Default, TransparentFX, Ignore Raycast, Player, Water, UI, Enemy, Walls, SpawnBlocker, Sign, Story
 - Active game object:
-  - Name: Sync
+  - Name: Timeline 1
   - Tag: Untagged
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

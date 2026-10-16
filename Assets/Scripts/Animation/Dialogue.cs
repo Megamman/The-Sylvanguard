@@ -100,6 +100,4 @@ public class Dialogue : MonoBehaviour
         public string character;
         public string dailogue;
     }
-
-
 }
