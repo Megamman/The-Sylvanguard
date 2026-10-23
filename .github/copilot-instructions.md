@@ -8,7 +8,11 @@
   - Layers:
     - Default, TransparentFX, Ignore Raycast, Player, Water, UI, Enemy, Walls, SpawnBlocker, Sign, Story
 - Active game object:
+<<<<<<< HEAD
   - Name: Timeline 1
+=======
+  - Name: Content
+>>>>>>> parent of dda1fd3f (How to Play)
   - Tag: Untagged
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

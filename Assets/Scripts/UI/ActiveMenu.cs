@@ -7,8 +7,6 @@ public class ActiveMenu : MonoBehaviour, IStatsDataPersistence
     public GameObject Curser;
     public Transform player;
 
-    public GameObject HowToPlayMenu;
-
     Scene scene;
 
     private PlayerMovement controls;
@@ -39,24 +37,11 @@ public class ActiveMenu : MonoBehaviour, IStatsDataPersistence
         {
             OpenMenu();
             openMenu = true;
-            Menu.SetActive(false);
         } else
         {
             ContinueGame();
             openMenu = false;
-            Menu.SetActive(false);
         }
-    }
-
-    public void OpenHowToPlay()
-    {
-        HowToPlayMenu.SetActive(true);
-        Menu.SetActive(false );
-    }
-    public void CloseHowToPlay()
-    {
-        HowToPlayMenu.SetActive(false);
-        Menu.SetActive(true);
     }
 
     public void OpenMenu()
