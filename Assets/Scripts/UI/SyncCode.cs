@@ -4,7 +4,7 @@ public class SyncCode : MonoBehaviour
 {
 
     public GameObject UICanvas;
-    public GameObject DigitalMouse;
+    //public GameObject DigitalMouse;
     public LoadScreen loadScreen;
 
     private void Awake() {
@@ -20,6 +20,6 @@ public class SyncCode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DigitalMouse.SetActive(MainStaticData.DigitalMouse);
+        //DigitalMouse.SetActive(MainStaticData.DigitalMouse);
     }
 }

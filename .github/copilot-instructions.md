@@ -2,7 +2,7 @@
 - Project name: The-Sylvanguard
 - Unity version: Unity 6000.0.43f1
 - Active game object:
-  - Name: Menu Canvas
+  - Name: First Steps - Skill - Icon - T1
   - Tag: Untagged
-  - Layer: UI
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

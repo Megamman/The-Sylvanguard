@@ -12,7 +12,7 @@ public class SkillCameraControl : MonoBehaviour
     [SerializeField] private Canvas canvas;
     [SerializeField] private RectTransform canvasRectTransform;
     [SerializeField] private float cursorSpeed = 1000f;
-    //[SerializeField] private float runSpeed = 20.0f;
+    [SerializeField] private float runSpeed = 20.0f;
     [SerializeField] private float padding = 20f;
     [SerializeField] private Rigidbody2D cameraRB;
     [SerializeField] private Transform cameraTransform;
@@ -49,10 +49,12 @@ public class SkillCameraControl : MonoBehaviour
         if (virtualMouse == null)
         {
             virtualMouse = (Mouse)InputSystem.AddDevice("VirtualMouse");
+            MainStaticData.UsingController = false;
         }
         else if (!virtualMouse.added)
         {
             InputSystem.AddDevice(virtualMouse);
+            MainStaticData.UsingController = true;
         }
 
         InputUser.PerformPairingWithDevice(virtualMouse, playerInput.user);
@@ -108,10 +110,15 @@ public class SkillCameraControl : MonoBehaviour
         Vector2 newPosition = currentPosition;
 
         if (Gamepad.current == null) { 
-            newPosition = Mouse.current.position.ReadValue(); 
+            newPosition = Mouse.current.position.ReadValue();
+
+            MainStaticData.UsingController = true;
             AnchorCurser(newPosition); 
             return; 
         }
+
+
+        MainStaticData.UsingController = false;
 
         Vector2 StickValue = Gamepad.current.leftStick.ReadValue();
         StickValue *= cursorSpeed * Time.deltaTime;
@@ -201,10 +208,10 @@ public class SkillCameraControl : MonoBehaviour
         mouseSpeedX = Input.GetAxis("Mouse X") * sensitivity;
         mouseSpeedY = Input.GetAxis("Mouse Y") * sensitivity;
 
-        Vector3 move = new Vector3(-mouseSpeedX, -mouseSpeedY, 0);
+        //Vector3 move = new Vector3(-mouseSpeedX, -mouseSpeedY, 0);
 
-        //Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
-        //Vector3 move = new Vector3(-pos.x * runSpeed, -pos.y * runSpeed, 0);
+        Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
+        Vector3 move = new Vector3(-pos.x * runSpeed, -pos.y * runSpeed, 0);
 
         cameraTransform.Translate(move, Space.World);
     }

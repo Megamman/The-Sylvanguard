@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static UnityEngine.GraphicsBuffer;
+using UnityEngine.Rendering;
+using NUnit.Framework.Constraints;
 
 public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -54,7 +57,7 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         sr = GetComponent<SpriteRenderer>();
 
     }
-
+    private bool tpto;
     void Update()
     {
         // if(currentLevel != 0) { transform.GetComponent<SkillSwitch>().SkillPurchase = true; }
@@ -65,14 +68,18 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         // {
         //     infoScript.timer = timer;
         // }
+        
 
         //sr.enabled = OnHover;
         if (Purchesable) { sr.color = Color.green; }
         if (!Purchesable) { sr.color = Color.red; }
         if (MaxLevelReached) { sr.color = _orange; }
+        if(tpto && MainStaticData.UsingController) { MoveCamera(); }
 
         if (OnHover) { 
             controls.Player.Interect.started += ctx => isPurchasing = true;
+
+            tpto = true;
 
             MainStaticData.isOnSkill = false;
         }else
@@ -86,6 +93,15 @@ public class SkillSystem : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             PurchaseSkill();
         }
         else {timer = 0;}
+    }
+
+    void MoveCamera()
+    {
+        Vector3 MoveCamera = new Vector3(transform.position.x, transform.position.y, -10);
+        Camera.main.transform.position = Vector3.MoveTowards(Camera.main.transform.position, MoveCamera, 100f * Time.deltaTime);
+
+        if (transform.position.y == Camera.main.transform.position.y && transform.position.x == Camera.main.transform.position.x)
+        { tpto = false; }    
     }
 
     private void UpdateCheck()

@@ -12,6 +12,7 @@ public static class MainStaticData
     public static int OldSceen;
     public static bool isOnSkill;
     public static bool CurserContol;
+    public static bool UsingController;
 
     public static int SpawnPosition;
 
