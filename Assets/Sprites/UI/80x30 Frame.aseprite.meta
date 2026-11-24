@@ -123,7 +123,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: 80x30 Frame
+  - name: Frame_0
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -134,8 +134,8 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 80
-      height: 45
-    spriteID: 4e35274bed255d84a8345b763a44dc3f
+      height: 30
+    spriteID: 263627198ca05f84db4b603d6c8508c7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,10 +153,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 57
+      y: 42
       width: 80
-      height: 45
-    spriteID: f2416c82d7d03f94ea133eba5124e8c5
+      height: 30
+    spriteID: 1a662c5f0e5ce4e4eaecb5464769037b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -164,7 +164,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 57}
+    uvTransform: {x: 4, y: 42}
   - name: Frame_2
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -174,10 +174,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 110
+      y: 80
       width: 80
-      height: 45
-    spriteID: a6bccf54fa0d8aa4ab6578a108ae311e
+      height: 30
+    spriteID: 99c454e5828a27b4ca705bca208a5ee1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -185,7 +185,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 110}
+    uvTransform: {x: 4, y: 80}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -202,8 +202,8 @@ ScriptedImporter:
         x: 0
         y: 0
         width: 80
-        height: 45
-      spriteId: 4e35274bed255d84a8345b763a44dc3f
+        height: 30
+      spriteId: 263627198ca05f84db4b603d6c8508c7
     - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
@@ -211,8 +211,8 @@ ScriptedImporter:
         x: 0
         y: 0
         width: 80
-        height: 45
-      spriteId: f2416c82d7d03f94ea133eba5124e8c5
+        height: 30
+      spriteId: 1a662c5f0e5ce4e4eaecb5464769037b
     - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
@@ -220,8 +220,8 @@ ScriptedImporter:
         x: 0
         y: 0
         width: 80
-        height: 45
-      spriteId: a6bccf54fa0d8aa4ab6578a108ae311e
+        height: 30
+      spriteId: 99c454e5828a27b4ca705bca208a5ee1
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -240,5 +240,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 80, y: 45}
-  previousTextureSize: {x: 128, y: 256}
+  canvasSize: {x: 80, y: 30}
+  previousTextureSize: {x: 128, y: 128}
